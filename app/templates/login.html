@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="col-md-6 col-md-offset-3">
+        <h1>{{ _('Sign In') }}</h1>
+        <form action="" method="post" name="login">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                  <label for="nickname">{{ _('Please enter your nickname:') }}</label>
+                  <input type="text" class="form-control" name="nickname">
+            </div>
+            {% for error in form.errors.nickname %}
+                  <div class="alert alert-danger" role="alert">
+                      <span>{{ error }}</span>
+                  </div>
+              {% endfor %}
+            <div class="form-group">
+                  <label for="email">{{ _('Please enter your email:') }}</label>
+                  <input type="text" class="form-control" name="email">
+            </div>
+            {% for error in form.errors.email %}
+                  <div class="alert alert-danger" role="alert">
+                      <span>{{ error }}</span>
+                  </div>
+            {% endfor %}
+            <p>{{ form.remember_me }} {{ _('Rememeber Me') }}</p>
+            <p><input type="submit" class="btn btn-primary" value="{{ _('Sign In') }}"></p>
+        </form>
+    </div>
+{% endblock %}

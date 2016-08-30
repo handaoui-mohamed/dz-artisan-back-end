@@ -1,0 +1,6 @@
+*.db
+*.pyc
+db_repository
+flask
+tmp
+whoosh_index

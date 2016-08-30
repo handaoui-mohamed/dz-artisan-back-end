@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ _('Hello') }}, {{ user.nickname }} </h1>
+    <div class="col-md-6">
+        <form method="post" name="post">
+            {{ form.hidden_tag() }}
+           <div class="form-group">
+                  <label for="post">{{ _('Say something') }}:</label>
+                  <input type="text" class="form-control" name="post">
+            </div>
+            {% for error in form.errors.post %}
+                  <div class="alert alert-danger" role="alert">
+                      <span>{{ error }}</span>
+                  </div>
+            {% endfor %}
+            <input type="submit" class="btn btn-primary" value="{{ _('Post') }}">
+        </form>
+        <br>
+        <br>
+        {% for post in posts.items %}
+         {% include 'post.html' %}
+        {% endfor %}
+        <br>
+        {% if posts.has_prev %}<a href="{{ url_for('index', page=posts.prev_num) }}">&lt;&lt; {{ _('Newer posts') }}</a>{% else %}&lt;&lt; {{ _('Newer posts') }}{% endif %} |
+        {% if posts.has_next %}<a href="{{ url_for('index', page=posts.next_num) }}">{{ _('Older posts') }} &gt;&gt;</a>{% else %}{{ _('Older posts') }} &gt;&gt;{% endif %}
+    </div>
+{% endblock %}

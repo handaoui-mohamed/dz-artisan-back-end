@@ -1,0 +1,19 @@
+<table>
+    <tr valign="top">
+        <td><div class="post-img" style="background: url({{ post.author.avatar(50) }}) center center"></div></td>
+        <td class="post">
+            <div>
+                {% autoescape false %}
+                <p>{{ _('%(nickname)s said %(when)s:', nickname = '<a class="cw" href="%s">%s</a>' % (url_for('user', nickname=post.author.nickname), post.author.nickname), when=momentjs(post.timestamp).fromNow()) }}</p>
+                {% endautoescape %}
+            </div>
+            <div>
+                {{ post.body }}
+            </div>
+             {% if post.language != None and post.language != '' and post.language != g.locale %}
+                 <div><a href="#">{{ _('Translate') }}</a></div>
+             {% endif %}
+         </td>
+    </tr>
+</table>
+<br>

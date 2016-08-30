@@ -1,0 +1,38 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="col-md-6 col-md-offset-3">
+         <h1>{{ _('Edit Your Profile') }}</h1>
+          <form action="" method="post" name="edit">
+              {{form.hidden_tag()}}
+              <div class="input-group">
+                <span class="input-group-addon">{{ _('Your nickname') }}</span>
+                <input type="text" class="form-control" name="nickname" value="{{ form.nickname.data }}">
+              </div>
+              <br>
+
+              {% for error in form.errors.nickname %}
+                  <div class="alert alert-danger" role="alert">
+                      <span>{{ error }}</span>
+                  </div>
+              {% endfor %}
+
+              <div class="input-group">
+                <span class="input-group-addon">{{ _('Your email') }}</span>
+                <input type="text" class="form-control" name="email" value="{{ form.email.data }}">
+              </div>
+              <br>
+              {% for error in form.errors.email %}
+                  <div class="alert alert-danger" role="alert">
+                      <span>{{ error }}</span>
+                  </div>
+              {% endfor %}
+              <div class="form-group">
+                  <label for="about_me">{{ _('About yourself') }}:</label>
+                  <textarea class="form-control" name="about_me" rows="5">{{ form.about_me.data }}</textarea>
+              </div>
+                <input type="submit" class="btn btn-primary" value="{{ _('Save Changes') }}"></td>
+          </form>
+    </div>
+{% endblock %}
