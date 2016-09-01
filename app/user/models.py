@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 from app import db
+from flask import jsonify
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -9,17 +11,19 @@ class User(db.Model):
     email = db.Column(db.String(60), unique=True)
     address = db.Column(db.String(100))
     phone_number = db.Column(db.String(20))
-    description = db.Column(db.String())
+    description = db.Column(db.String(300))
     # job_id = db.Column(db.Integer, db.foreignKey('job.id'))
 
     def __repr__(self):
-        return '<User %s>' % self.username
+        return '<User N=%s username=%s full name=%s>' % (self.id, self.username, self.full_name)
 
     def to_json(self):
-        return {
+        return jsonify({
+            'id': self.id,
             'username': self.username,
             'full_name': self.full_name,
             'email': self.email,
             'address': self.address,
-            'phone_number': self.phone_number
-        }
+            'phone_number': self.phone_number,
+            'description': self.description
+        })

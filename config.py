@@ -2,7 +2,7 @@
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-# WTF_CSRF_ENABLED = True
+WTF_CSRF_ENABLED = True
 SECRET_KEY = 'ab59)o(a%v19t=3j#4bt4z=-=6z%f@psw&3)qmh-5rarm6d_z4'
 SQLALCHEMY_TRACK_MODIFICATIONS =False
 
