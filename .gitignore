@@ -1,5 +1,6 @@
 *.db
 *.pyc
+*.sqlite
 db_repository
 flask
 tmp

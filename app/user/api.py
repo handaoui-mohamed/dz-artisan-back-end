@@ -11,16 +11,16 @@ class UserListApi(Resource):
 
     def post(self):
         form = UserForm(request.form)
-        if form.validate():
-            user = User(username=form.username.data, password=form.password.data,
-                        full_name=form.full_name.data, email=form.email.data, address=form.address.data,
-                        phone_number=form.phone_number.data, desctition=form.description.data)
-            db.session.add(user)
-            db.session.commit()
-            return user.to_json(), 201
+        user = User(username=form.username.data, password=form.password.data,
+                    full_name=form.full_name.data, email=form.email.data, address=form.address.data,
+                    phone_number=form.phone_number.data, description=form.description.data)
+
+        db.session.add(user)
+        db.session.commit()
+        return {'element': user.to_json()}
 
 
 class UserDetailApi(Resource):
     def get(self, user_id):
         user = User.query.get(user_id)
-        return user.to_json()
+        return {'element': user.to_json()}

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from app import db
-from flask import jsonify
 
 
 class User(db.Model):
@@ -18,7 +17,7 @@ class User(db.Model):
         return '<User N=%s username=%s full name=%s>' % (self.id, self.username, self.full_name)
 
     def to_json(self):
-        return jsonify({
+        return {
             'id': self.id,
             'username': self.username,
             'full_name': self.full_name,
@@ -26,4 +25,4 @@ class User(db.Model):
             'address': self.address,
             'phone_number': self.phone_number,
             'description': self.description
-        })
+        }

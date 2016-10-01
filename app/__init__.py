@@ -20,6 +20,7 @@ lm.init_app(app)
 
 # import APIs
 from app.user import views
+from app.login import views
 
 # import models
 # from app.job.models import Job
