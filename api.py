@@ -18,6 +18,9 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 auth = HTTPBasicAuth()
 
+# Job types
+JOB_TYPES = ['electrician', 'builder', 'constructor', 'plumber']
+
 
 class User(db.Model):
     __tablename__ = 'users'
@@ -29,6 +32,10 @@ class User(db.Model):
     address = db.Column(db.String(100))
     phone_number = db.Column(db.String(20))
     description = db.Column(db.String(300))
+    job = db.Column('job_type', db.Enum(*JOB_TYPES, name='job_type'))
+    # google map lat/lgt
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
 
     def hash_password(self, password):
         self.password_hash = pwd_context.encrypt(password)
@@ -75,13 +82,17 @@ def new_user():
     email = request.form['email']
     phone_number = request.form['phone_number']
     description = request.form['description']
-    # TODO: add job and location
+    job = request.form['job']
+    latitude = request.form['latitude']
+    longitude = request.form['longitude']
+
     if username is None or password is None:
         abort(400)    # missing arguments
     if User.query.filter_by(username=username).first() is not None:
         abort(400)    # existing user
-    user = User(username=username, full_name=full_name, address=address,
-                email=email, phone_number=phone_number, description=description)
+    user = User(username=username, full_name=full_name, address=address, job=job,
+                email=email, phone_number=phone_number, description=description,
+                latitude=latitude, longitude=longitude)
     user.hash_password(password)
     db.session.add(user)
     db.session.commit()
@@ -92,7 +103,12 @@ def new_user():
                 'address': user.address,
                 'email': user.email,
                 'phone_number': user.phone_number,
-                'description': user.description
+                'description': user.description,
+                'job': user.job,
+                'position': {
+                    'latitude': user.latitude,
+                    'longitude': user.longitude
+                }
             }), 201,
             {'Location': url_for('get_user', id=user.id, _external=True)})
 
@@ -109,7 +125,12 @@ def get_user(id):
                 'address': user.address,
                 'email': user.email,
                 'phone_number': user.phone_number,
-                'description': user.description
+                'description': user.description,
+                'job': user.job,
+                'position': {
+                    'latitude': user.latitude,
+                    'longitude': user.longitude
+                }
             })
 
 
@@ -120,10 +141,43 @@ def get_auth_token():
     return jsonify({'token': token.decode('ascii'), 'duration': 600})
 
 
-@app.route('/api/resource')
+@app.route('/api/profile')
 @auth.login_required
 def get_resource():
-    return jsonify({'data': 'Hello, %s!' % g.user.username})
+    return jsonify({
+        'id': g.user.id,
+        'username': g.user.username,
+        'full_name': g.user.full_name,
+        'address': g.user.address,
+        'email': g.user.email,
+        'phone_number': g.user.phone_number,
+        'description': g.user.description,
+        'job': g.user.job,
+        'position': {
+            'latitude': g.user.latitude,
+            'longitude': g.user.longitude
+        }
+    })
+
+
+@app.route('/api/search', methods=['POST'])
+def search():
+    print request.form['job']
+    # TODO: search using pagination: very important!
+    # query_obj = {
+    #     'job': request.form['job'] or JOB_TYPES,
+    # }
+
+    # location = {
+    #     'latitude': request.form['latitude'],
+    #     'longitude': request.form['longitude']
+    # }
+    #
+    # if request.form['email']:
+    #     query_obj['email'] = request.form['email']
+    users = User.query.filter(User.job == request.form['job']).all()
+    print users
+    return jsonify({'elements': len(users)})
 
 if __name__ == '__main__':
     if not os.path.exists('db.sqlite'):
