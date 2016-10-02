@@ -1,11 +1,12 @@
 #!/usr/bin/env python 
 import os
-from flask import Flask, abort, request, jsonify, g, url_for
+from flask import Flask, abort, request, jsonify, g, send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 from flask_httpauth import HTTPBasicAuth
 from passlib.apps import custom_app_context as pwd_context
 from itsdangerous import (TimedJSONWebSignatureSerializer
                           as Serializer, BadSignature, SignatureExpired)
+from werkzeug import secure_filename
 
 # initialization
 app = Flask(__name__)
@@ -13,10 +14,17 @@ app.config['SECRET_KEY'] = 'k@tj5C:!uj7B}vtJi2p7a0_vGu["x418E=_wU&WohA#>lRYWkX))
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
+app.config['UPLOAD_FOLDER'] = 'uploads/'
+app.config['ALLOWED_EXTENSIONS'] = set(['png', 'jpg', 'jpeg', 'gif'])
+
 
 # extensions
 db = SQLAlchemy(app)
 auth = HTTPBasicAuth()
+
+# For a given file, return whether it's an allowed type or not
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 # Job types
 JOB_TYPES = ['electrician', 'builder', 'constructor', 'plumber']
@@ -158,6 +166,28 @@ def search():
     #     query_obj['email'] = request.form['email']
     users = User.query.filter(User.job == request.form['job']).all()
     return jsonify({'elements': [element.to_json() for element in User.query.all()]})
+
+
+
+# Route that will process the file upload
+@app.route('/api/upload', methods=['POST'])
+@auth.login_required
+def upload():
+    uploaded_files = request.files.getlist("file[]")
+    filenames = []
+    for file in uploaded_files:
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            filenames.append(filename)
+    #associate the uploaded file to the the current user (g.user)
+    #send a respons containg the user and its uploded files
+    return jsonify({'element':g.user.to_json()})
+
+@app.route('/api/uploads/<string:filename>')
+def get_file():
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
 
 if __name__ == '__main__':
     if not os.path.exists('db.sqlite'):
