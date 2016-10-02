@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python 
 import os
 from flask import Flask, abort, request, jsonify, g, url_for
 from flask_sqlalchemy import SQLAlchemy
@@ -9,7 +9,7 @@ from itsdangerous import (TimedJSONWebSignatureSerializer
 
 # initialization
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy dog'
+app.config['SECRET_KEY'] = 'k@tj5C:!uj7B}vtJi2p7a0_vGu["x418E=_wU&WohA#>lRYWkX))q5T}h9M_!kp'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
@@ -59,6 +59,22 @@ class User(db.Model):
         user = User.query.get(data['id'])
         return user
 
+    def to_json(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'full_name': self.full_name,
+            'address': self.address,
+            'email': self.email,
+            'phone_number': self.phone_number,
+            'description': self.description,
+            'job': self.job,
+            'position': {
+                'latitude': self.latitude,
+                'longitude': self.longitude
+            }
+        }
+
 
 @auth.verify_password
 def verify_password(username_or_token, password):
@@ -96,20 +112,7 @@ def new_user():
     user.hash_password(password)
     db.session.add(user)
     db.session.commit()
-    return (jsonify({
-                'id': user.id,
-                'username': user.username,
-                'full_name': user.full_name,
-                'address': user.address,
-                'email': user.email,
-                'phone_number': user.phone_number,
-                'description': user.description,
-                'job': user.job,
-                'position': {
-                    'latitude': user.latitude,
-                    'longitude': user.longitude
-                }
-            }), 201,
+    return (jsonify({'element':user.to_json()}), 201,
             {'Location': url_for('get_user', id=user.id, _external=True)})
 
 
@@ -118,20 +121,7 @@ def get_user(id):
     user = User.query.get(id)
     if not user:
         abort(400)
-    return jsonify({
-                'id': user.id,
-                'username': user.username,
-                'full_name': user.full_name,
-                'address': user.address,
-                'email': user.email,
-                'phone_number': user.phone_number,
-                'description': user.description,
-                'job': user.job,
-                'position': {
-                    'latitude': user.latitude,
-                    'longitude': user.longitude
-                }
-            })
+    return jsonify({'element':user.to_json()})
 
 
 @app.route('/api/token')
@@ -144,29 +134,20 @@ def get_auth_token():
 @app.route('/api/profile')
 @auth.login_required
 def get_resource():
-    return jsonify({
-        'id': g.user.id,
-        'username': g.user.username,
-        'full_name': g.user.full_name,
-        'address': g.user.address,
-        'email': g.user.email,
-        'phone_number': g.user.phone_number,
-        'description': g.user.description,
-        'job': g.user.job,
-        'position': {
-            'latitude': g.user.latitude,
-            'longitude': g.user.longitude
-        }
-    })
+    return jsonify({'element':g.user.to_json()})
 
 
 @app.route('/api/search', methods=['POST'])
 def search():
-    print request.form['job']
     # TODO: search using pagination: very important!
+    # pagination = {
+    #     'page': request.form['page'] or 1,
+    #     'limit': request.form['limit'] or 10
+    # }
     # query_obj = {
     #     'job': request.form['job'] or JOB_TYPES,
     # }
+
 
     # location = {
     #     'latitude': request.form['latitude'],
@@ -176,8 +157,7 @@ def search():
     # if request.form['email']:
     #     query_obj['email'] = request.form['email']
     users = User.query.filter(User.job == request.form['job']).all()
-    print users
-    return jsonify({'elements': len(users)})
+    return jsonify({'elements': [element.to_json() for element in User.query.all()]})
 
 if __name__ == '__main__':
     if not os.path.exists('db.sqlite'):
