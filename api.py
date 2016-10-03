@@ -1,6 +1,6 @@
 #!/usr/bin/env python 
 import os
-from flask import Flask, abort, request, jsonify, g, send_from_directory
+from flask import Flask, abort, request, jsonify, g, send_from_directory, url_for
 from flask_sqlalchemy import SQLAlchemy
 from flask_httpauth import HTTPBasicAuth
 from passlib.apps import custom_app_context as pwd_context
@@ -31,7 +31,6 @@ JOB_TYPES = ['electrician', 'builder', 'constructor', 'plumber']
 
 
 class User(db.Model):
-    __tablename__ = 'users'
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(32), index=True)
     password_hash = db.Column(db.String(64))
@@ -44,6 +43,8 @@ class User(db.Model):
     # google map lat/lgt
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
+    # files uploads
+    files = db.relationship('Upload', backref='user', lazy='dynamic')
 
     def hash_password(self, password):
         self.password_hash = pwd_context.encrypt(password)
@@ -80,7 +81,23 @@ class User(db.Model):
             'position': {
                 'latitude': self.latitude,
                 'longitude': self.longitude
-            }
+            },
+            'files':  [element.to_json() for element in self.files.all()]
+        }
+
+# file upload
+class Upload(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    path = db.Column(db.String)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+    def to_json(self):
+        return {
+            'id': self.id,
+            'path': self.path,
+            'name': self.name,
+            'user_id': self.user_id
         }
 
 
@@ -99,6 +116,7 @@ def verify_password(username_or_token, password):
 
 @app.route('/api/users', methods=['POST'])
 def new_user():
+    print request.form
     username = request.form['username']
     password = request.form['password']
     full_name = request.form['full_name']
@@ -127,6 +145,7 @@ def new_user():
 @app.route('/api/users/<int:id>')
 def get_user(id):
     user = User.query.get(id)
+    print user.files.all()
     if not user:
         abort(400)
     return jsonify({'element':user.to_json()})
@@ -174,19 +193,42 @@ def search():
 @auth.login_required
 def upload():
     uploaded_files = request.files.getlist("file[]")
+    user_id = request.form['user_id']   
     filenames = []
     for file in uploaded_files:
         if file and allowed_file(file.filename):
             filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            directory = os.path.join(app.config['UPLOAD_FOLDER'], '%s/'%g.user.username)
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+            file_path = os.path.join(directory, filename)
+            i = 0
+            while os.path.exists(file_path):
+                filename = "%s%s"%(i,filename)
+                file_path = os.path.join(directory, filename)
+            file.save(file_path)
+            uploaded_file = Upload(name=filename,path=file_path,user_id=user_id)
+            db.session.add(uploaded_file)
+            db.session.commit()
             filenames.append(filename)
-    #associate the uploaded file to the the current user (g.user)
-    #send a respons containg the user and its uploded files
     return jsonify({'element':g.user.to_json()})
 
-@app.route('/api/uploads/<string:filename>')
-def get_file():
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
+@app.route('/api/uploads/<int:id>', methods=['DELETE'])
+@auth.login_required
+def delete_file(id):
+    file = Upload.query.get(id)
+    if file:
+        db.session.delete(file)
+        db.session.commit()
+        os.remove(file.path)
+    return jsonify({'element':g.user.to_json()})
+
+
+@app.route('/api/uploads/<string:username>/<string:filename>')
+def get_file(username, filename):
+    directory = os.path.join(app.config['UPLOAD_FOLDER'], '%s/'%username)
+    return send_from_directory(directory, filename)
 
 
 if __name__ == '__main__':
