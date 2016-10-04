@@ -4,9 +4,10 @@ from flask import Flask, abort, request, jsonify, g, send_from_directory, url_fo
 from flask_sqlalchemy import SQLAlchemy
 from flask_httpauth import HTTPBasicAuth
 from passlib.apps import custom_app_context as pwd_context
-from itsdangerous import (TimedJSONWebSignatureSerializer
-                          as Serializer, BadSignature, SignatureExpired)
+from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired)
 from werkzeug import secure_filename
+from math import radians, cos, sin, asin, sqrt
+from sqlalchemy.ext.hybrid import hybrid_method
 
 # initialization
 app = Flask(__name__)
@@ -16,7 +17,7 @@ app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['ALLOWED_EXTENSIONS'] = set(['png', 'jpg', 'jpeg', 'gif'])
-
+app.config['HOST_URL'] = 'http://localhost:5000/api/'
 
 # extensions
 db = SQLAlchemy(app)
@@ -27,15 +28,15 @@ def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
 # Job types
-JOB_TYPES = ['electrician', 'builder', 'constructor', 'plumber']
+JOB_TYPES = [u'electrician', u'builder', u'constructor', u'plumber']
 
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(32), index=True)
+    username = db.Column(db.String(32), index=True, unique=True)
     password_hash = db.Column(db.String(64))
     full_name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(60), unique=True)
+    email = db.Column(db.String(60))
     address = db.Column(db.String(100))
     phone_number = db.Column(db.String(20))
     description = db.Column(db.String(300))
@@ -84,6 +85,46 @@ class User(db.Model):
             },
             'files':  [element.to_json() for element in self.files.all()]
         }
+    
+    def __repr__(self):
+        return '<User N=%s username=%s location=(%s,%s)>' % (self.id, self.username, self.latitude, self.longitude)
+
+    @hybrid_method
+    # function Calculate the great circle distance between two points  on the earth (specified in decimal degrees) 
+    def haversine(self, lat2, lon2, search_area):
+        lat1 = self.latitude
+        lon1 = self.longitude
+        lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+        # haversine formula 
+        dlon = lon2 - lon1 
+        dlat = lat2 - lat1 
+        a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+        c = 2 * asin(sqrt(a)) 
+        km = 6367 * c
+        return km >= search_area
+
+    @haversine.expression
+    # function Calculate the great circle distance between two points  on the earth (specified in decimal degrees) 
+    def haversine(cls, lat2, lon2, search_area):
+        lat1 = cls.latitude
+        lon1 = cls.longitude
+        lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+        # haversine formula 
+        dlon = lon2 - lon1 
+        dlat = lat2 - lat1 
+        a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+        c = 2 * asin(sqrt(a)) 
+        km = 6367 * c
+        return km >= search_area
+
+    @hybrid_method
+    def jobs_intersection(self, job_list):
+        return len(set([self.job]).intersection(job_list)) > 0
+
+    @jobs_intersection.expression
+    def jobs_intersection(cls, job_list):
+        return len(set([cls.job]).intersection(job_list)) > 0
+
 
 # file upload
 class Upload(db.Model):
@@ -95,7 +136,7 @@ class Upload(db.Model):
     def to_json(self):
         return {
             'id': self.id,
-            'path': self.path,
+            'path': '%s'%os.path.join(app.config['HOST_URL'], self.path),
             'name': self.name,
             'user_id': self.user_id
         }
@@ -116,7 +157,6 @@ def verify_password(username_or_token, password):
 
 @app.route('/api/users', methods=['POST'])
 def new_user():
-    print request.form
     username = request.form['username']
     password = request.form['password']
     full_name = request.form['full_name']
@@ -160,31 +200,57 @@ def get_auth_token():
 
 @app.route('/api/profile')
 @auth.login_required
-def get_resource():
+def profile():
     return jsonify({'element':g.user.to_json()})
+
+@app.route('/api/edit', methods=['PUT'])
+@auth.login_required
+def edit():
+    user = g.user
+    password = request.form.get('password') or user.password
+    full_name = request.form.get('full_name') or user.full_name
+    address = request.form.get('address') or user.address
+    email = request.form.get('email') or user.email
+    phone_number = request.form.get('phone_number') or user.phone_number
+    description = request.form.get('description') or user.description
+    job = request.form.get('job') or user.job
+    latitude = request.form.get('latitude') or user.latitude
+    longitude = request.form.get('longitude') or user.longitude
+
+    user.full_name=full_name
+    user.address=address
+    user.job=job
+    user.email=email
+    user.phone_number=phone_number
+    user.description=description
+    user.latitude=latitude
+    user.longitude=longitude
+    user.hash_password(password)
+    db.session.add(user)
+    db.session.commit()
+
+    return (jsonify({'element':user.to_json()}), 201,
+            {'Location': url_for('get_user', id=user.id, _external=True)})
+
 
 
 @app.route('/api/search', methods=['POST'])
-def search():
-    # TODO: search using pagination: very important!
-    # pagination = {
-    #     'page': request.form['page'] or 1,
-    #     'limit': request.form['limit'] or 10
-    # }
-    # query_obj = {
-    #     'job': request.form['job'] or JOB_TYPES,
-    # }
+@app.route('/api/search/<int:page>', methods=['POST'])
+def search(page=1):
+    item_per_page = int(request.form.get('limit') or 10)
+    job = [request.form.get('job')] or JOB_TYPES
+    search_area = request.form.get('search_area') or 5
 
+    location = {
+        'latitude': float(request.form.get('latitude')),
+        'longitude': float(request.form.get('longitude'))
+    }
 
-    # location = {
-    #     'latitude': request.form['latitude'],
-    #     'longitude': request.form['longitude']
-    # }
-    #
-    # if request.form['email']:
-    #     query_obj['email'] = request.form['email']
-    users = User.query.filter(User.job == request.form['job']).all()
-    return jsonify({'elements': [element.to_json() for element in User.query.all()]})
+    # TODO: still problem when filtering
+    users = User.query.filter(User.jobs_intersection(job), 
+            (User.haversine(location['latitude'], location['longitude'], search_area)))\
+            .paginate(page, item_per_page, False).items
+    return jsonify({'elements': [element.to_json() for element in users]})
 
 
 
@@ -218,7 +284,7 @@ def upload():
 @auth.login_required
 def delete_file(id):
     file = Upload.query.get(id)
-    if file:
+    if file and file.user_id == g.user.id:
         db.session.delete(file)
         db.session.commit()
         os.remove(file.path)
