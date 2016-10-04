@@ -7,7 +7,6 @@ from passlib.apps import custom_app_context as pwd_context
 from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired)
 from werkzeug import secure_filename
 from math import radians, cos, sin, asin, sqrt
-from sqlalchemy.ext.hybrid import hybrid_method
 
 # initialization
 app = Flask(__name__)
@@ -88,42 +87,6 @@ class User(db.Model):
     
     def __repr__(self):
         return '<User N=%s username=%s location=(%s,%s)>' % (self.id, self.username, self.latitude, self.longitude)
-
-    @hybrid_method
-    # function Calculate the great circle distance between two points  on the earth (specified in decimal degrees) 
-    def haversine(self, lat2, lon2, search_area):
-        lat1 = self.latitude
-        lon1 = self.longitude
-        lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-        # haversine formula 
-        dlon = lon2 - lon1 
-        dlat = lat2 - lat1 
-        a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-        c = 2 * asin(sqrt(a)) 
-        km = 6367 * c
-        return km >= search_area
-
-    @haversine.expression
-    # function Calculate the great circle distance between two points  on the earth (specified in decimal degrees) 
-    def haversine(cls, lat2, lon2, search_area):
-        lat1 = cls.latitude
-        lon1 = cls.longitude
-        lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-        # haversine formula 
-        dlon = lon2 - lon1 
-        dlat = lat2 - lat1 
-        a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-        c = 2 * asin(sqrt(a)) 
-        km = 6367 * c
-        return km >= search_area
-
-    @hybrid_method
-    def jobs_intersection(self, job_list):
-        return len(set([self.job]).intersection(job_list)) > 0
-
-    @jobs_intersection.expression
-    def jobs_intersection(cls, job_list):
-        return len(set([cls.job]).intersection(job_list)) > 0
 
 
 # file upload
@@ -207,7 +170,7 @@ def profile():
 @auth.login_required
 def edit():
     user = g.user
-    password = request.form.get('password') or user.password
+    password = request.form.get('password')
     full_name = request.form.get('full_name') or user.full_name
     address = request.form.get('address') or user.address
     email = request.form.get('email') or user.email
@@ -225,7 +188,8 @@ def edit():
     user.description=description
     user.latitude=latitude
     user.longitude=longitude
-    user.hash_password(password)
+    if password:
+        user.hash_password(password)
     db.session.add(user)
     db.session.commit()
 
@@ -238,7 +202,7 @@ def edit():
 @app.route('/api/search/<int:page>', methods=['POST'])
 def search(page=1):
     item_per_page = int(request.form.get('limit') or 10)
-    job = [request.form.get('job')] or JOB_TYPES
+    jobs = [request.form.get('job')] or JOB_TYPES
     search_area = request.form.get('search_area') or 5
 
     location = {
@@ -246,10 +210,16 @@ def search(page=1):
         'longitude': float(request.form.get('longitude'))
     }
 
-    # TODO: still problem when filtering
-    users = User.query.filter(User.jobs_intersection(job), 
-            (User.haversine(location['latitude'], location['longitude'], search_area)))\
-            .paginate(page, item_per_page, False).items
+    users = []
+    for user in User.query.all():
+        user_location = {
+            'latitude': float(user.latitude),
+            'longitude': float(user.longitude)
+        }
+        if haversine(user_location, location, search_area) and jobs_intersection(user.job, jobs):
+            users.append(user)
+    users = [users[i:i+item_per_page] for i in range(0, len(users), item_per_page)]
+    users = users[page-1] if (page <= len(users)) else []
     return jsonify({'elements': [element.to_json() for element in users]})
 
 
@@ -296,6 +266,24 @@ def get_file(username, filename):
     directory = os.path.join(app.config['UPLOAD_FOLDER'], '%s/'%username)
     return send_from_directory(directory, filename)
 
+
+def haversine(location1, location2, search_area):
+    lat1 = location1['latitude']
+    lon1 = location1['longitude']
+    lat2 = location2['latitude']
+    lon2 = location2['longitude']
+    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+    # haversine formula 
+    dlon = lon2 - lon1 
+    dlat = lat2 - lat1 
+    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+    c = 2 * asin(sqrt(a)) 
+    km = 6367 * c
+    return km >= search_area
+
+
+def jobs_intersection(user_job, job_list):
+        return len(set([user_job]).intersection(job_list)) > 0
 
 if __name__ == '__main__':
     if not os.path.exists('db.sqlite'):
