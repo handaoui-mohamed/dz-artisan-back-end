@@ -34,7 +34,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(32), index=True, unique=True)
     password_hash = db.Column(db.String(64))
-    full_name = db.Column(db.String(100), nullable=False)
+    full_name = db.Column(db.String(100))
     email = db.Column(db.String(60))
     address = db.Column(db.String(100))
     phone_number = db.Column(db.String(20))
@@ -120,29 +120,23 @@ def verify_password(username_or_token, password):
 
 @app.route('/api/users', methods=['POST'])
 def new_user():
-    username = request.form['username']
-    password = request.form['password']
-    full_name = request.form['full_name']
-    address = request.form['address']
-    email = request.form['email']
-    phone_number = request.form['phone_number']
-    description = request.form['description']
-    job = request.form['job']
-    latitude = request.form['latitude']
-    longitude = request.form['longitude']
+    username = request.form.get('username')
+    password = request.form.get('password')
+    email = request.form.get('email')
+    remember_me = request.form.get('remember_me') or False
 
     if username is None or password is None:
         abort(400)    # missing arguments
     if User.query.filter_by(username=username).first() is not None:
         abort(400)    # existing user
-    user = User(username=username, full_name=full_name, address=address, job=job,
-                email=email, phone_number=phone_number, description=description,
-                latitude=latitude, longitude=longitude)
+    user = User(username=username, email=email)
     user.hash_password(password)
     db.session.add(user)
     db.session.commit()
-    return (jsonify({'element':user.to_json()}), 201,
-            {'Location': url_for('get_user', id=user.id, _external=True)})
+    duration = 24*3600 if not remember_me else 30*24*3600
+    token = user.generate_auth_token(duration)
+    return (jsonify({'token': token.decode('ascii'), 'user_id': user.id}), 201,
+           {'Location': url_for('get_user', id=user.id, _external=True)})
 
 
 @app.route('/api/users/<int:id>')
@@ -154,11 +148,13 @@ def get_user(id):
     return jsonify({'element':user.to_json()})
 
 
-@app.route('/api/token')
+@app.route('/api/login', methods=['POST'])
 @auth.login_required
 def get_auth_token():
-    token = g.user.generate_auth_token(600)
-    return jsonify({'token': token.decode('ascii'), 'duration': 600})
+    remember_me = request.form.get('remember_me') or False
+    duration = 24*3600 if not remember_me else 30*24*3600
+    token = g.user.generate_auth_token(duration)
+    return jsonify({'token': token.decode('ascii'), 'user_id': g.user.id})
 
 
 @app.route('/api/profile')
