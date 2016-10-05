@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_httpauth import HTTPBasicAuth
 from passlib.apps import custom_app_context as pwd_context
 from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired)
-from werkzeug import secure_filename
+from werkzeug import secure_filename 
 from math import radians, cos, sin, asin, sqrt
 
 # initialization
@@ -26,8 +26,39 @@ auth = HTTPBasicAuth()
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1] in app.config['ALLOWED_EXTENSIONS']
 
-# Job types
-JOB_TYPES = [u'electrician', u'builder', u'constructor', u'plumber']
+
+UserJob = db.Table(
+    'UserJob',
+    db.Column('id', db.Integer, primary_key=True),
+    db.Column('User_id', db.Integer, db.ForeignKey('user.id')),
+    db.Column('job_id', db.Integer, db.ForeignKey('job.id'))
+)
+
+
+class Job(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String, unique=True)
+    description = db.Column(db.Text)
+    users = db.relationship('User', secondary=UserJob, backref='Job')
+
+    def to_json_min(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+        }
+    
+    def to_json(self):
+        return {
+            'id': self.id,
+            'name': self.name,
+            'description': self.description,
+            'users': [element.to_json() for element in self.users.all()]
+        }
+    
+    def remove_user(self, user):
+        users.remove(user)
+        return self
 
 
 class User(db.Model):
@@ -38,8 +69,8 @@ class User(db.Model):
     email = db.Column(db.String(60))
     address = db.Column(db.String(100))
     phone_number = db.Column(db.String(20))
-    description = db.Column(db.String(300))
-    job = db.Column('job_type', db.Enum(*JOB_TYPES, name='job_type'))
+    description = db.Column(db.Text)
+    jobs = db.relationship('Job', secondary=UserJob, backref='user')
     # google map lat/lgt
     latitude = db.Column(db.Float)
     longitude = db.Column(db.Float)
@@ -77,13 +108,22 @@ class User(db.Model):
             'email': self.email,
             'phone_number': self.phone_number,
             'description': self.description,
-            'job': self.job,
+            'job': [element.to_json() for element in self.jobs.all()],
             'position': {
                 'latitude': self.latitude,
                 'longitude': self.longitude
             },
             'files':  [element.to_json() for element in self.files.all()]
         }
+    
+    def add_job(self, job):
+        self.jobs.append(job)
+        return self
+    
+    def remove_job(self, job):
+        self.remove(job)
+        return self
+
     
     def __repr__(self):
         return '<User N=%s username=%s location=(%s,%s)>' % (self.id, self.username, self.latitude, self.longitude)
@@ -201,19 +241,28 @@ def search(page=1):
     jobs = [request.form.get('job')] or JOB_TYPES
     search_area = request.form.get('search_area') or 5
 
-    location = {
-        'latitude': float(request.form.get('latitude')),
-        'longitude': float(request.form.get('longitude'))
-    }
+    latitude = request.form.get('latitude')
+    longitude = request.form.get('longitude')
+    location_search = False
+    if latitude and longitude:
+        location_search = True
+        location = {
+            'latitude': float(request.form.get('latitude')),
+            'longitude': float(request.form.get('longitude'))
+        }
 
     users = []
     for user in User.query.all():
-        user_location = {
-            'latitude': float(user.latitude),
-            'longitude': float(user.longitude)
-        }
-        if haversine(user_location, location, search_area) and jobs_intersection(user.job, jobs):
-            users.append(user)
+        if location_search:
+            user_location = {
+                'latitude': float(user.latitude),
+                'longitude': float(user.longitude)
+            }
+            if haversine(user_location, location, search_area) and jobs_intersection(user.job, jobs):
+                users.append(user)
+        else:
+            if jobs_intersection(user.job, jobs):
+                users.append(user)
     users = [users[i:i+item_per_page] for i in range(0, len(users), item_per_page)]
     users = users[page-1] if (page <= len(users)) else []
     return jsonify({'elements': [element.to_json() for element in users]})
@@ -261,6 +310,46 @@ def delete_file(id):
 def get_file(username, filename):
     directory = os.path.join(app.config['UPLOAD_FOLDER'], '%s/'%username)
     return send_from_directory(directory, filename)
+
+
+# new Job
+@app.route('/api/job', methods=['POST'])
+def new_job():
+    name = request.form.get('name')
+    description = request.form.get('description')
+    if name is None or Job.query.filter_by(name=name).first() is not None:
+        abort(400)    # missing arguments or existing one
+    job = Job(name=name, description=description)
+    db.session.add(job)
+    db.session.commit()
+    return jsonify({'element': job.to_json_min()}), 201
+
+
+@app.route('/api/job/<int:id>')
+def edit_job(id):
+    job = Job.query.get(id)
+    if job is None:
+        abort(400)
+    name = request.form.get('name') or job.name
+    description = request.form.get('description') or job.description
+    if name is None or Job.query.filter_by(name=name).first() is not None:
+        abort(400)    # missing arguments or existing one
+    job.name = name
+    job.description = description
+    db.session.add(job)
+    db.session.commit()
+    return jsonify({'element': job.to_json_min()})
+
+
+@app.route('/api/job/<string:name>')
+def get_job(name):
+    jobs = Job.query.filter_by(name=name).all()
+    return jsonify({'elements': [element.to_json() for element in jobs]})
+
+
+@app.route('/api/jobs')
+def get_jobs():
+    return jsonify({'elements': [element.to_json() for element in Job.query.all()]})
 
 
 def haversine(location1, location2, search_area):

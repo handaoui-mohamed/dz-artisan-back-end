@@ -1,30 +1,26 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python 
+import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager
-from flask_restful import Api
+from flask_httpauth import HTTPBasicAuth
 
-# flask app
+
+# initialization
 app = Flask(__name__)
 app.config.from_object('config')
-
-# flask api
-api = Api(app)
-
-# database
+# extensions
 db = SQLAlchemy(app)
-
-# login manager
-lm = LoginManager()
-lm.init_app(app)
+auth = HTTPBasicAuth()
 
 # import APIs
 from app.user import views
-from app.login import views
+from app.job import views
+from app.upload import views
 
 # import models
-# from app.job.models import Job
 from app.user.models import User
+from app.job.models import Job
+from app.upload.models import Upload
 
 
 

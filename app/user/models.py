@@ -1,28 +1,74 @@
 # -*- coding: utf-8 -*-
-from app import db
+from app import db, app
+from passlib.apps import custom_app_context as pwd_context
+from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired)
+from app.job.models import UserJob, Job
+from app.upload.models import Upload
 
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(65), unique=True)
-    password = db.Column(db.String(65))
-    full_name = db.Column(db.String(100), nullable=False)
-    email = db.Column(db.String(60), unique=True)
+    username = db.Column(db.String(32), index=True, unique=True)
+    password_hash = db.Column(db.String(64))
+    full_name = db.Column(db.String(100))
+    email = db.Column(db.String(60))
     address = db.Column(db.String(100))
     phone_number = db.Column(db.String(20))
-    description = db.Column(db.String(300))
-    # job_id = db.Column(db.Integer, db.foreignKey('job.id'))
+    description = db.Column(db.Text)
+    jobs = db.relationship('Job', secondary=UserJob, backref='user')
+    # google map lat/lgt
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
+    # files uploads
+    files = db.relationship('Upload', backref='user', lazy='dynamic')
 
-    def __repr__(self):
-        return '<User N=%s username=%s full name=%s>' % (self.id, self.username, self.full_name)
+    def hash_password(self, password):
+        self.password_hash = pwd_context.encrypt(password)
+
+    def verify_password(self, password):
+        return pwd_context.verify(password, self.password_hash)
+
+    def generate_auth_token(self, expiration=600):
+        s = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
+        return s.dumps({'id': self.id})
+
+    @staticmethod
+    def verify_auth_token(token):
+        s = Serializer(app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except SignatureExpired:
+            return None    # valid token, but expired
+        except BadSignature:
+            return None    # invalid token
+        user = User.query.get(data['id'])
+        return user
 
     def to_json(self):
         return {
             'id': self.id,
             'username': self.username,
             'full_name': self.full_name,
-            'email': self.email,
             'address': self.address,
+            'email': self.email,
             'phone_number': self.phone_number,
-            'description': self.description
+            'description': self.description,
+            'job': [element.to_json() for element in self.jobs],
+            'position': {
+                'latitude': self.latitude,
+                'longitude': self.longitude
+            },
+            'files':  [element.to_json() for element in self.files.all()]
         }
+    
+    def add_job(self, job):
+        self.jobs.append(job)
+        return self
+    
+    def remove_job(self, job):
+        self.remove(job)
+        return self
+
+    
+    def __repr__(self):
+        return '<User N=%s username=%s location=(%s,%s)>' % (self.id, self.username, self.latitude, self.longitude)
