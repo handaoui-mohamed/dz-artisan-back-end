@@ -20,7 +20,7 @@ from app.upload import views
 # import models
 from app.user.models import User
 from app.job.models import Job
-from app.upload.models import Upload
+from app.upload.models import Upload, ProfilePicture
 
 
 

@@ -3,7 +3,8 @@ from app import db, app
 from passlib.apps import custom_app_context as pwd_context
 from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired)
 from app.job.models import UserJob, Job
-from app.upload.models import Upload
+from app.upload.models import Upload, ProfilePicture
+from config import SECRET_KEY
 
 
 class User(db.Model):
@@ -21,6 +22,8 @@ class User(db.Model):
     longitude = db.Column(db.Float)
     # files uploads
     files = db.relationship('Upload', backref='user', lazy='dynamic')
+    # profile picture
+    profile_image = db.relationship('ProfilePicture', backref='user', lazy='dynamic')
 
     def hash_password(self, password):
         self.password_hash = pwd_context.encrypt(password)
@@ -29,12 +32,12 @@ class User(db.Model):
         return pwd_context.verify(password, self.password_hash)
 
     def generate_auth_token(self, expiration=600):
-        s = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
+        s = Serializer(SECRET_KEY, expires_in=expiration)
         return s.dumps({'id': self.id})
 
     @staticmethod
     def verify_auth_token(token):
-        s = Serializer(app.config['SECRET_KEY'])
+        s = Serializer(SECRET_KEY)
         try:
             data = s.loads(token)
         except SignatureExpired:
@@ -58,7 +61,8 @@ class User(db.Model):
                 'latitude': self.latitude,
                 'longitude': self.longitude
             },
-            'files':  [element.to_json() for element in self.files.all()]
+            'files':  [element.to_json() for element in self.files.all()],
+            'profile_image':  [element.to_json() for element in self.profile_image.all()]
         }
     
     def add_job(self, job):

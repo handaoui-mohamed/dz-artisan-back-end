@@ -5,6 +5,7 @@ from flask import abort, request, jsonify, g, send_from_directory
 from werkzeug import secure_filename
 from config import UPLOAD_FOLDER, ALLOWED_EXTENSIONS
 from app.upload.models import Upload
+from app.upload.models import ProfilePicture
 
 
 # For a given file, return whether it's an allowed type or not
@@ -51,5 +52,46 @@ def delete_file(id):
 
 @app.route('/api/uploads/<string:username>/<string:filename>')
 def get_file(username, filename):
+    directory = os.path.join(UPLOAD_FOLDER, '%s/'%username)
+    return send_from_directory(directory, filename)
+
+
+# profile picture upload
+@app.route('/api/upload/profile', methods=['POST'])
+@auth.login_required
+def upload_profile_image():
+    file = request.files.get("profile_image")
+    user_id = request.form.get('user_id') 
+
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        directory = os.path.join(UPLOAD_FOLDER, '%s/profile/'%g.user.username)
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+        file_path = os.path.join(directory, filename)
+        i = 0
+        while os.path.exists(file_path):
+            filename = "%s%s"%(i,filename)
+            file_path = os.path.join(directory, filename)
+        file.save(file_path)
+        uploaded_image = ProfilePicture(name=filename,path=file_path,user_id=user_id)
+        db.session.add(uploaded_image)
+        db.session.commit()
+    return jsonify({'element':g.user.to_json()})
+
+
+@app.route('/api/uploads/profile/<int:id>', methods=['DELETE'])
+@auth.login_required
+def delete_profile_image(id):
+    file = ProfilePicture.query.get(id)
+    if file and file.user_id == g.user.id:
+        db.session.delete(file)
+        db.session.commit()
+        os.remove(file.path)
+    return jsonify({'element':g.user.to_json()})
+
+
+@app.route('/api/uploads/<string:username>/profile/<string:filename>')
+def get_profile_image(username, filename):
     directory = os.path.join(UPLOAD_FOLDER, '%s/'%username)
     return send_from_directory(directory, filename)
