@@ -3,39 +3,44 @@ from flask import abort, request, jsonify, g
 from app.user.models import User
 from app.job.models import Job
 
+# add auth required and verify admin role
+
 # new Job
 @app.route('/api/job', methods=['POST'])
 def new_job():
     name = request.form.get('name')
     description = request.form.get('description')
+
     if name is None or Job.query.filter_by(name=name).first() is not None:
         abort(400)    # missing arguments or existing one
+
     job = Job(name=name, description=description)
     db.session.add(job)
     db.session.commit()
-    return jsonify({'element': job.to_json_min()}), 201
+    return jsonify({'element': job.to_json()}), 201
 
 
-@app.route('/api/job/<int:id>', methods=['PUT'])
+@app.route('/api/job/<int:id>', methods=['GET', 'PUT'])
 def edit_job(id):
     job = Job.query.get(id)
     if job is None:
         abort(400)
-    name = request.form.get('name') or job.name
-    description = request.form.get('description') or job.description
-    if name is None or Job.query.filter_by(name=name).first() is not None:
-        abort(400)    # missing arguments or existing one
-    job.name = name
+
+    if request.method == 'GET':    
+        return jsonify({'element': job.to_json()})
+    
+    name = request.form.get('name')
+    description = request.form.get('description', job.description)
+
+    new_job = False
+    existing_job = Job.query.filter_by(name=name).first()
+    if (existing_job is None) or (existing_job.id == job.id and not (name == job.name)): new_job =True
+      
+    if new_job and name: job.name = name
     job.description = description
     db.session.add(job)
     db.session.commit()
-    return jsonify({'element': job.to_json_min()})
-
-
-# @app.route('/api/job/<string:name>')
-# def get_job(name):
-#     jobs = Job.query.filter_by(name=name).all()
-#     return jsonify({'elements': [element.to_json() for element in jobs]})
+    return jsonify({'element': job.to_json()})
 
 
 @app.route('/api/jobs')

@@ -3,6 +3,7 @@ import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_httpauth import HTTPBasicAuth
+from config import basedir
 
 
 # initialization
@@ -21,6 +22,3 @@ from app.upload import views
 from app.user.models import User
 from app.job.models import Job
 from app.upload.models import Upload, ProfilePicture
-
-
-

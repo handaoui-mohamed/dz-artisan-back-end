@@ -2,9 +2,17 @@
 from app import db, app
 from passlib.apps import custom_app_context as pwd_context
 from itsdangerous import (TimedJSONWebSignatureSerializer as Serializer, BadSignature, SignatureExpired)
-from app.job.models import UserJob, Job
+from app.job.models import Job
 from app.upload.models import Upload, ProfilePicture
 from config import SECRET_KEY
+
+
+UserJob = db.Table(
+    'UserJob',
+    db.Column('id', db.Integer, primary_key=True),
+    db.Column('user_id', db.Integer, db.ForeignKey('user.id')),
+    db.Column('job_id', db.Integer, db.ForeignKey('job.id'))
+)
 
 
 class User(db.Model):
@@ -61,10 +69,14 @@ class User(db.Model):
                 'latitude': self.latitude,
                 'longitude': self.longitude
             },
-            'files':  [element.to_json() for element in self.files.all()],
-            'profile_image':  [element.to_json() for element in self.profile_image.all()]
+            'files':  [element.to_json(self.username) for element in self.files.all()],
+            'profile_image':  [element.to_json(self.username) for element in self.profile_image.all()]
         }
     
+    def add_jobs(self, jobs):
+        self.jobs = jobs
+        return self
+
     def add_job(self, job):
         self.jobs.append(job)
         return self

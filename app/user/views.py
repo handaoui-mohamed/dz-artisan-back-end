@@ -2,13 +2,14 @@ from app import db, app, auth
 from app.user.models import User
 from app.job.models import Job
 from flask import abort, request, jsonify, g, send_from_directory, url_for
+from config import YEAR, DAY
 
-@app.route('/api/users', methods=['POST'])
+@app.route('/api/user', methods=['POST'])
 def new_user():
     username = request.form.get('username')
     password = request.form.get('password')
     email = request.form.get('email')
-    remember_me = request.form.get('remember_me') or False
+    remember_me = request.form.get('remember_me', False)
 
     if username is None or password is None:
         abort(400)    # missing arguments
@@ -18,13 +19,13 @@ def new_user():
     user.hash_password(password)
     db.session.add(user)
     db.session.commit()
-    duration = 24*3600 if not remember_me else 30*24*3600
+    duration = DAY if not remember_me else YEAR
     token = user.generate_auth_token(duration)
     return (jsonify({'token': token.decode('ascii'), 'user_id': user.id}), 201,
            {'Location': url_for('get_user', id=user.id, _external=True)})
 
 
-@app.route('/api/users/<int:id>')
+@app.route('/api/user/<int:id>')
 def get_user(id):
     user = User.query.get(id)
     if not user:
@@ -32,57 +33,61 @@ def get_user(id):
     return jsonify({'element':user.to_json()})
 
 
+@app.route('/api/users')
+def get_users():
+    users = User.query.all()
+    return jsonify({'elements': [element.to_json() for element in users]})
+
+
 @app.route('/api/login', methods=['POST'])
 @auth.login_required
 def get_auth_token():
-    remember_me = request.form.get('remember_me') or False
-    duration = 24*3600 if not remember_me else 30*24*3600
+    remember_me = request.form.get('remember_me', False)
+    duration = DAY if not remember_me else YEAR
     token = g.user.generate_auth_token(duration)
     return jsonify({'token': token.decode('ascii'), 'user_id': g.user.id})
 
 
-@app.route('/api/profile')
+@app.route('/api/profile', methods=['GET', 'PUT'])
 @auth.login_required
 def profile():
-    return jsonify({'element':g.user.to_json()})
+    if request.method == 'GET':
+        return jsonify({'element':g.user.to_json()})
+    
+    if request.method == 'PUT':
+        user = g.user
+        password = request.form.get('password')
+        full_name = request.form.get('full_name', user.full_name) 
+        address = request.form.get('address', user.address)
+        email = request.form.get('email', user.email)
+        phone_number = request.form.get('phone_number', user.phone_number)
+        description = request.form.get('description', user.description)
+        jobs = request.form.get('jobs', user.jobs)
+        latitude = request.form.get('latitude', user.latitude, type=float)
+        longitude = request.form.get('longitude', user.longitude, type=float)
 
-@app.route('/api/edit', methods=['PUT'])
-@auth.login_required
-def edit():
-    user = g.user
-    password = request.form.get('password')
-    full_name = request.form.get('full_name') or user.full_name
-    address = request.form.get('address') or user.address
-    email = request.form.get('email') or user.email
-    phone_number = request.form.get('phone_number') or user.phone_number
-    description = request.form.get('description') or user.description
-    job = request.form.get('job') or user.job
-    latitude = request.form.get('latitude') or user.latitude
-    longitude = request.form.get('longitude') or user.longitude
-
-    user.full_name=full_name
-    user.address=address
-    user.job=job
-    user.email=email
-    user.phone_number=phone_number
-    user.description=description
-    user.latitude=latitude
-    user.longitude=longitude
-    if password:
-        user.hash_password(password)
-    db.session.add(user)
-    db.session.commit()
-
-    return (jsonify({'element':user.to_json()}), 201,
-            {'Location': url_for('get_user', id=user.id, _external=True)})
+        if request.form.get('jobs') is not None: user.add_job(Job.query.get(job))
+        
+        user.full_name=full_name
+        user.address=address
+        user.email=email
+        user.phone_number=phone_number
+        user.description=description
+        user.latitude=latitude
+        user.longitude=longitude
+        if password: user.hash_password(password)
+        db.session.add(user)
+        db.session.commit()
+        return (jsonify({'element':user.to_json()}), 201,
+                {'Location': url_for('get_user', id=user.id, _external=True)})
 
 
 @app.route('/api/search', methods=['POST'])
 @app.route('/api/search/<int:page>', methods=['POST'])
 def search(page=1):
-    item_per_page = int(request.form.get('limit') or 10)
-    jobs = [request.form.get('job')] or JOB_TYPES
-    search_area = request.form.get('search_area') or 5
+    item_per_page = request.form.get('limit', 10, type=int)
+    jobs = request.form.get('jobs', JOB_TYPES)
+    search_area = request.form.get('search_area', 5, type=int) or 5
 
     latitude = request.form.get('latitude')
     longitude = request.form.get('longitude')
@@ -90,8 +95,8 @@ def search(page=1):
     if latitude and longitude:
         location_search = True
         location = {
-            'latitude': float(request.form.get('latitude')),
-            'longitude': float(request.form.get('longitude'))
+            'latitude': float(latitude),
+            'longitude': float(longitude)
         }
 
     users = []
@@ -101,11 +106,12 @@ def search(page=1):
                 'latitude': float(user.latitude),
                 'longitude': float(user.longitude)
             }
-            if haversine(user_location, location, search_area) and jobs_intersection(user.job, jobs):
+            if haversine(user_location, location, search_area) and jobs_intersection(user.jobs, jobs):
                 users.append(user)
         else:
-            if jobs_intersection(user.job, jobs):
+            if jobs_intersection(user.jobs, jobs):
                 users.append(user)
+    
     users = [users[i:i+item_per_page] for i in range(0, len(users), item_per_page)]
     users = users[page-1] if (page <= len(users)) else []
     return jsonify({'elements': [element.to_json() for element in users]})
@@ -139,4 +145,4 @@ def haversine(location1, location2, search_area):
 
 
 def jobs_intersection(user_job, job_list):
-        return len(set([user_job]).intersection(job_list)) > 0
+        return len(set(user_job).intersection(job_list)) > 0
