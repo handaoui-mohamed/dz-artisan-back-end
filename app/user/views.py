@@ -1,15 +1,60 @@
-from app import db, app, auth
+from app import db, app
 from app.user.models import User
 from app.job.models import Job
-from flask import abort, request, jsonify, g, send_from_directory, url_for
-from config import YEAR, DAY
+from flask import abort, request, jsonify, g, send_from_directory, url_for, make_response
+from config import YEAR, DAY, SECRET_KEY
+import jwt
+from jwt import DecodeError, ExpiredSignature
+from datetime import datetime, timedelta
+from functools import wraps
+
+# JWT AUTh process start
+def create_token(user, days=1):
+    payload = {
+        'sub': user.id,
+        'iat': datetime.utcnow(),
+        'exp': datetime.utcnow() + timedelta(days=days)
+    }
+    token = jwt.encode(payload, SECRET_KEY, algorithm='HS256')
+    return token.decode('unicode_escape')
+
+
+def parse_token(req):
+    token = req.headers.get('Authorization').split()[1]
+    return jwt.decode(token, SECRET_KEY, algorithms='HS256')
+
+
+def login_required(f):
+    @wraps(f)
+    def decorated_function(*args, **kwargs):
+        if not request.headers.get('Authorization'):
+            response = jsonify(message='Missing authorization header')
+            response.status_code = 401
+            return response
+
+        try:
+            payload = parse_token(request)
+        except DecodeError:
+            response = jsonify(message='Token is invalid')
+            response.status_code = 401
+            return response
+        except ExpiredSignature:
+            response = jsonify(message='Token has expired')
+            response.status_code = 401
+            return response
+
+        g.user_id = payload['sub']
+
+        return f(*args, **kwargs)
+    return decorated_function
+
 
 @app.route('/api/user', methods=['POST'])
 def new_user():
-    username = request.form.get('username')
-    password = request.form.get('password')
-    email = request.form.get('email')
-    remember_me = request.form.get('remember_me', False)
+    username = request.get_json().get('username')
+    password = request.get_json().get('password')
+    email = request.get_json().get('email')
+    remember_me = request.get_json().get('remember_me', False)
 
     if username is None or password is None:
         abort(400)    # missing arguments
@@ -20,7 +65,7 @@ def new_user():
     db.session.add(user)
     db.session.commit()
     duration = DAY if not remember_me else YEAR
-    token = user.generate_auth_token(duration)
+    token = create_token(user, duration)
     return (jsonify({'token': token.decode('ascii'), 'user_id': user.id}), 201,
            {'Location': url_for('get_user', id=user.id, _external=True)})
 
@@ -39,34 +84,42 @@ def get_users():
     return jsonify({'elements': [element.to_json() for element in users]})
 
 
+
 @app.route('/api/login', methods=['POST'])
-@auth.login_required
+@login_required
 def get_auth_token():
-    remember_me = request.form.get('remember_me', False)
+    form = request.get_json(force=True)
+    username = form.get('username')
+    password = form.get('password')
+    remember_me = form.get('remember_me', False)
     duration = DAY if not remember_me else YEAR
-    token = g.user.generate_auth_token(duration)
-    return jsonify({'token': token.decode('ascii'), 'user_id': g.user.id})
+    user = User.query.filter_by(username=username).first()
+    if not user or not user.verify_password(password):
+        abort(404)
+    g.user = user
+    token = create_token(g.user, duration)
+    return jsonify({'token': token.decode('ascii'), 'user': g.user.to_json()})
 
 
 @app.route('/api/profile', methods=['GET', 'PUT'])
-@auth.login_required
+@login_required
 def profile():
     if request.method == 'GET':
         return jsonify({'element':g.user.to_json()})
     
     if request.method == 'PUT':
         user = g.user
-        password = request.form.get('password')
-        full_name = request.form.get('full_name', user.full_name) 
-        address = request.form.get('address', user.address)
-        email = request.form.get('email', user.email)
-        phone_number = request.form.get('phone_number', user.phone_number)
-        description = request.form.get('description', user.description)
-        jobs = request.form.get('jobs', user.jobs)
-        latitude = request.form.get('latitude', user.latitude, type=float)
-        longitude = request.form.get('longitude', user.longitude, type=float)
+        password = request.get_json().get('password')
+        full_name = request.get_json().get('full_name', user.full_name) 
+        address = request.get_json().get('address', user.address)
+        email = request.get_json().get('email', user.email)
+        phone_number = request.get_json().get('phone_number', user.phone_number)
+        description = request.get_json().get('description', user.description)
+        jobs = request.get_json().get('jobs', user.jobs)
+        latitude = request.get_json().get('latitude', user.latitude, type=float)
+        longitude = request.get_json().get('longitude', user.longitude, type=float)
 
-        if request.form.get('jobs') is not None: user.add_job(Job.query.get(job))
+        if request.get_json().get('jobs') is not None: user.add_job(Job.query.get(job))
         
         user.full_name=full_name
         user.address=address
@@ -85,12 +138,12 @@ def profile():
 @app.route('/api/search', methods=['POST'])
 @app.route('/api/search/<int:page>', methods=['POST'])
 def search(page=1):
-    item_per_page = request.form.get('limit', 10, type=int)
-    jobs = request.form.get('jobs', JOB_TYPES)
-    search_area = request.form.get('search_area', 5, type=int) or 5
+    item_per_page = request.get_json().get('limit', 10, type=int)
+    jobs = request.get_json().get('jobs', JOB_TYPES)
+    search_area = request.get_json().get('search_area', 5, type=int) or 5
 
-    latitude = request.form.get('latitude')
-    longitude = request.form.get('longitude')
+    latitude = request.get_json().get('latitude')
+    longitude = request.get_json().get('longitude')
     location_search = False
     if latitude and longitude:
         location_search = True
@@ -116,18 +169,6 @@ def search(page=1):
     users = users[page-1] if (page <= len(users)) else []
     return jsonify({'elements': [element.to_json() for element in users]})
 
-
-@auth.verify_password
-def verify_password(username_or_token, password):
-    # first try to authenticate by token
-    user = User.verify_auth_token(username_or_token)
-    if not user:
-        # try to authenticate with username/password
-        user = User.query.filter_by(username=username_or_token).first()
-        if not user or not user.verify_password(password):
-            return False
-    g.user = user
-    return True
 
 def haversine(location1, location2, search_area):
     lat1 = location1['latitude']

@@ -2,8 +2,8 @@
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_httpauth import HTTPBasicAuth
 from config import basedir
+from flask_cors import CORS
 
 
 # initialization
@@ -11,8 +11,8 @@ app = Flask(__name__)
 app.config.from_object('config')
 # extensions
 db = SQLAlchemy(app)
-auth = HTTPBasicAuth()
 
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 # import APIs
 from app.user import views
 from app.job import views

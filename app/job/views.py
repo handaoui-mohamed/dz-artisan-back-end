@@ -8,8 +8,8 @@ from app.job.models import Job
 # new Job
 @app.route('/api/job', methods=['POST'])
 def new_job():
-    name = request.form.get('name')
-    description = request.form.get('description')
+    name = request.get_json().get('name')
+    description = request.get_json().get('description')
 
     if name is None or Job.query.filter_by(name=name).first() is not None:
         abort(400)    # missing arguments or existing one
@@ -29,8 +29,8 @@ def edit_job(id):
     if request.method == 'GET':    
         return jsonify({'element': job.to_json()})
     
-    name = request.form.get('name')
-    description = request.form.get('description', job.description)
+    name = request.get_json().get('name')
+    description = request.get_json().get('description', job.description)
 
     new_job = False
     existing_job = Job.query.filter_by(name=name).first()
