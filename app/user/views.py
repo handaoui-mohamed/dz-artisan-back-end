@@ -44,12 +44,12 @@ def login_required(f):
             return response
 
         g.user_id = payload['sub']
-
+        g.user = User.query.get(g.user_id)
         return f(*args, **kwargs)
     return decorated_function
 
 
-@app.route('/api/user', methods=['POST'])
+@app.route('/api/users', methods=['POST'])
 def new_user():
     username = request.get_json().get('username')
     password = request.get_json().get('password')
@@ -70,7 +70,7 @@ def new_user():
            {'Location': url_for('get_user', id=user.id, _external=True)})
 
 
-@app.route('/api/user/<int:id>')
+@app.route('/api/users/<int:id>')
 def get_user(id):
     user = User.query.get(id)
     if not user:
@@ -86,7 +86,6 @@ def get_users():
 
 
 @app.route('/api/login', methods=['POST'])
-@login_required
 def get_auth_token():
     form = request.get_json(force=True)
     username = form.get('username')
