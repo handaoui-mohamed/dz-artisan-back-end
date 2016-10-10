@@ -51,10 +51,11 @@ def login_required(f):
 
 @app.route('/api/users', methods=['POST'])
 def new_user():
-    username = request.get_json().get('username')
-    password = request.get_json().get('password')
-    email = request.get_json().get('email')
-    remember_me = request.get_json().get('remember_me', False)
+    data = request.get_json(force=True)
+    username = data.get('username')
+    password = data.get('password')
+    email = data.get('email')
+    remember_me = data.get('remember_me', False)
 
     if username is None or password is None:
         abort(400)    # missing arguments
@@ -87,10 +88,10 @@ def get_users():
 
 @app.route('/api/login', methods=['POST'])
 def get_auth_token():
-    form = request.get_json(force=True)
-    username = form.get('username')
-    password = form.get('password')
-    remember_me = form.get('remember_me', False)
+    data = request.get_json(force=True)
+    username = data.get('username')
+    password = data.get('password')
+    remember_me = data.get('remember_me', False)
     duration = DAY if not remember_me else YEAR
     user = User.query.filter_by(username=username).first()
     if not user or not user.verify_password(password):
@@ -108,17 +109,18 @@ def profile():
     
     if request.method == 'PUT':
         user = g.user
-        password = request.get_json().get('password')
-        full_name = request.get_json().get('full_name', user.full_name) 
-        address = request.get_json().get('address', user.address)
-        email = request.get_json().get('email', user.email)
-        phone_number = request.get_json().get('phone_number', user.phone_number)
-        description = request.get_json().get('description', user.description)
-        jobs = request.get_json().get('jobs', user.jobs)
-        latitude = request.get_json().get('latitude', user.latitude, type=float)
-        longitude = request.get_json().get('longitude', user.longitude, type=float)
+        data = request.get_json(force=True)
+        password = data.get('password')
+        full_name = data.get('full_name', user.full_name) 
+        address = data.get('address', user.address)
+        email = data.get('email', user.email)
+        phone_number = data.get('phone_number', user.phone_number)
+        description = data.get('description', user.description)
+        jobs = data.get('jobs', user.jobs)
+        latitude = data.get('latitude', user.latitude)
+        longitude = data.get('longitude', user.longitude)
 
-        if request.get_json().get('jobs') is not None: user.add_job(Job.query.get(job))
+        if data.get('jobs') is not None: user.add_job(Job.query.get(job))
         
         user.full_name=full_name
         user.address=address
@@ -137,12 +139,13 @@ def profile():
 @app.route('/api/search', methods=['POST'])
 @app.route('/api/search/<int:page>', methods=['POST'])
 def search(page=1):
-    item_per_page = request.get_json().get('limit', 10, type=int)
-    jobs = request.get_json().get('jobs', JOB_TYPES)
-    search_area = request.get_json().get('search_area', 5, type=int) or 5
+    data = request.get_json(force=True)
+    item_per_page = data.get('limit', 10, type=int)
+    jobs = data.get('jobs', JOB_TYPES)
+    search_area = data.get('search_area', 5, type=int) or 5
 
-    latitude = request.get_json().get('latitude')
-    longitude = request.get_json().get('longitude')
+    latitude = data.get('latitude')
+    longitude = data.get('longitude')
     location_search = False
     if latitude and longitude:
         location_search = True

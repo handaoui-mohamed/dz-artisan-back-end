@@ -6,6 +6,7 @@ from werkzeug import secure_filename
 from config import UPLOAD_FOLDER, ALLOWED_EXTENSIONS, basedir
 from app.upload.models import Upload
 from app.upload.models import ProfilePicture
+from app.user.views import login_required
 
 
 # For a given file, return whether it's an allowed type or not
@@ -15,7 +16,7 @@ def allowed_file(filename):
 
 # Route that will process the file upload
 @app.route('/api/upload', methods=['POST'])
-# @auth.login_required
+@login_required
 def upload():
     uploaded_files = request.files.getlist("file")
     user_id = g.user.id
@@ -38,7 +39,7 @@ def upload():
 
 
 @app.route('/api/uploads/<int:id>', methods=['DELETE'])
-# @auth.login_required
+@login_required
 def delete_file(id):
     file = Upload.query.get(id)
     if file and file.user_id == g.user.id:
@@ -57,7 +58,7 @@ def get_file(username, filename):
 
 # profile picture upload
 @app.route('/api/upload/profile', methods=['POST'])
-# @auth.login_required
+@login_required
 def upload_profile_image():
     file = request.files.get("profile_image")
     user_id = g.user.id
@@ -79,7 +80,7 @@ def upload_profile_image():
 
 
 @app.route('/api/uploads/profile/<int:id>', methods=['DELETE'])
-# @auth.login_required
+@login_required
 def delete_profile_image(id):
     file = ProfilePicture.query.get(id)
     if file and file.user_id == g.user.id:
