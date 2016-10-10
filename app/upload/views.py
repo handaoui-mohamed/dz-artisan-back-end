@@ -91,7 +91,8 @@ def delete_profile_image(id):
     return jsonify({'element':g.user.to_json()})
 
 
-@app.route('/api/profile/uploads/<string:username>/<string:filename>')
+@app.route('/api/uploads/profile/<string:username>/<string:filename>')
 def get_profile_image(username, filename):
     directory = os.path.join(basedir, UPLOAD_FOLDER, username, 'profile')
+    print os.path.exists(directory)
     return send_from_directory(directory, filename)
