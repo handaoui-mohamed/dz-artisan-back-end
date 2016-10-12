@@ -74,6 +74,7 @@ class User(db.Model):
         }
     
     def add_jobs(self, jobs):
+        self.jobs = []
         for job_id in jobs:
             self.jobs.append(Job.query.get(job_id))
         return self
@@ -81,11 +82,6 @@ class User(db.Model):
     def add_job(self, job):
         self.jobs.append(job)
         return self
-    
-    def remove_job(self, job):
-        self.remove(job)
-        return self
 
-    
     def __repr__(self):
         return '<User N=%s username=%s location=(%s,%s)>' % (self.id, self.username, self.latitude, self.longitude)

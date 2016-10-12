@@ -65,13 +65,17 @@ def upload_profile_image():
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
         directory = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile')
-        if not os.path.exists(directory):
+        if os.path.exists(directory):
+            old_pictures = ProfilePicture.query.all()
+            for picture in old_pictures:
+                file_path = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile', picture.name)
+                if os.path.exists(file_path):
+                    db.session.delete(picture)
+                    db.session.commit()
+                    os.remove(file_path)
+        else:
             os.makedirs(directory)
         file_path = os.path.join(directory, filename)
-        i = 0
-        while os.path.exists(file_path):
-            filename = "%s%s"%(i,filename)
-            file_path = os.path.join(directory, filename)
         file.save(file_path)
         uploaded_image = ProfilePicture(name=filename,user_id=user_id)
         db.session.add(uploaded_image)
@@ -84,10 +88,7 @@ def upload_profile_image():
 def delete_profile_image(id):
     file = ProfilePicture.query.get(id)
     if file and file.user_id == g.user.id:
-        db.session.delete(file)
-        db.session.commit()
-        file_path = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile', file.name)
-        os.remove(file_path)
+        
         return jsonify({'success': 'true'}), 200
     else:
         abort(404)
