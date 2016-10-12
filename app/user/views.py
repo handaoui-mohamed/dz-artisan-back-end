@@ -120,7 +120,7 @@ def profile():
         latitude = data.get('latitude', user.latitude)
         longitude = data.get('longitude', user.longitude)
 
-        if data.get('jobs') is not None: user.add_job(Job.query.get(job))
+        if data.get('jobs') is not None: user.add_jobs(jobs)
         
         user.full_name=full_name
         user.address=address

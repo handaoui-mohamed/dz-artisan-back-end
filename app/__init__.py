@@ -22,3 +22,12 @@ from app.upload import views
 from app.user.models import User
 from app.job.models import Job
 from app.upload.models import Upload, ProfilePicture
+
+# db.session.add(Job(name='plumber',description='this is just a plumber'))
+# db.session.add(Job(name='plumber1',description='this is just a plumber'))
+# db.session.add(Job(name='plumber2',description='this is just a plumber'))
+# db.session.add(Job(name='plumber3',description='this is just a plumber'))
+# db.session.add(Job(name='plumber4',description='this is just a plumber'))
+# db.session.add(Job(name='plumber5',description='this is just a plumber'))
+# db.session.add(Job(name='plumber6',description='this is just a plumber'))
+# db.session.commit()

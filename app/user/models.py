@@ -64,7 +64,7 @@ class User(db.Model):
             'email': self.email,
             'phone_number': self.phone_number,
             'description': self.description,
-            'job': [element.to_json() for element in self.jobs],
+            'jobs': [element.to_json() for element in self.jobs],
             'position': {
                 'latitude': self.latitude,
                 'longitude': self.longitude
@@ -74,7 +74,8 @@ class User(db.Model):
         }
     
     def add_jobs(self, jobs):
-        self.jobs = jobs
+        for job_id in jobs:
+            self.jobs.append(Job.query.get(job_id))
         return self
 
     def add_job(self, job):

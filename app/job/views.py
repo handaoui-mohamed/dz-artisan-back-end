@@ -6,22 +6,26 @@ from app.job.models import Job
 # add auth required and verify admin role
 
 # new Job
-@app.route('/api/job', methods=['POST'])
+@app.route('/api/jobs', methods=['GET', 'POST'])
 def new_job():
-    data = get_json(force=True)
-    name = data.get('name')
-    description = data.get('description')
+    if request.method == 'GET':
+        print 'here'
+        return jsonify({'elements': [element.to_json() for element in Job.query.all()]})
+    else:
+        data = request.get_json(force=True)
+        name = data.get('name')
+        description = data.get('description')
 
-    if name is None or Job.query.filter_by(name=name).first() is not None:
-        abort(400)    # missing arguments or existing one
+        if name is None or Job.query.filter_by(name=name).first() is not None:
+            abort(400)    # missing arguments or existing one
 
-    job = Job(name=name, description=description)
-    db.session.add(job)
-    db.session.commit()
-    return jsonify({'element': job.to_json()}), 201
+        job = Job(name=name, description=description)
+        db.session.add(job)
+        db.session.commit()
+        return jsonify({'element': job.to_json()}), 201
 
 
-@app.route('/api/job/<int:id>', methods=['GET', 'PUT'])
+@app.route('/api/jobs/<int:id>', methods=['GET', 'PUT'])
 def edit_job(id):
     job = Job.query.get(id)
     if job is None:
@@ -43,8 +47,3 @@ def edit_job(id):
     db.session.add(job)
     db.session.commit()
     return jsonify({'element': job.to_json()})
-
-
-@app.route('/api/jobs')
-def get_jobs():
-    return jsonify({'elements': [element.to_json() for element in Job.query.all()]})

@@ -18,23 +18,22 @@ def allowed_file(filename):
 @app.route('/api/upload', methods=['POST'])
 @login_required
 def upload():
-    uploaded_files = request.files.getlist("file")
+    file = request.files.get("file")
     user_id = g.user.id
-    for file in uploaded_files:
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            directory = os.path.join(UPLOAD_FOLDER, g.user.username)
-            if not os.path.exists(directory):
-                os.makedirs(directory)
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        directory = os.path.join(UPLOAD_FOLDER, g.user.username)
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+        file_path = os.path.join(directory, filename)
+        i = 0
+        while os.path.exists(file_path):
+            filename = "%s%s"%(i,filename)
             file_path = os.path.join(directory, filename)
-            i = 0
-            while os.path.exists(file_path):
-                filename = "%s%s"%(i,filename)
-                file_path = os.path.join(directory, filename)
-            file.save(file_path)
-            uploaded_file = Upload(name=filename,user_id=user_id)
-            db.session.add(uploaded_file)
-            db.session.commit()
+        file.save(file_path)
+        uploaded_file = Upload(name=filename,user_id=user_id)
+        db.session.add(uploaded_file)
+        db.session.commit()
     return jsonify({'element':g.user.to_json()})
 
 
@@ -47,8 +46,9 @@ def delete_file(id):
         db.session.commit()
         file_path = os.path.join(UPLOAD_FOLDER, g.user.username, file.name)
         os.remove(file_path)
-    return jsonify({'element':g.user.to_json()})
-
+        return jsonify({'success': 'true'}), 200
+    else:
+        abort(404)
 
 @app.route('/api/uploads/<string:username>/<string:filename>')
 def get_file(username, filename):
@@ -88,7 +88,9 @@ def delete_profile_image(id):
         db.session.commit()
         file_path = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile', file.name)
         os.remove(file_path)
-    return jsonify({'element':g.user.to_json()})
+        return jsonify({'success': 'true'}), 200
+    else:
+        abort(404)
 
 
 @app.route('/api/uploads/profile/<string:username>/<string:filename>')
