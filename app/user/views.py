@@ -140,13 +140,14 @@ def profile():
 @app.route('/api/search/<int:page>', methods=['POST'])
 def search(page=1):
     data = request.get_json(force=True)
-    item_per_page = data.get('limit', 10, type=int)
-    jobs = data.get('jobs', JOB_TYPES)
-    search_area = data.get('search_area', 5, type=int) or 5
+    item_per_page = data.get('limit', 10)
+    jobs = data.get('jobs', Job.query.all())
+    search_area = data.get('search_area', 5)
 
     latitude = data.get('latitude')
     longitude = data.get('longitude')
     location_search = False
+    print 'here'
     if latitude and longitude:
         location_search = True
         location = {
@@ -168,8 +169,9 @@ def search(page=1):
                 users.append(user)
     
     users = [users[i:i+item_per_page] for i in range(0, len(users), item_per_page)]
+    total_pages = len(users)
     users = users[page-1] if (page <= len(users)) else []
-    return jsonify({'elements': [element.to_json() for element in users]})
+    return jsonify({'total_pages': total_pages,'elements': [element.to_json() for element in users]})
 
 
 def haversine(location1, location2, search_area):
@@ -187,5 +189,11 @@ def haversine(location1, location2, search_area):
     return km >= search_area
 
 
-def jobs_intersection(user_job, job_list):
-        return len(set(user_job).intersection(job_list)) > 0
+def jobs_intersection(user_jobs, jobs_list):
+    if len(jobs_list) == 0 and len(user_jobs) > 0: return True
+    # if len(jobs_list) == 0: return True
+    for user_job in user_jobs:
+        for job in jobs_list:
+            if job.name == user_job.name:
+                return True
+    return False

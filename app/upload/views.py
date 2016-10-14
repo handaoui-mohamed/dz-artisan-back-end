@@ -71,7 +71,7 @@ def upload_profile_image():
                 file_path = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile', picture.name)
                 if os.path.exists(file_path):
                     db.session.delete(picture)
-                    db.session.commit()
+                    db.session.commit() 
                     os.remove(file_path)
         else:
             os.makedirs(directory)
