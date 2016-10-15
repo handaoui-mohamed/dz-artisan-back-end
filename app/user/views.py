@@ -144,20 +144,15 @@ def search(page=1):
     jobs = data.get('jobs', Job.query.all())
     search_area = data.get('search_area', 5)
 
-    latitude = data.get('latitude')
-    longitude = data.get('longitude')
+    location = data.get('location')
+    print location
     location_search = False
-    print 'here'
-    if latitude and longitude:
+    if location and location['latitude'] and location['longitude']:
         location_search = True
-        location = {
-            'latitude': float(latitude),
-            'longitude': float(longitude)
-        }
 
     users = []
     for user in User.query.all():
-        if location_search:
+        if location_search and user.latitude and user.longitude:
             user_location = {
                 'latitude': float(user.latitude),
                 'longitude': float(user.longitude)
@@ -194,6 +189,6 @@ def jobs_intersection(user_jobs, jobs_list):
     # if len(jobs_list) == 0: return True
     for user_job in user_jobs:
         for job in jobs_list:
-            if job.name == user_job.name:
+            if job['name'] == user_job.name:
                 return True
     return False
