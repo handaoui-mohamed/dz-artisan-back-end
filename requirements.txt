@@ -5,3 +5,4 @@ sqlalchemy-migrate==0.10.0
 Flask_cors==3.0.2
 Flask_jwt==0.3.2
 gunicorn==19.6.0
+psycopg2==2.6.2
