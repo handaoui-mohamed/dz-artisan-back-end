@@ -68,12 +68,19 @@ def new_user():
     duration = DAY if not remember_me else YEAR
     token = create_token(user, duration)
     return (jsonify({'token': token.decode('ascii'), 'user_id': user.id}), 201,
-           {'Location': url_for('get_user', id=user.id, _external=True)})
+           {'Location': url_for('get_users', id=user.id, _external=True)})
 
 
 @app.route('/api/users/<int:id>')
-def get_user(id):
+def get_user_by_id(id):
     user = User.query.get(id)
+    if not user:
+        abort(400)
+    return jsonify({'element':user.to_json()})
+
+@app.route('/api/users/<string:username>')
+def get_user_by_username(username):
+    user = User.query.filter_by(username=username).first();
     if not user:
         abort(400)
     return jsonify({'element':user.to_json()})
@@ -133,7 +140,7 @@ def profile():
         db.session.add(user)
         db.session.commit()
         return (jsonify({'element':user.to_json()}), 201,
-                {'Location': url_for('get_user', id=user.id, _external=True)})
+                {'Location': url_for('get_users', id=user.id, _external=True)})
 
 
 @app.route('/api/search', methods=['POST'])

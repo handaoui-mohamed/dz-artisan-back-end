@@ -4,3 +4,4 @@ passlib==1.6.5
 sqlalchemy-migrate==0.10.0
 Flask_cors==3.0.2
 Flask_jwt==0.3.2
+gunicors==19.6.0
