@@ -18,7 +18,7 @@ UserJob = db.Table(
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(32), index=True, unique=True)
-    password_hash = db.Column(db.String(64))
+    password_hash = db.Column(db.String)
     full_name = db.Column(db.String(100))
     email = db.Column(db.String(60))
     address = db.Column(db.String(100))
