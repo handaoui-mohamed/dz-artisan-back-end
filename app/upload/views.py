@@ -40,15 +40,14 @@ def upload():
 @app.route('/api/uploads/<int:id>', methods=['DELETE'])
 @login_required
 def delete_file(id):
-    file = Upload.query.get(id)
+    file = g.user.files.get(id)
     if file and file.user_id == g.user.id:
         db.session.delete(file)
         db.session.commit()
         file_path = os.path.join(UPLOAD_FOLDER, g.user.username, file.name)
         os.remove(file_path)
         return jsonify({'success': 'true'}), 200
-    else:
-        abort(404)
+    abort(404)
 
 @app.route('/api/uploads/<string:username>/<string:filename>')
 def get_file(username, filename):
@@ -66,12 +65,12 @@ def upload_profile_image():
         filename = secure_filename(file.filename)
         directory = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile')
         if os.path.exists(directory):
-            old_pictures = ProfilePicture.query.all()
+            old_pictures = g.user.profile_image.all()
             for picture in old_pictures:
                 file_path = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile', picture.name)
+                db.session.delete(picture)
+                db.session.commit() 
                 if os.path.exists(file_path):
-                    db.session.delete(picture)
-                    db.session.commit() 
                     os.remove(file_path)
         else:
             os.makedirs(directory)
@@ -86,12 +85,10 @@ def upload_profile_image():
 @app.route('/api/uploads/profile/<int:id>', methods=['DELETE'])
 @login_required
 def delete_profile_image(id):
-    file = ProfilePicture.query.get(id)
+    file = g.user.profile_image.get(id)
     if file and file.user_id == g.user.id:
-        
         return jsonify({'success': 'true'}), 200
-    else:
-        abort(404)
+    abort(404)
 
 
 @app.route('/api/uploads/profile/<string:username>/<string:filename>')

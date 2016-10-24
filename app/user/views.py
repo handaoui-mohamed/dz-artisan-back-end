@@ -61,7 +61,7 @@ def new_user():
         abort(400)    # missing arguments
     if User.query.filter_by(username=username).first() is not None:
         abort(400)    # existing user
-    user = User(username=username, email=email)
+    user = User(username=username.lower(), email=email.lower())
     user.hash_password(password)
     db.session.add(user)
     db.session.commit()
@@ -118,7 +118,7 @@ def profile():
         user = g.user
         data = request.get_json(force=True)
         password = data.get('password')
-        full_name = data.get('full_name', user.full_name) 
+        full_name = data.get('full_name', user.full_name)
         address = data.get('address', user.address)
         email = data.get('email', user.email)
         phone_number = data.get('phone_number', user.phone_number)
@@ -129,9 +129,9 @@ def profile():
 
         if data.get('jobs') is not None: user.add_jobs(jobs)
         
-        user.full_name=full_name
-        user.address=address
-        user.email=email
+        if full_name is not None : user.full_name=full_name.lower()
+        if address is not None: user.address=address.lower()
+        if email is not None: user.email=email.lower()
         user.phone_number=phone_number
         user.description=description
         user.latitude=latitude
@@ -147,7 +147,7 @@ def profile():
 @app.route('/api/search/<int:page>', methods=['POST'])
 def search(page=1):
     data = request.get_json(force=True)
-    item_per_page = data.get('limit', 10)
+    item_per_page = data.get('limit', 6)
     jobs = data.get('jobs', Job.query.all())
     search_area = data.get('search_area', 5)
 
@@ -193,9 +193,9 @@ def haversine(location1, location2, search_area):
 
 def jobs_intersection(user_jobs, jobs_list):
     if len(jobs_list) == 0 and len(user_jobs) > 0: return True
-    # if len(jobs_list) == 0: return True
-    for user_job in user_jobs:
-        for job in jobs_list:
-            if job['name'] == user_job.name:
-                return True
-    return False
+    if len(job_list) != len(user_jobs): return False
+    for job in jobs_list:
+        for user_job in user_jobs:
+            if job['name'] != user_job.name:
+                return False
+    return True
