@@ -21,8 +21,8 @@ class User(db.Model):
     password_hash = db.Column(db.String)
     full_name = db.Column(db.String(100))
     email = db.Column(db.String(60))
-    address = db.Column(db.String(100))
-    phone_number = db.Column(db.String(20))
+    address = db.Column(db.String(200))
+    phone_number = db.Column(db.String(14))
     description = db.Column(db.Text)
     jobs = db.relationship('Job', secondary=UserJob, backref='user')
     # google map lat/lgt

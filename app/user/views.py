@@ -1,5 +1,6 @@
 from app import db, app
 from app.user.models import User
+from app.user.forms import UserForm
 from app.job.models import Job
 from flask import abort, request, jsonify, g, send_from_directory, url_for, make_response
 from config import YEAR, DAY, SECRET_KEY
@@ -7,6 +8,7 @@ import jwt
 from jwt import DecodeError, ExpiredSignature
 from datetime import datetime, timedelta
 from functools import wraps
+from werkzeug.datastructures import MultiDict
 
 # JWT AUTh process start
 def create_token(user, days=1):
@@ -52,6 +54,12 @@ def login_required(f):
 @app.route('/api/users', methods=['POST'])
 def new_user():
     data = request.get_json(force=True)
+    form = UserForm(MultiDict(mapping=data))
+    print form.validate()
+    for fieldName, errorMessages in form.errors.iteritems():
+        print fieldName
+        for err in errorMessages:
+            print err
     username = data.get('username')
     password = data.get('password')
     email = data.get('email')
