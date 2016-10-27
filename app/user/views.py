@@ -159,7 +159,6 @@ def search(page=1):
     search_area = data.get('search_area', 5)
 
     location = data.get('location')
-    print location
     location_search = False
     if location and location['latitude'] and location['longitude']:
         location_search = True
@@ -199,10 +198,13 @@ def haversine(location1, location2, search_area):
 
 
 def jobs_intersection(user_jobs, jobs_list):
+    if len(user_jobs) == 0 or len(jobs_list) > len(user_jobs): return False
     if len(jobs_list) == 0 and len(user_jobs) > 0: return True
-    if len(jobs_list) != len(user_jobs): return False
+    # if len(jobs_list) > len(user_jobs): return False
     for job in jobs_list:
+        exist = False
         for user_job in user_jobs:
-            if job['name'] != user_job.name:
-                return False
+            if not exist and job['name'] == user_job.name:
+                exist = True
+        if not exist: return False
     return True

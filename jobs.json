@@ -1,0 +1,45 @@
+[{
+  "description": " (également appelé installateur sanitaire) est chargé de la réalisation ou de la réparation des installations de plomberie",
+  "id": 1,
+  "name": "Plombier"
+},
+{
+  "description": "Le maçon est un professionnel du bâtiment qui pratique la maçonnerie",
+  "id": 2,
+  "name": "Maçon"
+},
+{
+  "description": "nom donné au métier qu'exercent les hommes ou femmes de l'art en matière d'électricité",
+  "id": 3,
+  "name": "Électricien"
+},
+{
+  "description": "Un plâtrier ou plafonneur est un ouvrier spécialisé dans l'utilisation du plâtre",
+  "id": 4,
+  "name": "Plâtrier"
+},
+{
+  "description": "Ouvrier ou artisan qui peint des surfaces, des murs, des objets",
+  "id": 5,
+  "name": "Peintre"
+},
+{
+  "description": "Le canalisateur installe des canalisations pour distribuer l'eau potable, évacuer les eaux usées et transporter le gaz",
+  "id": 6,
+  "name": "Canalisateur"
+},
+{
+  "description": "Un couvreur est un professionnel du bâtiment qui pose sur les toits un revêtement étanche constituant la couverture, qui l'entretient et la répare",
+  "id": 7,
+  "name": "Couvreur"
+},
+{
+  "description": "Le menuisier est un professionnel qui travaille traditionnellement le bois",
+  "id": 8,
+  "name": "Menuisier"
+},
+{
+  "description": "Personne qui fournit des tissus d'ameublement, qui recouvre des sièges",
+  "id": 9,
+  "name": "Tapissier"
+}]
