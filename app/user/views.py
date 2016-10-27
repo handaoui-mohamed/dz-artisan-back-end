@@ -55,42 +55,38 @@ def login_required(f):
 def new_user():
     data = request.get_json(force=True)
     form = UserForm(MultiDict(mapping=data))
-    print form.validate()
-    for fieldName, errorMessages in form.errors.iteritems():
-        print fieldName
-        for err in errorMessages:
-            print err
-    username = data.get('username')
-    password = data.get('password')
-    email = data.get('email')
-    remember_me = data.get('remember_me', False)
-
-    if username is None or password is None:
-        abort(400)    # missing arguments
-    if User.query.filter_by(username=username).first() is not None:
-        abort(400)    # existing user
-    user = User(username=username.lower(), email=email.lower())
-    user.hash_password(password)
-    db.session.add(user)
-    db.session.commit()
-    duration = DAY if not remember_me else YEAR
-    token = create_token(user, duration)
-    return (jsonify({'token': token.decode('ascii'), 'user_id': user.id}), 201,
-           {'Location': url_for('get_users', id=user.id, _external=True)})
+    if form.validate():
+        for fieldName, errorMessages in form.errors.iteritems():
+            print fieldName
+            for err in errorMessages:
+                print err
+        username = data.get('username')
+        password = data.get('password')
+        email = data.get('email')
+        remember_me = data.get('remember_me', False)
+        user = User(username=username.lower(), email=email.lower())
+        user.hash_password(password)
+        db.session.add(user)
+        db.session.commit()
+        duration = DAY if not remember_me else YEAR
+        token = create_token(user, duration)
+        return (jsonify({'token': token.decode('ascii'), 'user_id': user.id}), 201,
+               {'Location': url_for('get_users', id=user.id, _external=True)})
+    return jsonify({"form_errors": form.errors}), 400
 
 
 @app.route('/api/users/<int:id>')
 def get_user_by_id(id):
     user = User.query.get(id)
     if not user:
-        abort(400)
+        abort(404)
     return jsonify({'element':user.to_json()})
 
 @app.route('/api/users/<string:username>')
 def get_user_by_username(username):
     user = User.query.filter_by(username=username).first();
     if not user:
-        abort(400)
+        abort(404)
     return jsonify({'element':user.to_json()})
 
 
@@ -121,34 +117,37 @@ def get_auth_token():
 def profile():
     if request.method == 'GET':
         return jsonify({'element':g.user.to_json()})
-    
+
     if request.method == 'PUT':
         user = g.user
         data = request.get_json(force=True)
-        password = data.get('password')
-        full_name = data.get('full_name', user.full_name)
-        address = data.get('address', user.address)
-        email = data.get('email', user.email)
-        phone_number = data.get('phone_number', user.phone_number)
-        description = data.get('description', user.description)
-        jobs = data.get('jobs', user.jobs)
-        latitude = data.get('latitude', user.latitude)
-        longitude = data.get('longitude', user.longitude)
+        form = UserForm(MultiDict(mapping=data))
+        if form.validate():
+            password = data.get('password')
+            full_name = data.get('full_name', user.full_name)
+            address = data.get('address', user.address)
+            email = data.get('email', user.email)
+            phone_number = data.get('phone_number', user.phone_number)
+            description = data.get('description', user.description)
+            jobs = data.get('jobs', user.jobs)
+            latitude = data.get('latitude', user.latitude)
+            longitude = data.get('longitude', user.longitude)
 
-        if data.get('jobs') is not None: user.add_jobs(jobs)
-        
-        if full_name is not None : user.full_name=full_name.lower()
-        if address is not None: user.address=address.lower()
-        if email is not None: user.email=email.lower()
-        user.phone_number=phone_number
-        user.description=description
-        user.latitude=latitude
-        user.longitude=longitude
-        if password: user.hash_password(password)
-        db.session.add(user)
-        db.session.commit()
-        return (jsonify({'element':user.to_json()}), 201,
-                {'Location': url_for('get_users', id=user.id, _external=True)})
+            if data.get('jobs') is not None: user.add_jobs(jobs)
+
+            if full_name is not None : user.full_name=full_name.lower()
+            if address is not None: user.address=address.lower()
+            if email is not None: user.email=email.lower()
+            user.phone_number=phone_number
+            user.description=description
+            user.latitude=latitude
+            user.longitude=longitude
+            if password: user.hash_password(password)
+            db.session.add(user)
+            db.session.commit()
+            return (jsonify({'element':user.to_json()}), 201,
+                    {'Location': url_for('get_users', id=user.id, _external=True)})
+        return jsonify({"form_errors": form.errors}), 400
 
 
 @app.route('/api/search', methods=['POST'])
@@ -177,7 +176,7 @@ def search(page=1):
         else:
             if jobs_intersection(user.jobs, jobs):
                 users.append(user)
-    
+
     users = [users[i:i+item_per_page] for i in range(0, len(users), item_per_page)]
     total_pages = len(users)
     users = users[page-1] if (page <= len(users)) else []
@@ -190,18 +189,18 @@ def haversine(location1, location2, search_area):
     lat2 = location2['latitude']
     lon2 = location2['longitude']
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-    # haversine formula 
-    dlon = lon2 - lon1 
-    dlat = lat2 - lat1 
+    # haversine formula
+    dlon = lon2 - lon1
+    dlat = lat2 - lat1
     a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-    c = 2 * asin(sqrt(a)) 
+    c = 2 * asin(sqrt(a))
     km = 6367 * c
     return km >= search_area
 
 
 def jobs_intersection(user_jobs, jobs_list):
     if len(jobs_list) == 0 and len(user_jobs) > 0: return True
-    if len(job_list) != len(user_jobs): return False
+    if len(jobs_list) != len(user_jobs): return False
     for job in jobs_list:
         for user_job in user_jobs:
             if job['name'] != user_job.name:
