@@ -1,6 +1,6 @@
 from app import db, app
 from app.user.models import User
-from app.user.forms import UserForm
+from app.user.forms import RegistrationForm, UpdateForm
 from app.job.models import Job
 from flask import abort, request, jsonify, g, send_from_directory, url_for, make_response
 from config import YEAR, DAY, SECRET_KEY
@@ -54,7 +54,7 @@ def login_required(f):
 @app.route('/api/users', methods=['POST'])
 def new_user():
     data = request.get_json(force=True)
-    form = UserForm(MultiDict(mapping=data))
+    form = RegistrationForm(MultiDict(mapping=data))
     if form.validate():
         for fieldName, errorMessages in form.errors.iteritems():
             print fieldName
@@ -121,7 +121,7 @@ def profile():
     if request.method == 'PUT':
         user = g.user
         data = request.get_json(force=True)
-        form = UserForm(MultiDict(mapping=data))
+        form = UpdateForm(MultiDict(mapping=data))
         if form.validate():
             password = data.get('password')
             full_name = data.get('full_name', user.full_name)

@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired, Length
 from app.user.models import User
 
 
-class UserForm(FlaskForm):
+class RegistrationForm(FlaskForm):
     username = StringField('username',validators=[
         DataRequired('Le nom d\'utilisateur est nécessaire'),
         Length(min=1, max=32, message="Le nom d\'utilisateur doit être > 1 et < 32 caractères")
@@ -44,3 +44,20 @@ class UserForm(FlaskForm):
             self.username.errors.append("Ce nom d'utilisteur existe déja, veuillez choisir un autre!")
             return False
         return True
+
+
+class UpdateForm(FlaskForm):
+    address = StringField('address', validators=[
+        Length(max=200, message="L\'addresse doit être < 200 caractères")
+    ])
+    full_name = StringField('full_name', validators=[
+        Length(max=100, message="Le nom et prénom doivent être < 100 caractères")
+    ])
+    phone_number = StringField('phone_number', validators=[
+        Length(max=14, message="Le numéro téléphone doit être < 14 numéro")
+    ])
+    description = StringField('description', validators=[
+        Length(max=1000, message="La description doit être < 1000 caractères")
+    ])
+    latitude = FloatField('latitude')
+    longitude = FloatField('longitude')
