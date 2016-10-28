@@ -19,20 +19,6 @@ class RegistrationForm(FlaskForm):
         Length(min=8, message="Le nom mot de passe doit être > 8 caractères"),
         DataRequired('Le mot de passe est nécessaire')
     ])
-    address = StringField('address', validators=[
-        Length(max=200, message="L\'addresse doit être < 200 caractères")
-    ])
-    full_name = StringField('full_name', validators=[
-        Length(max=100, message="Le nom et prénom doivent être < 100 caractères")
-    ])
-    phone_number = StringField('phone_number', validators=[
-        Length(max=14, message="Le numéro téléphone doit être < 14 numéro")
-    ])
-    description = StringField('description', validators=[
-        Length(max=1000, message="La description doit être < 1000 caractères")
-    ])
-    latitude = FloatField('latitude')
-    longitude = FloatField('longitude')
 
 
     def validate(self):
@@ -57,7 +43,7 @@ class UpdateForm(FlaskForm):
         Length(max=14, message="Le numéro téléphone doit être < 14 numéro")
     ])
     description = StringField('description', validators=[
-        Length(max=1000, message="La description doit être < 1000 caractères")
+        Length(max=10000, message="La description doit être < 10000 caractères")
     ])
     latitude = FloatField('latitude')
     longitude = FloatField('longitude')

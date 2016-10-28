@@ -1,0 +1,4744 @@
+[
+	{
+		"id": 0,
+		"position":{
+			"lat": 27.9716342 ,
+			"lng": -0.18696439999996528
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Adrar",
+		"wilayaID":  1, "wilaya": "ADRAR",
+		"adresse": "Cite Aissat Idir Adrar",
+		"tel": "TEL/FAX: 049.96.7632/FAX: 49.9638.15",
+		"fax": "TEL/FAX: 049.96.7632/FAX: 49.9638.15"
+	},
+	{
+		"id": 1,
+		"position":{
+			"lat": 29.2609217 ,
+			"lng": 0.2385386999999355
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Timimoun",
+		"wilayaID":  1, "wilaya": "ADRAR",
+		"adresse": "Cite 200 Logement El Djadido",
+		"tel": "TEL/FAX: 040. 87.21.00",
+		"fax": "TEL/FAX: 040. 87.21.00"
+	},
+	{
+		"id": 2,
+		"position":{
+			"lat": 27.9716342 ,
+			"lng": -0.18696439999996528
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "Adrar",
+		"wilayaID":  1, "wilaya": "ADRAR",
+		"adresse": "Rue Palestine BP 789 Adrar",
+		"tel": "TEL/FAX: 049.96.01.26/ FAX:049.96.74.35",
+		"fax": "TEL/FAX: 049.96.01.26/ FAX:049.96.74.35"
+	},
+	{
+		"id": 3,
+		"position":{
+			"lat": 27.9716342 ,
+			"lng": -0.18696439999996528
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "Adrar",
+		"wilayaID":  1, "wilaya": "ADRAR",
+		"adresse": "Cite 300 Lgt Tillilem Adrar",
+		"tel": "TEL/FAX: 049.96.23.13/ FAX :049.96.23.15",
+		"fax": "TEL/FAX: 049.96.23.13/ FAX :049.96.23.15"
+	},
+	{
+		"id": 4,
+		"position":{
+			"lat": 36.147424 ,
+			"lng": 1.3083685000000287
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "Chlef",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Hai El Nasr Zone 11 Chlef",
+		"tel": "TEL/FAX: 027.79.05.01",
+		"fax": "TEL/FAX: 027.79.05.01"
+	},
+	{
+		"id": 5,
+		"position":{
+			"lat": 36.147424 ,
+			"lng": 1.3083685000000287
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "Chlef",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Hai El Nasr Zone 09 Chlef",
+		"tel": "TEL/FAX: 027.77.95.92/ FAX:027.77.17.53",
+		"fax": "TEL/FAX: 027.77.95.92/ FAX:027.77.17.53"
+	},
+	{
+		"id": 6,
+		"position":{
+			"lat": 36.147424 ,
+			"lng": 1.3083685000000287
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Chlef",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Zone 09 Radar Chlef",
+		"tel": "TEL/FAX:TEL/FAX ; 027.79.09.13",
+		"fax": "TEL/FAX:TEL/FAX ; 027.79.09.13"
+	},
+	{
+		"id": 7,
+		"position":{
+			"lat": 36.5049038 ,
+			"lng": 1.3180042000000185
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Tenes",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Route de Mostaganem Tenes Chlef",
+		"tel": "TEL/FAX: 027.76.66.04",
+		"fax": "TEL/FAX: 027.76.66.04"
+	},
+	{
+		"id": 8,
+		"position":{
+			"lat": 36.1589988 ,
+			"lng": 1.2409798999999566
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Chettia",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Zone D3 BP 04 Chettia Chlef",
+		"tel": "TEL/FAX: 027.7330.66",
+		"fax": "TEL/FAX: 027.7330.66"
+	},
+	{
+		"id": 9,
+		"position":{
+			"lat": 36.1824023 ,
+			"lng": 1.5222241000000167
+		},
+		"denomination": "CPPEH MOTEUR",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes moteurs",
+		"commune": "Oued El Fedda",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Hai Sakassik Oued El Fadda Chlef",
+		"tel": "TEL/FAX: 040.67.27.97",
+		"fax": "TEL/FAX: 040.67.27.97"
+	},
+	{
+		"id": 10,
+		"position":{
+			"lat": 36.1589988 ,
+			"lng": 1.2409798999999566
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "Chettia",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Nouvele Ville Chettia",
+		"tel": "TEL/FAX: 027.73.60.40/FAX: 027.73.62.49",
+		"fax": "TEL/FAX: 027.73.60.40/FAX: 027.73.62.49"
+	},
+	{
+		"id": 11,
+		"position":{
+			"lat": 33.7972551 ,
+			"lng": 2.869406499999968
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "Laghouat",
+		"wilayaID":  2, "wilaya": "LAGHOUAT",
+		"adresse": "Cite 05 Juillet M'kam Laghouat",
+		"tel": "TEL/FAX: 029.93.45.80/FAX : 029.93.35.45",
+		"fax": "TEL/FAX: 029.93.45.80/FAX : 029.93.35.45"
+	},
+	{
+		"id": 12,
+		"position":{
+			"lat": 33.7972551 ,
+			"lng": 2.869406499999968
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Laghouat",
+		"wilayaID":  2, "wilaya": "LAGHOUAT",
+		"adresse": "Rue Emir Khaled Laghouat",
+		"tel": "TEL/FAX: 029.93.2030/FAX .029.92.04.13",
+		"fax": "TEL/FAX: 029.93.2030/FAX .029.92.04.13"
+	},
+	{
+		"id": 13,
+		"position":{
+			"lat": 33.7972551 ,
+			"lng": 2.869406499999968
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "Laghouat",
+		"wilayaID":  2, "wilaya": "LAGHOUAT",
+		"adresse": "Cite 05 Juillet Laghouat",
+		"tel": "TEL/FAX:TEL:029.93.20.53/ FAX : 029.93.10.51",
+		"fax": "TEL/FAX:TEL:029.93.20.53/ FAX : 029.93.10.51"
+	},
+	{
+		"id": 14,
+		"position":{
+			"lat": 36.0189518 ,
+			"lng": 6.556988199999978
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN M'Iila",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "Cite Soualhia Ain El Beida",
+		"tel": "TEL/FAX: 030.34.34.68/FAX:030.34.48.94",
+		"fax": "TEL/FAX: 030.34.34.68/FAX:030.34.48.94"
+	},
+	{
+		"id": 15,
+		"position":{
+			"lat": 35.873056 ,
+			"lng": 7.119786699999963
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "OUM EL BOUAGHI",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "BP 342 Oum El Bouaghi",
+		"tel": "TEL/FAX: 032.42.52.85/FAX:032.42.11.71",
+		"fax": "TEL/FAX: 032.42.52.85/FAX:032.42.11.71"
+	},
+	{
+		"id": 16,
+		"position":{
+			"lat": 35.873056 ,
+			"lng": 7.119786699999963
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "OUM EL BOUAGHI",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "BP 506 Oum El Bouaghi",
+		"tel": "TEL/FAX: 032.42.21.61/FAX:032.42.59.01",
+		"fax": "TEL/FAX: 032.42.21.61/FAX:032.42.59.01"
+	},
+	{
+		"id": 17,
+		"position":{
+			"lat": 35.873056 ,
+			"lng": 7.119786699999963
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "OUM EL BOUAGHI",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "Cite Herkat El Malki BP 110 Oum El Bouaghi",
+		"tel": "TEL/FAX: 032.42.15.94/FAX:032.42.15.85",
+		"fax": "TEL/FAX: 032.42.15.94/FAX:032.42.15.85"
+	},
+	{
+		"id": 18,
+		"position":{
+			"lat": 35.7981327 ,
+			"lng": 7.392173400000047
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN El Beida",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "Cite El Azzabi Ain El Beida",
+		"tel": "TEL/FAX: 032.49.12.02/FAX:032.48.76.05",
+		"fax": "TEL/FAX: 032.49.12.02/FAX:032.48.76.05"
+	},
+	{
+		"id": 19,
+		"position":{
+			"lat": 35.7981327 ,
+			"lng": 7.392173400000047
+		},
+		"denomination": "CPPEH MOTEURS",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes moteurs",
+		"commune": "AIN El Beida",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "Cite de Tesperance Ain El Beida",
+		"tel": "TEL/FAX: 032.49.15.04/FAX:032.49.32.07",
+		"fax": "TEL/FAX: 032.49.15.04/FAX:032.49.32.07"
+	},
+	{
+		"id": 20,
+		"position":{
+			"lat": 35.6328262 ,
+			"lng": 7.6710888999999725
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Meskiana",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "CPPEHMentaux Zaidi Azzedine",
+		"tel": "TEL/FAX: 032.56.23.59",
+		"fax": "TEL/FAX: 032.56.23.59"
+	},
+	{
+		"id": 21,
+		"position":{
+			"lat": 35.9302835 ,
+			"lng": 6.690545799999995
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN KERCHA",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "Cite Boughazi Habiha Ain Kercha",
+		"tel": "TEL/FAX: 030.34.97.78/FAX:030.34.97.86",
+		"fax": "TEL/FAX: 030.34.97.78/FAX:030.34.97.86"
+	},
+	{
+		"id": 22,
+		"position":{
+			"lat": 35.5610218 ,
+			"lng": 6.173911599999997
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "Batna",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Rue Abdessamed Abdelmadjid",
+		"tel": "TEL/FAX: 033.80.38.15/FAX:033.80.76.69",
+		"fax": "TEL/FAX: 033.80.38.15/FAX:033.80.76.69"
+	},
+	{
+		"id": 23,
+		"position":{
+			"lat": 35.5610218 ,
+			"lng": 6.173911599999997
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "Batna",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Route de Poid lourd Kachida Batina",
+		"tel": "TEL/FAX: 033.92.10.78/FAX : 033.92.12.61",
+		"fax": "TEL/FAX: 033.92.10.78/FAX : 033.92.12.61"
+	},
+	{
+		"id": 24,
+		"position":{
+			"lat": 35.55 ,
+			"lng": 6.080000000000041
+		},
+		"denomination": "CIR",
+		"typeId": "0",
+		"description": " Centre pour insuffisants respiratoires",
+		"commune": "Oued Chaaba /Hamla",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "TAOURA",
+		"tel": "TEL/FAX: 033.82.72.13",
+		"fax": "TEL/FAX: 033.82.72.13"
+	},
+	{
+		"id": 25,
+		"position":{
+			"lat": 35.3005374 ,
+			"lng": 6.3545169000000215
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "ARRIS",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Arris Batna",
+		"tel": "TEL/FAX:TEL /FAX: 033.98.18.10",
+		"fax": "TEL/FAX:TEL /FAX: 033.98.18.10"
+	},
+	{
+		"id": 26,
+		"position":{
+			"lat": 35.5610218 ,
+			"lng": 6.173911599999997
+		},
+		"denomination": "CPPEH MENTAUX 1",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Batna",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Cite 164 Lgt El Nasser",
+		"tel": "TEL/FAX: 033.80.76.69/FAX :033.86.30.46",
+		"fax": "TEL/FAX: 033.80.76.69/FAX :033.86.30.46"
+	},
+	{
+		"id": 27,
+		"position":{
+			"lat": 35.5610218 ,
+			"lng": 6.173911599999997
+		},
+		"denomination": "CPPEH MENTAUX 2",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Batna",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Lot Ben Fliss",
+		"tel": "TEL/FAX: 033.82.43.01/FAX:033.82.43.41",
+		"fax": "TEL/FAX: 033.82.43.01/FAX:033.82.43.41"
+	},
+	{
+		"id": 28,
+		"position":{
+			"lat": 35.3845934 ,
+			"lng": 5.289343300000041
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Barika",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Rue ne3 Sonelgaz Cite Chaabani Barika",
+		"tel": "TEL/FAX: 033.89.99.19/FAX:033.89.28.98",
+		"fax": "TEL/FAX: 033.89.99.19/FAX:033.89.28.98"
+	},
+	{
+		"id": 29,
+		"position":{
+			"lat": 35.6287744 ,
+			"lng": 5.90927540000007
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Merouana",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Commune Merouana",
+		"tel": "TEL/FAX: 033.83.24.91",
+		"fax": "TEL/FAX: 033.83.24.91"
+	},
+	{
+		"id": 30,
+		"position":{
+			"lat": 36.7508896 ,
+			"lng": 5.056733300000019
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "Bejaia",
+		"wilayaID":  6, "wilaya": "BEJAIA",
+		"adresse": "Route Des Aures",
+		"tel": "TEL/FAX: 034.21.07.85/FAX:034.21.47.83",
+		"fax": "TEL/FAX: 034.21.07.85/FAX:034.21.47.83"
+	},
+	{
+		"id": 31,
+		"position":{
+			"lat": 36.6151583 ,
+			"lng": 4.774915800000031
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Timezrit",
+		"wilayaID":  6, "wilaya": "BEJAIA",
+		"adresse": "Cite Idderaken Timezirt",
+		"tel": "TEL/FAX: 034.26.20.36/FAX .034.26.20.38",
+		"fax": "TEL/FAX: 034.26.20.36/FAX .034.26.20.38"
+	},
+	{
+		"id": 32,
+		"position":{
+			"lat": 36.45901610000001 ,
+			"lng": 4.53347830000007
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Akbou",
+		"wilayaID":  6, "wilaya": "BEJAIA",
+		"adresse": "CommuneAkbou",
+		"tel": "TEL/FAX: 034.35.71.06/ FAX: 034.35.67.41",
+		"fax": "TEL/FAX: 034.35.71.06/ FAX: 034.35.67.41"
+	},
+	{
+		"id": 33,
+		"position":{
+			"lat": 36.6256524 ,
+			"lng": 5.336021500000015
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Souk El Tenin",
+		"wilayaID":  6, "wilaya": "BEJAIA",
+		"adresse": "Centre Psycho-Pedagogique Pour Enfants Handicapes Mentaux - Commune Souk el Tnine",
+		"tel": "TEL/FAX: 034.21.05.15",
+		"fax": "TEL/FAX: 034.21.05.15"
+	},
+	{
+		"id": 34,
+		"position":{
+			"lat": 36.7508896 ,
+			"lng": 5.056733300000019
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Bejaia",
+		"wilayaID":  6, "wilaya": "BEJAIA",
+		"adresse": "Cite Laazib Oumaamar lhadaden",
+		"tel": "TEL/FAX: 034.20.74.90/ FAX :034.20.40.43",
+		"fax": "TEL/FAX: 034.20.74.90/ FAX :034.20.40.43"
+	},
+	{
+		"id": 35,
+		"position":{
+			"lat": 34.8370347 ,
+			"lng": 5.751047500000027
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "BISKRA",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "Avenue Hakim Saadan",
+		"tel": "TEL/FAX: 033.54.46.63/65",
+		"fax": "TEL/FAX: 033.54.46.63/65"
+	},
+	{
+		"id": 36,
+		"position":{
+			"lat": 34.4466834 ,
+			"lng": 5.101522499999987
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "OULED DJELLAL",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "Cite ouest Ouled djellal",
+		"tel": "TEL/FAX: 033.76.29.41/20",
+		"fax": "TEL/FAX: 033.76.29.41/20"
+	},
+	{
+		"id": 37,
+		"position":{
+			"lat": 34.8370347 ,
+			"lng": 5.751047500000027
+		},
+		"denomination": "CPPEH MENTAUX 2",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BISKRA",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "Zone Ouest Cite Saada El Cours",
+		"tel": "TEL/FAX: 033.75.53.03/02",
+		"fax": "TEL/FAX: 033.75.53.03/02"
+	},
+	{
+		"id": 38,
+		"position":{
+			"lat": 34.4466834 ,
+			"lng": 5.101522499999987
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "OULED DJELLAL",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "Avenue Sliman Amirat Ouled djellal",
+		"tel": "TEL/FAX: 033.74.30.11/FAX:033.76.04.78",
+		"fax": "TEL/FAX: 033.74.30.11/FAX:033.76.04.78"
+	},
+	{
+		"id": 39,
+		"position":{
+			"lat": 34.8370347 ,
+			"lng": 5.751047500000027
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BISKRA",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "Hai Bouassid Biskra",
+		"tel": "TEL/FAX: 033.54.46.72/71",
+		"fax": "TEL/FAX: 033.54.46.72/71"
+	},
+	{
+		"id": 40,
+		"position":{
+			"lat": 34.6878171 ,
+			"lng": 6.503878699999973
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Zeribet El Oued",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "Centre Psycho-Pedagogique Pour Enfants Handicapes Mentaux - Commune Zribet El Oued",
+		"tel": "TEL/FAX: 033.54.46.74",
+		"fax": "TEL/FAX: 033.54.46.74"
+	},
+	{
+		"id": 41,
+		"position":{
+			"lat": 34.8370347 ,
+			"lng": 5.751047500000027
+		},
+		"denomination": "CPPEH MENTAUX 1",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BISKRA",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "AL Alia Nord Biskra",
+		"tel": "TEL/FAX: 033.75.39.19/94",
+		"fax": "TEL/FAX: 033.75.39.19/94"
+	},
+	{
+		"id": 42,
+		"position":{
+			"lat": 31.6182492 ,
+			"lng": -2.2143231000000014
+		},
+		"denomination": "CPPEH MENTAUX 1",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BECHAR",
+		"wilayaID":  8,"wilaya": "BECHAR",
+		"adresse": "Route Nationaie Ne06 Rue Colonel Chabou",
+		"tel": "TEL/FAX: 040.85.73.01",
+		"fax": "TEL/FAX: 040.85.73.01"
+	},
+	{
+		"id": 43,
+		"position":{
+			"lat": 31.6182492 ,
+			"lng": -2.2143231000000014
+		},
+		"denomination": "CPPEH MENTAUX 2",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BECHAR",
+		"wilayaID":  8,"wilaya": "BECHAR",
+		"adresse": "Route Nationale Ne06 Gherrassa",
+		"tel": "TEL/FAX: 0776 045.027",
+		"fax": "TEL/FAX: 0776 045.027"
+	},
+	{
+		"id": 44,
+		"position":{
+			"lat": 31.6182492 ,
+			"lng": -2.2143231000000014
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "BECHAR",
+		"wilayaID":  8,"wilaya": "BECHAR",
+		"adresse": "Route Nationale Ne06 Bechar Djeddid",
+		"tel": "TEL/FAX: 049.87.03.35",
+		"fax": "TEL/FAX: 049.87.03.35"
+	},
+	{
+		"id": 45,
+		"position":{
+			"lat": 36.4713985 ,
+			"lng": 2.6785092000000077
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MOUZAIA",
+		"wilayaID":  9,"wilaya": "BLIDA",
+		"adresse": "Rue Kouider Rabeh Mouzaia",
+		"tel": "TEL/FAX:025.37.73.20",
+		"fax": "TEL/FAX:025.37.73.20"
+	},
+	{
+		"id": 46,
+		"position":{
+			"lat": 36.5181119 ,
+			"lng": 2.9875564999999824
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BOUINANE",
+		"wilayaID":  9,"wilaya": "BLIDA",
+		"adresse": "Cite Stade Bouinane",
+		"tel": "TEL/FAX: 025.39.44.19/72",
+		"fax": "TEL/FAX: 025.39.44.19/72"
+	},
+	{
+		"id": 47,
+		"position":{
+			"lat": 36.4336226 ,
+			"lng": 2.9076093999999557
+		},
+		"denomination": "CIR",
+		"typeId": "0",
+		"description": " Centre pour insuffisants respiratoires",
+		"commune": "CHREA",
+		"wilayaID":  9,"wilaya": "BLIDA",
+		"adresse": "Chrea Ouled Aich",
+		"tel": "TEL/FAX: 025.44.01.55/64",
+		"fax": "TEL/FAX: 025.44.01.55/64"
+	},
+	{
+		"id": 48,
+		"position":{
+			"lat": 36.4798683 ,
+			"lng": 2.800567699999988
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BLIDA",
+		"wilayaID":  9,"wilaya": "BLIDA",
+		"adresse": "Cite Ben Achour",
+		"tel": "TEL/FAX: 025.43.82.18",
+		"fax": "TEL/FAX: 025.43.82.18"
+	},
+	{
+		"id": 49,
+		"position":{
+			"lat": 36.37763 ,
+			"lng": 3.896234800000002
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BOUIRA",
+		"wilayaID":  10,"wilaya": "BOUIRA",
+		"adresse": "Cite1100 Lgt",
+		"tel": "TEL/FAX:TEL: 026.93.05.47/FAX :026.97.59.57",
+		"fax": "TEL/FAX:TEL: 026.93.05.47/FAX :026.97.59.57"
+	},
+	{
+		"id": 50,
+		"position":{
+			"lat": 36.4002383 ,
+			"lng": 3.7232004999999617
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN BESSAM",
+		"wilayaID":  10,"wilaya": "BOUIRA",
+		"adresse": "Hai matari commune Ain bessam",
+		"tel": "TEL/FAX: 026.97.66.64",
+		"fax": "TEL/FAX: 026.97.66.64"
+	},
+	{
+		"id": 51,
+		"position":{
+			"lat": 36.37763 ,
+			"lng": 3.896234800000002
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BOUIRA",
+		"wilayaID":  10,"wilaya": "BOUIRA",
+		"adresse": "Lot 338 Bouira",
+		"tel": "TEL/FAX: 026.93.08.02/07",
+		"fax": "TEL/FAX: 026.93.08.02/07"
+	},
+	{
+		"id": 52,
+		"position":{
+			"lat": 21.9537293 ,
+			"lng": 5.561727900000051
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "TAMANRASSET",
+		"wilayaID":  11,"wilaya": "TAMANRASSET",
+		"adresse": "Cite El Wiam",
+		"tel": "TEL/FAX: 029.32.00.56/FAX: 029.32.00.57",
+		"fax": "TEL/FAX: 029.32.00.56/FAX: 029.32.00.57"
+	},
+	{
+		"id": 53,
+		"position":{
+			"lat": 27.1927769 ,
+			"lng": 2.4851462999999967
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "AIN SALEH",
+		"wilayaID":  11,"wilaya": "TAMANRASSET",
+		"adresse": "Cite La Challet",
+		"tel": "TEL/FAX:TEL: 020.80.23.67",
+		"fax": "TEL/FAX:TEL: 020.80.23.67"
+	},
+	{
+		"id": 54,
+		"position":{
+			"lat": 21.9537293 ,
+			"lng": 5.561727900000051
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TAMANRASSET",
+		"wilayaID":  11,"wilaya": "TAMANRASSET",
+		"adresse": "Ankouf BP 5091",
+		"tel": "TEL/FAX: 029.32.82.91",
+		"fax": "TEL/FAX: 029.32.82.91"
+	},
+	{
+		"id": 55,
+		"position":{
+			"lat": 27.1927769 ,
+			"lng": 2.4851462999999967
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN SALEH",
+		"wilayaID":  11,"wilaya": "TAMANRASSET",
+		"adresse": "Cite La Challet",
+		"tel": "TEL/FAX: 020.80.20.43",
+		"fax": "TEL/FAX: 020.80.20.43"
+	},
+	{
+		"id": 56,
+		"position":{
+			"lat": 35.4142494 ,
+			"lng": 8.101091999999994
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TEBESSA",
+		"wilayaID":  12,"wilaya": "TEBESSA",
+		"adresse": "Cite Fatima Zohra Route ANNABA",
+		"tel": "TEL/FAX: 037.49.66.68/FAX :037.49.57.29",
+		"fax": "TEL/FAX: 037.49.66.68/FAX :037.49.57.29"
+	},
+	{
+		"id": 57,
+		"position":{
+			"lat": 35.4142494 ,
+			"lng": 8.101091999999994
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BAKARIA",
+		"wilayaID":  12,"wilaya": "TEBESSA",
+		"adresse": "BAKARIA",
+		"tel": "TEL/FAX: 037.40.81.13/FAX: 037.40.83.90",
+		"fax": "TEL/FAX: 037.40.81.13/FAX: 037.40.83.90"
+	},
+	{
+		"id": 58,
+		"position":{
+			"lat": 35.0579657 ,
+			"lng": -1.428973400000018
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "REMCHI",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "Rue Laarbi Ben M'hidi Remchi",
+		"tel": "TEL/FAX: 043.24.99.80",
+		"fax": "TEL/FAX: 043.24.99.80"
+	},
+	{
+		"id": 59,
+		"position":{
+			"lat": 34.9218192 ,
+			"lng": -1.9172518999999966
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SOUANI",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "Rue Beradj Souani Bab El Asso",
+		"tel": "TEL/FAX: 040.90.45.82",
+		"fax": "TEL/FAX: 040.90.45.82"
+	},
+	{
+		"id": 60,
+		"position":{
+			"lat": 34.8534497 ,
+			"lng": -1.7349661000000651
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MAGHNIA",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "Cite Ouled Ben Saber Maghnia",
+		"tel": "TEL/FAX: 043.48.32.10",
+		"fax": "TEL/FAX: 043.48.32.10"
+	},
+	{
+		"id": 61,
+		"position":{
+			"lat": 34.88840620000001 ,
+			"lng": -1.3180042000000185
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TLEMCEN",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "El Kalaa Superieure Birouana",
+		"tel": "TEL/FAX: 040.90.74.70/ FAX :043.27.64.74",
+		"fax": "TEL/FAX: 040.90.74.70/ FAX :043.27.64.74"
+	},
+	{
+		"id": 62,
+		"position":{
+			"lat": 34.4458733 ,
+			"lng": -1.566881100000046
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SIDI DJILLALI",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "Rue 11 Decembre Sidi Djillali",
+		"tel": "TEL/FAX: 043.34.21.96",
+		"fax": "TEL/FAX: 043.34.21.96"
+	},
+	{
+		"id": 63,
+		"position":{
+			"lat": 35.0097474 ,
+			"lng": -1.749014299999999
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "NADROUMA",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "Commune Kriba Nedroma",
+		"tel": "TEL/FAX:TEL: 043.32.10.32 /FAX: 043.32.10.33",
+		"fax": "TEL/FAX:TEL: 043.32.10.32 /FAX: 043.32.10.33"
+	},
+	{
+		"id": 64,
+		"position":{
+			"lat": 34.6396882 ,
+			"lng": -1.332461999999964
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SEBDOU",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "Commune Sebdou",
+		"tel": "TEL/FAX: 043.34.31.40",
+		"fax": "TEL/FAX: 043.34.31.40"
+	},
+	{
+		"id": 65,
+		"position":{
+			"lat": 34.88840620000001 ,
+			"lng": -1.3180042000000185
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "TLEMCEN",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "RIADH EL Kebir Mansoura",
+		"tel": "TEL/FAX:TEL: 043.26.97.76/FAX:043.26.92.08",
+		"fax": "TEL/FAX:TEL: 043.26.97.76/FAX:043.26.92.08"
+	},
+	{
+		"id": 66,
+		"position":{
+			"lat": 34.88840620000001 ,
+			"lng": -1.3180042000000185
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "CHETTOUAN",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "Commune Ouzidane Daira de Chettouan",
+		"tel": "TEL/FAX: 043.28.96.07",
+		"fax": "TEL/FAX: 043.28.96.07"
+	},
+	{
+		"id": 67,
+		"position":{
+			"lat": 34.88840620000001 ,
+			"lng": -1.3180042000000185
+		},
+		"denomination": "CIR",
+		"typeId": "0",
+		"description": " Centre pour insuffisants respiratoires",
+		"commune": "TLEMCEN",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "BP 58 Docteur Tebal Mohamed",
+		"tel": "TEL/FAX: 040.90.79.12",
+		"fax": "TEL/FAX: 040.90.79.12"
+	},
+	{
+		"id": 68,
+		"position":{
+			"lat": 35.1781601 ,
+			"lng": 1.4966618999999355
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "SOUGUEUR",
+		"wilayaID":  14,"wilaya": "TIARET",
+		"adresse": "Route De Mellakou Sougueur",
+		"tel": "TEL/FAX: 046.43.88.52/FAX :046.43.98.13",
+		"fax": "TEL/FAX: 046.43.88.52/FAX :046.43.98.13"
+	},
+	{
+		"id": 69,
+		"position":{
+			"lat":  35.3673553 ,
+			"lng": 1.322032199999967
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MAHDIA",
+		"wilayaID":  14,"wilaya": "TIARET",
+		"adresse": "Boulevard Emir AEK",
+		"tel": "TEL/FAX: 046.46.37.28/FAX :046.46.36.81",
+		"fax": "TEL/FAX: 046.46.37.28/FAX :046.46.36.81"
+	},
+	{
+		"id": 70,
+		"position":{
+			"lat": 35.3673553 ,
+			"lng": 1.322032199999967
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TIARET",
+		"wilayaID":  14,"wilaya": "TIARET",
+		"adresse": "Centre Ville Tiaret",
+		"tel": "TEL/FAX:040.77.71.72",
+		"fax": "TEL/FAX:040.77.71.72"
+	},
+	{
+		"id": 71,
+		"position":{
+			"lat": 36.7021906 ,
+			"lng": 4.0593255
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "TlZI OUZOU",
+		"wilayaID":  15,"wilaya": "TIZI OUZOU",
+		"adresse": "Cite Sociale Mahfoud Boussebsi Boukhalfa",
+		"tel": "TEL/FAX: 020.69.35.72",
+		"fax": "TEL/FAX: 020.69.35.72"
+	},
+	{
+		"id": 72,
+		"position":{
+			"lat": 36.744022 ,
+			"lng": 4.015913500000011
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BOUKHALFA",
+		"wilayaID":  15,"wilaya": "TIZI OUZOU",
+		"adresse": "BP 74 Boukhalfa",
+		"tel": "TEL/FAX: 020.68.81.70",
+		"fax": "TEL/FAX: 020.68.81.70"
+	},
+	{
+		"id": 73,
+		"position":{
+			"lat": 36.7700939 ,
+			"lng": 4.17508799999996
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Ouagnoun",
+		"wilayaID":  15,"wilaya": "TIZI OUZOU",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 74,
+		"position":{
+			"lat": 36.8052793 ,
+			"lng": 3.0350883999999496
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BOLOGHINE",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "152 Avenue Ziar AEK Bologhine",
+		"tel": "TEL/FAX: 021.95.13.02",
+		"fax": "TEL/FAX: 021.95.13.02"
+	},
+	{
+		"id": 75,
+		"position":{
+			"lat": 36.7852529 ,
+			"lng": 3.2835136999999577
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN TAYA",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "Route Nationale ne24 Villa ne8 Zerzouria",
+		"tel": "TEL/FAX: 021.86.85.74/FAX : 021.86.73.86",
+		"fax": "TEL/FAX: 021.86.85.74/FAX : 021.86.73.86"
+	},
+	{
+		"id": 76,
+		"position":{
+			"lat": 36.7162726 ,
+			"lng": 3.0425976999999875
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BlRKHADEM",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "Lot Charbonnier Domaine Tahar Bouchet ne04",
+		"tel": "TEL/FAX: 021.44.90.99",
+		"fax": "TEL/FAX: 021.44.90.99"
+	},
+	{
+		"id": 77,
+		"position":{
+			"lat": 36.7411788 ,
+			"lng": 3.068889600000034
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "El MADANIA",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "13 RueAmar Ghrissi",
+		"tel": "TEL/FAX: 021.27.63.59",
+		"fax": "TEL/FAX: 021.27.63.59"
+	},
+	{
+		"id": 78,
+		"position":{
+			"lat": 36.7409507 ,
+			"lng": 3.0250777999999627
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "HYDRA",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "04 Chemin AEK Gueddouche",
+		"tel": "TEL/FAX: 021.60.20.56/FAX : 021.60.51.94",
+		"fax": "TEL/FAX: 021.60.20.56/FAX : 021.60.51.94"
+	},
+	{
+		"id": 79,
+		"position":{
+			"lat": 36.7259091 ,
+			"lng": 3.2885455000000547
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "ROUIBA",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "23 Rue Hassiba Ben Bouali Rouiba",
+		"tel": "TEL/FAX: 023.85.53.96",
+		"fax": "TEL/FAX: 023.85.53.96"
+	},
+	{
+		"id": 80,
+		"position":{
+			"lat": 36.7029047 ,
+			"lng": 3.142834099999959
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "EIHARRACH",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "04 Rue Sidi Okba El Harrach",
+		"tel": "TEL/FAX: 021.82.18.48/FAX : 021.52.21.22",
+		"fax": "TEL/FAX: 021.82.18.48/FAX : 021.52.21.22"
+	},
+	{
+		"id": 81,
+		"position":{
+			"lat": 36.7216867 ,
+			"lng": 3.1181457999999793
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BACHDJARAH",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "15 Rue Colonel Amirouch Oued Chavehe",
+		"tel": "TEL/FAX:TEL: 021.41.74.78/FAX: 021.41.78.68",
+		"fax": "TEL/FAX:TEL: 021.41.74.78/FAX: 021.41.78.68"
+	},
+	{
+		"id": 82,
+		"position":{
+			"lat": 36.6490943 ,
+			"lng": 2.9275835999999344
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "DOUERA",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "Rue Ben Tahar Douera",
+		"tel": "TEL/FAX:TEL: 021.41.74.78/FAX :021.41.78.68",
+		"fax": "TEL/FAX:TEL: 021.41.74.78/FAX :021.41.78.68"
+	},
+	{
+		"id": 83,
+		"position":{
+			"lat": 36.6672951 ,
+			"lng": 3.0985795999999937
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BARAKI",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "Ancien Stade Baraki",
+		"tel": "TEL/FAX: 021.53.31.57",
+		"fax": "TEL/FAX: 021.53.31.57"
+	},
+	{
+		"id": 84,
+		"position":{
+			"lat": 36.73495279999999 ,
+			"lng": 3.152869199999941
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "MOHAMMADIA",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "Rouiba",
+		"tel": "TEL/FAX:021.81.21.69",
+		"fax": "TEL/FAX:021.81.21.69"
+	},
+	{
+		"id": 85,
+		"position":{
+			"lat": 36.7090511 ,
+			"lng": 3.2215128999999934
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "KRIM BELKACEM",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "14 Boulevard Krim Belkacem",
+		"tel": "TEL/FAX: 021.64.10.38",
+		"fax": "TEL/FAX: 021.64.10.38"
+	},
+	{
+		"id": 86,
+		"position":{
+			"lat": 36.7285583 ,
+			"lng": 2.9825558999999657
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "EIACHOUR",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "111 Chemin De La Wilaya",
+		"tel": "TEL/FAX: 021.33.16,31/FAX : 021.33.14.76",
+		"fax": "TEL/FAX: 021.33.16,31/FAX : 021.33.14.76"
+	},
+	{
+		"id": 87,
+		"position":{
+			"lat": 34.6751691 ,
+			"lng": 3.2684214999999313
+		},
+		"denomination": "CPPEH MOTEURS",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes moteurs",
+		"commune": "DJELFA",
+		"wilayaID":  1,"wilayaID":  17,"wilaya": "DJELFA",
+		"adresse": "Cite 05 Juillet",
+		"tel": "TEL/FAX: 027.90.99.58",
+		"fax": "TEL/FAX: 027.90.99.58"
+	},
+	{
+		"id": 88,
+		"position":{
+			"lat": 34.6751691 ,
+			"lng": 3.2684214999999313
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "DJELFA",
+		"wilayaID":  17,"wilaya": "DJELFA",
+		"adresse": "Cite 05 Juillet",
+		"tel": "TEL/FAX: 027.87.75.45/FAX: 027.87.71.65",
+		"fax": "TEL/FAX: 027.87.75.45/FAX: 027.87.71.65"
+	},
+	{
+		"id": 89,
+		"position":{
+			"lat": 34.6751691 ,
+			"lng": 3.2684214999999313
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "DJELFA",
+		"wilayaID":  17,"wilaya": "DJELFA",
+		"adresse": "Cite Benjerma",
+		"tel": "TEL/FAX: 027.87.40.20 027.87. 13.31",
+		"fax": "TEL/FAX: 027.87.40.20 027.87. 13.31"
+	},
+	{
+		"id": 90,
+		"position":{
+			"lat": 35.4542653 ,
+			"lng": 2.9076093999999557
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN OUSSARA",
+		"wilayaID":  17,"wilaya": "DJELFA",
+		"adresse": "Zone Hurbaine Ain Oussara",
+		"tel": "TEL/FAX: 027.82.56.44",
+		"fax": "TEL/FAX: 027.82.56.44"
+	},
+	{
+		"id": 91,
+		"position":{
+			"lat": 36.7753597 ,
+			"lng": 5.90927540000007
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TAHIR",
+		"wilayaID":  18,"wilaya": "JIJEL",
+		"adresse": "Boulevard Dekhli Mokhtar Boucherka Tahar",
+		"tel": "TEL/FAX: 034.44.97.67/FAX:034.44.87.00",
+		"fax": "TEL/FAX: 034.44.97.67/FAX:034.44.87.00"
+	},
+	{
+		"id": 92,
+		"position":{
+			"lat": 36.81673869999999 ,
+			"lng": 5.749093300000027
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "JIJEL",
+		"wilayaID":  18,"wilaya": "JIJEL",
+		"adresse": "40 Hector",
+		"tel": "TEL/FAX: 034.50.41.28/14",
+		"fax": "TEL/FAX: 034.50.41.28/14"
+	},
+	{
+		"id": 93,
+		"position":{
+			"lat": 36.81673869999999 ,
+			"lng": 5.749093300000027
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "JIJEL",
+		"wilayaID":  18,"wilaya": "JIJEL",
+		"adresse": "41 Hector",
+		"tel": "TEL/FAX: 034.50.40.96/95",
+		"fax": "TEL/FAX: 034.50.40.96/95"
+	},
+	{
+		"id": 94,
+		"position":{
+			"lat": 36.81673869999999 ,
+			"lng": 5.749093300000027
+		},
+		"denomination": "CPPEH MOTEURS",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes moteurs",
+		"commune": "JIJEL",
+		"wilayaID":  18,"wilaya": "JIJEL",
+		"adresse": "42 Hector",
+		"tel": "TEL/FAX: 034.50.21.21",
+		"fax": "TEL/FAX: 034.50.21.21"
+	},
+	{
+		"id": 95,
+		"position":{
+			"lat": 36.1969027 ,
+			"lng": 5.415087099999937
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SETIF",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "Cite 300 Lgt",
+		"tel": "TEL/FAX: 036.83.95.72/73",
+		"fax": "TEL/FAX: 036.83.95.72/73"
+	},
+	{
+		"id": 96,
+		"position":{
+			"lat": 36.1969027 ,
+			"lng": 5.415087099999937
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "SETIF",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "Commune Setif",
+		"tel": "TEL/FAX: 036.83.15.42",
+		"fax": "TEL/FAX: 036.83.15.42"
+	},
+	{
+		"id": 97,
+		"position":{
+			"lat": 36.1969027 ,
+			"lng": 5.415087099999937
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "SETIF",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "Cite Said Boukhrissa",
+		"tel": "TEL/FAX: 036.74.30.84",
+		"fax": "TEL/FAX: 036.74.30.84"
+	},
+	{
+		"id": 98,
+		"position":{
+			"lat": 35.96946399999999 ,
+			"lng": 5.835383699999966
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "HAMMAM ESSOUKHNA",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "Commune Hammam Essoukhna",
+		"tel": "TEL/FAX: 036.95.85.01",
+		"fax": "TEL/FAX: 036.95.85.01"
+	},
+	{
+		"id": 99,
+		"position":{
+			"lat": 36.1969027 ,
+			"lng": 5.415087099999937
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "EULMA 02",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 100,
+		"position":{
+			"lat": 34.8412014 ,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "SAIDA",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "Rue 05 Juillet Saida",
+		"tel": "TEL/FAX: 048.47.34.06 /FAX : 048.47.44.77",
+		"fax": "TEL/FAX: 048.47.34.06 /FAX : 048.47.44.77"
+	},
+	{
+		"id": 101,
+		"position":{
+			"lat": 34.8412014,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SAIDA 01",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "Cite Soummam BP 120",
+		"tel": "TEL/FAX: 048.47.15.52- 048.47.41.27",
+		"fax": "TEL/FAX: 048.47.15.52- 048.47.41.27"
+	},
+	{
+		"id": 102,
+		"position":{
+			"lat": 34.8412014 ,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "HASSASNA",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "Hassasna",
+		"tel": "TEL/FAX: 048.51.04.70",
+		"fax": "TEL/FAX: 048.51.04.70"
+	},
+	{
+		"id": 103,
+		"position":{
+			"lat": 34.8412014 ,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SAIDA 02",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "Cite Ennasr Saida",
+		"tel": "TEL/FAX: 048.47.89.33",
+		"fax": "TEL/FAX: 048.47.89.33"
+	},
+	{
+		"id": 104,
+		"position":{
+			"lat": 34.8412014 ,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "AIN IeAHDJAR",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "Ain L'ahdjar",
+		"tel": "TEL/FAX: 036.74.30.84",
+		"fax": "TEL/FAX: 036.74.30.84"
+	},
+	{
+		"id": 105,
+		"position":{
+			"lat": 34.8412014,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "CIR",
+		"typeId": "0",
+		"description": " Centre pour insuffisants respiratoires",
+		"commune": "AIN IeAHDJAR",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "Ain L'ahdjar",
+		"tel": "TEL/FAX: 048.50.35.30",
+		"fax": "TEL/FAX: 048.50.35.30"
+	},
+	{
+		"id": 106,
+		"position":{
+			"lat": 36.7441137 ,
+			"lng": 7.117095199999994
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AZZABA",
+		"wilayaID":  21,"wilaya": "SKIKDA",
+		"adresse": "Boulevard 1er Novembre 54",
+		"tel": "TEL/FAX: 030.91.45.00/ FAX: 038.77.83.74",
+		"fax": "TEL/FAX: 030.91.45.00/ FAX: 038.77.83.74"
+	},
+	{
+		"id": 107,
+		"position":{
+			"lat": 36.8828035 ,
+			"lng": 7.082116199999973
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "FIL FILA",
+		"wilayaID":  21,"wilaya": "SKIKDA",
+		"adresse": "Commune FilFila",
+		"tel": "TEL/FAX: 030.92.59.12",
+		"fax": "TEL/FAX: 030.92.59.12"
+	},
+	{
+		"id": 108,
+		"position":{
+			"lat": 36.8357539 ,
+			"lng": 6.645105000000058
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TAMALOUS",
+		"wilayaID":  21,"wilaya": "SKIKDA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 109,
+		"position":{
+			"lat": 37.0013848 ,
+			"lng": 6.554319899999996
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "COLLO",
+		"wilayaID":  21,"wilaya": "SKIKDA",
+		"adresse": "Rue Palestine",
+		"tel": "TEL/FAX: 038.71.63.12/ FAX:038.71.84.93",
+		"fax": "TEL/FAX: 038.71.63.12/ FAX:038.71.84.93"
+	},
+	{
+		"id": 110,
+		"position":{
+			"lat": 35.2022249 ,
+			"lng": -0.629892199999972
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "SIDI BEL ABBES",
+		"wilayaID":  22,"wilaya": "SIDI BEL ABBES",
+		"adresse": "Hai El Houria",
+		"tel": "TEL/FAX: 048.56.88.10/FAX:048.56.68.00",
+		"fax": "TEL/FAX: 048.56.88.10/FAX:048.56.68.00"
+	},
+	{
+		"id": 111,
+		"position":{
+			"lat": 35.2022249 ,
+			"lng": -0.629892199999972
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SIDI BEL ABBES",
+		"wilayaID":  22,"wilaya": "SIDI BEL ABBES",
+		"adresse": "Hai El Houria",
+		"tel": "TEL/FAX: 048.65.79.66",
+		"fax": "TEL/FAX: 048.65.79.66"
+	},
+	{
+		"id": 112,
+		"position":{
+			"lat": 35.2022249 ,
+			"lng": -0.629892199999972
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Tl FGH",
+		"wilayaID":  22,"wilaya": "SIDI BEL ABBES",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 113,
+		"position":{
+			"lat": 35.2365004 ,
+			"lng": -0.2807867999999871
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SEFISEF",
+		"wilayaID":  22,"wilaya": "SIDI BEL ABBES",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 114,
+		"position":{
+			"lat": 35.2672655 ,
+			"lng": -0.7818088999999873
+		},
+		"denomination": "CIR",
+		"typeId": "0",
+		"description": " Centre pour insuffisants respiratoires",
+		"commune": "TESSALA",
+		"wilayaID":  22,"wilaya": "SIDI BEL ABBES",
+		"adresse": "Tessala 22140",
+		"tel": "TEL/FAX: 040.41.11.50/FAX :048.56.23.3",
+		"fax": "TEL/FAX: 040.41.11.50/FAX :048.56.23.3"
+	},
+	{
+		"id": 115,
+		"position":{
+			"lat": 36.9264582 ,
+			"lng": 7.752535200000011
+		},
+		"denomination": "CPPEH MENTAUX 1",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "ANNABA",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "Rue Attia Ahmed Cite FLN",
+		"tel": "TEL/FAX: 038.84.12.58",
+		"fax": "TEL/FAX: 038.84.12.58"
+	},
+	{
+		"id": 116,
+		"position":{
+			"lat": 36.9264582 ,
+			"lng": 7.752535200000011
+		},
+		"denomination": "CPPEH MENTAUX 2",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "ANNABA",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "Cite GS Mai 1945",
+		"tel": "TEL/FAX:TEL /FAX: 038.84.26.23",
+		"fax": "TEL/FAX:TEL /FAX: 038.84.26.23"
+	},
+	{
+		"id": 117,
+		"position":{
+			"lat": 36.8535764 ,
+			"lng": 7.743152399999985
+		},
+		"denomination": "CPPEH BOUKHADRA",
+		"typeId": "0",
+		"description": " ",
+		"commune": "EL BOUNI",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "Cite Boukhadra 800 Lgt",
+		"tel": "TEL/FAX: 030.82.04.99",
+		"fax": "TEL/FAX: 030.82.04.99"
+	},
+	{
+		"id": 118,
+		"position":{
+			"lat": 36.8535764 ,
+			"lng": 7.743152399999985
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "EL BOUNI",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "Cite 900 Lgt",
+		"tel": "TEL/FAX: 038.52.51.36",
+		"fax": "TEL/FAX: 038.52.51.36"
+	},
+	{
+		"id": 119,
+		"position":{
+			"lat": 36.9264582 ,
+			"lng": 7.752535200000011
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "ANNABA",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "Rue Bicha Youcef Cite Oued Fercha",
+		"tel": "TEL/FAX:Por : 06.62.10.28.73",
+		"fax": "TEL/FAX:Por : 06.62.10.28.73"
+	},
+	{
+		"id": 120,
+		"position":{
+			"lat": 36.458976 ,
+			"lng": 7.4327273000000105
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "GUELMA",
+		"wilayaID":  24,"wilaya": "GUELMA",
+		"adresse": "Cite Nezar El Hadi",
+		"tel": "TEL/FAX: 037.26.16.47/FAX: 037.26.51.76",
+		"fax": "TEL/FAX: 037.26.16.47/FAX: 037.26.51.76"
+	},
+	{
+		"id": 121,
+		"position":{
+			"lat": 36.3139054 ,
+			"lng": 7.1628647
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Oued Znati",
+		"wilayaID":  24,"wilaya": "GUELMA",
+		"adresse": "Commune de Oued Znati",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 122,
+		"position":{
+			"lat": 36.458976 ,
+			"lng": 7.4327273000000105
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "GUELMA",
+		"wilayaID":  24,"wilaya": "GUELMA",
+		"adresse": "Rue Frere Rehabi",
+		"tel": "TEL/FAX: 037.26.57.73/FAX : 037.26.58.93",
+		"fax": "TEL/FAX: 037.26.57.73/FAX : 037.26.58.93"
+	},
+	{
+		"id": 123,
+		"position":{
+			"lat": 36.360155 ,
+			"lng": 6.642432999999983
+		},
+		"denomination": "CPPEH MENTAUX 1",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "CONSTANTINE",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "Cite Daksi Abdessalem",
+		"tel": "TEL/FAX: 031.61.28.16/FAX:031.63.77.55",
+		"fax": "TEL/FAX: 031.61.28.16/FAX:031.63.77.55"
+	},
+	{
+		"id": 124,
+		"position":{
+			"lat": 36.360155 ,
+			"lng": 6.642432999999983
+		},
+		"denomination": "CPPEH MENTAUX 2",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "CONSTANTINE",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "Cite Daksi Abdessalem",
+		"tel": "TEL/FAX:031.61.32.27/FAX: 031.61.34.56",
+		"fax": "TEL/FAX:031.61.32.27/FAX: 031.61.34.56"
+	},
+	{
+		"id": 125,
+		"position":{
+			"lat": 36.4565656 ,
+			"lng": 6.653121599999963
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "DlDOUCHE MOURAD",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "Cite 104 Lgts",
+		"tel": "TEL/FAX:031.90.51.99/FAX:031.90.52.62",
+		"fax": "TEL/FAX:031.90.51.99/FAX:031.90.52.62"
+	},
+	{
+		"id": 126,
+		"position":{
+			"lat": 36.2714408 ,
+			"lng": 6.685198200000059
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "EL KHROUB",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "Nelle Ville Ali Mendjli",
+		"tel": "TEL/FAX: 031.95.79.86",
+		"fax": "TEL/FAX: 031.95.79.86"
+	},
+	{
+		"id": 127,
+		"position":{
+			"lat": 36.360155 ,
+			"lng": 6.642432999999983
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "CONSTANTINE",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "21 Rue Ben Melik Abderahman",
+		"tel": "TEL/FAX:031.92.20.62",
+		"fax": "TEL/FAX:031.92.20.62"
+	},
+	{
+		"id": 128,
+		"position":{
+			"lat": 36.360155 ,
+			"lng": 6.642432999999983
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "CONSTANTINE",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "Cite Bitat ommar 200 Lgt Mansouru",
+		"tel": "TEL/FAX:031.61.41 53/ FAX: 031.61.42.00",
+		"fax": "TEL/FAX:031.61.41 53/ FAX: 031.61.42.00"
+	},
+	{
+		"id": 129,
+		"position":{
+			"lat": 36.3309673 ,
+			"lng": 2.668573599999945
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TAMESGUIDA",
+		"wilayaID":  26,"wilaya": "MEDEA",
+		"adresse": "Commune De Tamesguida",
+		"tel": "TEL/FAX: 025.60.31.13/FAX :025.60.31.25",
+		"fax": "TEL/FAX: 025.60.31.13/FAX :025.60.31.25"
+	},
+	{
+		"id": 130,
+		"position":{
+			"lat": 36.2853847 ,
+			"lng": 2.768024700000069
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MEDEA",
+		"wilayaID":  26,"wilaya": "MEDEA",
+		"adresse": "Route Du 15 Decembre",
+		"tel": "TEL/FAX: 025.58.61.72/FAX :025.58.04.38",
+		"fax": "TEL/FAX: 025.58.61.72/FAX :025.58.04.38"
+	},
+	{
+		"id": 131,
+		"position":{
+			"lat": 36.1625653 ,
+			"lng": 2.9175955000000613
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BERROUAGHIA",
+		"wilayaID":  26,"wilaya": "MEDEA",
+		"adresse": "Commune De Berrouagia",
+		"tel": "TEL/FAX: 025.57.36.29",
+		"fax": "TEL/FAX: 025.57.36.29"
+	},
+	{
+		"id": 132,
+		"position":{
+			"lat": 36.2283487 ,
+			"lng": 3.3086777999999413
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BENI SLIMANE",
+		"wilayaID":  26,"wilaya": "MEDEA",
+		"adresse": "Commune De Beni Slimane",
+		"tel": "TEL/FAX: 025.51.53.34/FAX: 025.51.51-49",
+		"fax": "TEL/FAX: 025.51.53.34/FAX: 025.51.51-49"
+	},
+	{
+		"id": 133,
+		"position":{
+			"lat": 36.0967786 ,
+			"lng": 0.4148744000000306
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SIDI ALI",
+		"wilayaID":  27,"wilaya": "MOSTAGANEM",
+		"adresse": "Rue Ahmed Boukchiche",
+		"tel": "TEL/FAX: 045.24.17.85",
+		"fax": "TEL/FAX: 045.24.17.85"
+	},
+	{
+		"id": 134,
+		"position":{
+			"lat": 35.8879489 ,
+			"lng": 0.06066369999996368
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MAZAGRAN",
+		"wilayaID":  27,"wilaya": "MOSTAGANEM",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 135,
+		"position":{
+			"lat": 36.0970536 ,
+			"lng": 0.32543169999996735
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "HADJAJ",
+		"wilayaID":  27,"wilaya": "MOSTAGANEM",
+		"adresse": "Commune Hdjaj",
+		"tel": "TEL/FAX: 045.24.64.16/14",
+		"fax": "TEL/FAX: 045.24.64.16/14"
+	},
+	{
+		"id": 136,
+		"position":{
+			"lat": 35.677109 ,
+			"lng": 4.5418141000000105
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "M'SILA",
+		"wilayaID":  28,"wilaya": "M'SILA",
+		"adresse": "Cite 346 Lgts",
+		"tel": "TEL/FAX: 035.55.36.88/FAX : 035.55.62.79",
+		"fax": "TEL/FAX: 035.55.36.88/FAX : 035.55.62.79"
+	},
+	{
+		"id": 137,
+		"position":{
+			"lat": 35.3281772 ,
+			"lng": 4.205553499999951
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BOUSAADA",
+		"wilayaID":  28,"wilaya": "M'SILA",
+		"adresse": "Cite Batene Boussaada",
+		"tel": "TEL/FAX: 035.53.51.13/14",
+		"fax": "TEL/FAX: 035.53.51.13/14"
+	},
+	{
+		"id": 138,
+		"position":{
+			"lat": 35.677109 ,
+			"lng": 4.5418141000000105
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "M'SILA",
+		"wilayaID":  28,"wilaya": "M'SILA",
+		"adresse": "Cite Administative 126 Lgts",
+		"tel": "TEL/FAX:035.33.86.30/FAX : 035.33.88.49",
+		"fax": "TEL/FAX:035.33.86.30/FAX : 035.33.88.49"
+	},
+	{
+		"id": 139,
+		"position":{
+			"lat": 35.677109 ,
+			"lng": 4.5418141000000105
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "M'SILA",
+		"wilayaID":  28,"wilaya": "M'SILA",
+		"adresse": "Cite OS Juillet 1962",
+		"tel": "TEL/FAX:Por : 07.71.57.03.54",
+		"fax": "TEL/FAX:Por : 07.71.57.03.54"
+	},
+	{
+		"id": 140,
+		"position":{
+			"lat": 35.5437798 ,
+			"lng": -0.16822709999996732
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SIG",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "Boulevard Larbi BEN M'hidi",
+		"tel": "TEL/FAX:TEL: 045.84.93.44/FAX : 045.84.01.46",
+		"fax": "TEL/FAX:TEL: 045.84.93.44/FAX : 045.84.01.46"
+	},
+	{
+		"id": 141,
+		"position":{
+			"lat": 35.3974554 ,
+			"lng": 0.13884459999997034
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MASCARA",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "Rue Ben Tahet AEK",
+		"tel": "TEL/FAX: 045.71.98.65",
+		"fax": "TEL/FAX: 045.71.98.65"
+	},
+	{
+		"id": 142,
+		"position":{
+			"lat": 35.5876568 ,
+			"lng": 0.05599389999997584
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MOHAMMADIA",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "10 Rue Pasteur",
+		"tel": "TEL/FAX:TEL: 045.89.98.11/FAX : 045.87.75.60",
+		"fax": "TEL/FAX:TEL: 045.89.98.11/FAX : 045.87.75.60"
+	},
+	{
+		"id": 143,
+		"position":{
+			"lat": 35.2367082 ,
+			"lng": 0.16822709999996732
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "GHRISS",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "24 Rue Ben Aicha Ahmed",
+		"tel": "TEL/FAX:TEL:045.81.98.16/FAX: 045.81.84.50",
+		"fax": "TEL/FAX:TEL:045.81.98.16/FAX: 045.81.84.50"
+	},
+	{
+		"id": 144,
+		"position":{
+			"lat": 35.4011585 ,
+			"lng": 0.3006192000000283
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MASCARA 02",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "",
+		"tel": "TEL/FAX:TELDASS . 045.73.71.63",
+		"fax": "TEL/FAX:TELDASS . 045.73.71.63"
+	},
+	{
+		"id": 145,
+		"position":{
+			"lat": 35.3974554 ,
+			"lng": 0.13884459999997034
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "MASCARA",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "Rue Mzila Mohamed Zone 08",
+		"tel": "TEL/FAX: 045.93.01.50/FAX : 045.93.07.29",
+		"fax": "TEL/FAX: 045.93.01.50/FAX : 045.93.07.29"
+	},
+	{
+		"id": 146,
+		"position":{
+			"lat": 33.0996078 ,
+			"lng": 6.078510400000027
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TOUGGOURT",
+		"wilayaID":  30,"wilaya": "OUARGLA",
+		"adresse": "Cite Emir AEK",
+		"tel": "TEL/FAX: 029.68.21.81/FAX : 029.68.16.44",
+		"fax": "TEL/FAX: 029.68.21.81/FAX : 029.68.16.44"
+	},
+	{
+		"id": 147,
+		"position":{
+			"lat": 31.945266 ,
+			"lng": 5.395263999999997
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN BEIDA",
+		"wilayaID":  30,"wilaya": "OUARGLA",
+		"adresse": "BP 562 M'khadma",
+		"tel": "TEL/FAX: 029.71.58.70/FAX :029.71.19.76",
+		"fax": "TEL/FAX: 029.71.58.70/FAX :029.71.19.76"
+	},
+	{
+		"id": 148,
+		"position":{
+			"lat": 32.1677808 ,
+			"lng": 4.976654000000053
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "OUARGLA",
+		"wilayaID":  30,"wilaya": "OUARGLA",
+		"adresse": "Zone Administative",
+		"tel": "TEL/FAX:TEL: 029.71.23.27/FAX :029.71.S8.70",
+		"fax": "TEL/FAX:TEL: 029.71.23.27/FAX :029.71.S8.70"
+	},
+	{
+		"id": 149,
+		"position":{
+			"lat": 32.1677808 ,
+			"lng": 4.976654000000053
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "OUARGLA",
+		"wilayaID":  30,"wilaya": "OUARGLA",
+		"adresse": "Zone Nelle D'equipement",
+		"tel": "TEL/FAX: 029.91.10.45/FAX :029.71.36.02",
+		"fax": "TEL/FAX: 029.91.10.45/FAX :029.71.36.02"
+	},
+	{
+		"id": 150,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MISSERGHINE",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "Misserghine Boutlelis",
+		"tel": "TEL/FAX: 041.49.07.70",
+		"fax": "TEL/FAX: 041.49.07.70"
+	},
+	{
+		"id": 151,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "ORAN",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "Hai El Makkarat Ahmed Madaghri",
+		"tel": "TEL/FAX: 041.53.84.01/02",
+		"fax": "TEL/FAX: 041.53.84.01/02"
+	},
+	{
+		"id": 152,
+		"position":{
+			"lat": 35.8602138 ,
+			"lng": -0.3465971000000536
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "ARZEW",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "Les Plateaux Arzew",
+		"tel": "TEL/FAX:TEL/DASS : 041.59.04.97",
+		"fax": "TEL/FAX:TEL/DASS : 041.59.04.97"
+	},
+	{
+		"id": 153,
+		"position":{
+			"lat": 35.74895300000001 ,
+			"lng": -0.800838800000065
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "AIN TURK",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "Boulevard Akid Abbes Ain Turk",
+		"tel": "TEL/FAX: 041.44.38.45/FAX : 041.44.39.18",
+		"fax": "TEL/FAX: 041.44.38.45/FAX : 041.44.39.18"
+	},
+	{
+		"id": 154,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "ORAN",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "11 Avenue Bougguerri Khelifa Gambetta",
+		"tel": "TEL/FAX: 041.53.16.31/FAX : 041.53.15.60",
+		"fax": "TEL/FAX: 041.53.16.31/FAX : 041.53.15.60"
+	},
+	{
+		"id": 155,
+		"position":{
+			"lat": 33.65813869999999 ,
+			"lng": 1.020322399999941
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "EL BAYADH",
+		"wilayaID":  32,"wilaya": "EL BAYADH",
+		"adresse": "Frere Hassni Lazine Route Petit Mechria",
+		"tel": "TEL/FAX:TEL: 049.71.69.33 /FAX : 049.71.33.26",
+		"fax": "TEL/FAX:TEL: 049.71.69.33 /FAX : 049.71.33.26"
+	},
+	{
+		"id": 156,
+		"position":{
+			"lat": 33.65813869999999 ,
+			"lng": 1.020322399999941
+		},
+		"denomination": "CPPEH MENTAUX 01",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "EL BAYADH",
+		"wilayaID":  32,"wilaya": "EL BAYADH",
+		"adresse": "Route Petit Mechria",
+		"tel": "TEL/FAX:TEL:049.71.32.04/FAX : 049.71.37.94",
+		"fax": "TEL/FAX:TEL:049.71.32.04/FAX : 049.71.37.94"
+	},
+	{
+		"id": 157,
+		"position":{
+			"lat": 33.65813869999999 ,
+			"lng": 1.020322399999941
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "LABIAD SIDI CHEIKH",
+		"wilayaID":  32,"wilaya": "EL BAYADH",
+		"adresse": "Hai Taouaz Bahous El Biodh Sidi Cheich",
+		"tel": "TEL/FAX: 049.73.75.21/FAX.049.73.76.18",
+		"fax": "TEL/FAX: 049.73.75.21/FAX.049.73.76.18"
+	},
+	{
+		"id": 158,
+		"position":{
+			"lat": 24.5545691 ,
+			"lng": 9.481160400000022
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "Djanet",
+		"wilayaID":  33,"wilaya": "ILLIZI",
+		"adresse": "Commune Djanet",
+		"tel": "TEL/FAX: 029.47.69.49/50",
+		"fax": "TEL/FAX: 029.47.69.49/50"
+	},
+	{
+		"id": 159,
+		"position":{
+			"lat": 26.5094346 ,
+			"lng": 8.47327180000002
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "ILLIZI",
+		"wilayaID":  33,"wilaya": "ILLIZI",
+		"adresse": "Zone Administrative pres Nouveau lycee",
+		"tel": "TEL/FAX: 029.41.01.82",
+		"fax": "TEL/FAX: 029.41.01.82"
+	},
+	{
+		"id": 160,
+		"position":{
+			"lat": 35.947031 ,
+			"lng": 5.035695099999998
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "RASS EL OUED",
+		"wilayaID":  34,"wilaya": "BORDJ BOU ARRERIDJ",
+		"adresse": "Commune Rass El Oued",
+		"tel": "TEL/FAX:TEL: 035.61.70.47/FAX: 035.65.85.73",
+		"fax": "TEL/FAX:TEL: 035.61.70.47/FAX: 035.65.85.73"
+	},
+	{
+		"id": 161,
+		"position":{
+			"lat": 35.9672331 ,
+			"lng": 4.914323899999999
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BELIMOUR",
+		"wilayaID":  34,"wilaya": "BORDJ BOU ARRERIDJ",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 162,
+		"position":{
+			"lat": 36.0704188 ,
+			"lng": 4.756404599999996
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SID M'BAREK",
+		"wilayaID":  34,"wilaya": "BORDJ BOU ARRERIDJ",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 163,
+		"position":{
+			"lat": 36.0704188 ,
+			"lng": 4.756404599999996
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "BORDJ BOUARRERIDJ",
+		"wilayaID":  34,"wilaya": "BORDJ BOU ARRERIDJ",
+		"adresse": "Cite 1er Novembre 45 BP 81",
+		"tel": "TEL/FAX:TEL: 035.69.12.41/FAX : 035.69.12.40",
+		"fax": "TEL/FAX:TEL: 035.69.12.41/FAX : 035.69.12.40"
+	},
+	{
+		"id": 164,
+		"position":{
+			"lat": 36.0704188 ,
+			"lng": 4.756404599999996
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BORDJ BOUARRERIDJ",
+		"wilayaID":  34,"wilaya": "BORDJ BOU ARRERIDJ",
+		"adresse": "Boulevard Houari Boumedien",
+		"tel": "TEL/FAX:035.73.31.38/FAX :035.73.31.64",
+		"fax": "TEL/FAX:035.73.31.38/FAX :035.73.31.64"
+	},
+	{
+		"id": 165,
+		"position":{
+			"lat": 36.7552496 ,
+			"lng": 3.7536662999999635
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "BORDJ MNAIL",
+		"wilayaID":  35,"wilaya": "BOUMERDES",
+		"adresse": "Cite110 Lgts Bastos",
+		"tel": "TEL/FAX: 024.98.50.37 /FAX:024.98.50.36",
+		"fax": "TEL/FAX: 024.98.50.37 /FAX:024.98.50.36"
+	},
+	{
+		"id": 166,
+		"position":{
+			"lat": 36.720184 ,
+			"lng": 3.4902391000000534
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TIDJELABINE",
+		"wilayaID":  35,"wilaya": "BOUMERDES",
+		"adresse": "Commune Tidjelabine",
+		"tel": "TEL/FAX:024.95.04.04 /FAX :024.95.04.14",
+		"fax": "TEL/FAX:024.95.04.04 /FAX :024.95.04.14"
+	},
+	{
+		"id": 167,
+		"position":{
+			"lat": 36.6385933 ,
+			"lng": 3.3288182999999663
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "KHMIS EL KHECHNA",
+		"wilayaID":  35,"wilaya": "BOUMERDES",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 168,
+		"position":{
+			"lat": 36.7666667 ,
+			"lng": 8.33333330000005
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN LAASSEL",
+		"wilayaID":  36,"wilaya": "EL TAREF",
+		"adresse": "Commune Taref",
+		"tel": "TEL/FAX: 030.89.36.61/FAX :030.89.30.35",
+		"fax": "TEL/FAX: 030.89.36.61/FAX :030.89.30.35"
+	},
+	{
+		"id": 169,
+		"position":{
+			"lat": 36.7558581 ,
+			"lng": 8.221297899999968
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TAREF",
+		"wilayaID":  36,"wilaya": "EL TAREF",
+		"adresse": "Centre Psycho-Pedagogique Pour Enfants Taref",
+		"tel": "TEL/FAX: 038.60.28.55",
+		"fax": "TEL/FAX: 038.60.28.55"
+	},
+	{
+		"id": 170,
+		"position":{
+			"lat": 36.7558581 ,
+			"lng": 8.221297899999968
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "BEN M'HIDI",
+		"wilayaID":  36,"wilaya": "EL TAREF",
+		"adresse": "Commune Ben Mhidi",
+		"tel": "TEL/FAX: 038.69.20.19",
+		"fax": "TEL/FAX: 038.69.20.19"
+	},
+	{
+		"id": 171,
+		"position":{
+			"lat": 36.7558581 ,
+			"lng": 8.221297899999968
+		},
+		"denomination": "CIR",
+		"typeId": "0",
+		"description": " Centre pour insuffisants respiratoires",
+		"commune": "TAREF",
+		"wilayaID":  36,"wilaya": "EL TAREF",
+		"adresse": "Commune Bouhedjar",
+		"tel": "TEL/FAX:Por ; 06.99.84.27.28",
+		"fax": "TEL/FAX:Por ; 06.99.84.27.28"
+	},
+	{
+		"id": 172,
+		"position":{
+			"lat": 27.6761012 ,
+			"lng": -8.127652600000033
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TlNDOUF",
+		"wilayaID":  37,"wilaya": "TINDOUF",
+		"adresse": "Hat Shmane Amirat Kassabi",
+		"tel": "TEL/FAX: 045.92.13.52",
+		"fax": "TEL/FAX: 045.92.13.52"
+	},
+	{
+		"id": 173,
+		"position":{
+			"lat": 27.6761012 ,
+			"lng": -8.127652600000033
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "TlNDOUF",
+		"wilayaID":  37,"wilaya": "TINDOUF",
+		"adresse": "Hai Tindouf Lotfi - Tindouf",
+		"tel": "TEL/FAX:TEL:049.93.88.52 FAX 049.93 89.93",
+		"fax": "TEL/FAX:TEL:049.93.88.52 FAX 049.93 89.93"
+	},
+	{
+		"id": 174,
+		"position":{
+			"lat": 35.6015182 ,
+			"lng": 1.8074586000000181
+		},
+		"denomination": "CPPEH MOTEURS",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes moteurs",
+		"commune": "TISSEMSILT",
+		"wilayaID":  38,"wilaya": "TISSEMSILT",
+		"adresse": "Ain El BordJ",
+		"tel": "TEL/FAX:TFL/FAX : 046.47.03.12",
+		"fax": "TEL/FAX:TFL/FAX : 046.47.03.12"
+	},
+	{
+		"id": 175,
+		"position":{
+			"lat": 35.6015182 ,
+			"lng": 1.8074586000000181
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "TISSEMSILT",
+		"wilayaID":  38,"wilaya": "TISSEMSILT",
+		"adresse": "Cite Ben Charki ex Castor",
+		"tel": "TEL/FAX: 046.49.61.32/FAX : 046.47.08.94",
+		"fax": "TEL/FAX: 046.49.61.32/FAX : 046.47.08.94"
+	},
+	{
+		"id": 176,
+		"position":{
+			"lat": 35.6015182 ,
+			"lng": 1.8074586000000181
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TISSEMSILT",
+		"wilayaID":  38,"wilaya": "TISSEMSILT",
+		"adresse": "Cite Ben Charki ex Castor",
+		"tel": "TEL/FAX: 046.49.68.85/84",
+		"fax": "TEL/FAX: 046.49.68.85/84"
+	},
+	{
+		"id": 177,
+		"position":{
+			"lat": 33.3713397 ,
+			"lng": 6.847968199999968
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "EL OUED",
+		"wilayaID":  39,"wilaya": "EL OUED",
+		"adresse": "Rue1er Novembre El Chate",
+		"tel": "TEL/FAX: 032.21.70.61",
+		"fax": "TEL/FAX: 032.21.70.61"
+	},
+	{
+		"id": 178,
+		"position":{
+			"lat": 33.5383569 ,
+			"lng": 5.986358600000017
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "DJAMAA",
+		"wilayaID":  39,"wilaya": "EL OUED",
+		"adresse": "Hai El Hayat Route El Mirara",
+		"tel": "TEL/FAX: 032.25.98.56/57",
+		"fax": "TEL/FAX: 032.25.98.56/57"
+	},
+	{
+		"id": 179,
+		"position":{
+			"lat": 33.5383569 ,
+			"lng": 5.986358600000017
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MGHIER",
+		"wilayaID":  39,"wilaya": "EL OUED",
+		"adresse": "Cite El Alia 2",
+		"tel": "TEL/FAX:020.94.59.91/FAX : 020.94.57.01",
+		"fax": "TEL/FAX:020.94.59.91/FAX : 020.94.57.01"
+	},
+	{
+		"id": 180,
+		"position":{
+			"lat": 33.3713397 ,
+			"lng": 6.847968199999968
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "EL OUED",
+		"wilayaID":  39,"wilaya": "EL OUED",
+		"adresse": "Cite Emir AEK",
+		"tel": "TEL/FAX: 032.20.51.70/FAX : 032.20.61.34",
+		"fax": "TEL/FAX: 032.20.51.70/FAX : 032.20.61.34"
+	},
+	{
+		"id": 181,
+		"position":{
+			"lat": 33.3713397 ,
+			"lng": 6.847968199999968
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "R'GUIBA",
+		"wilayaID":  39,"wilaya": "EL OUED",
+		"adresse": "",
+		"tel": "TEL/FAX:TEL: 032.27.39.93",
+		"fax": "TEL/FAX:TEL: 032.27.39.93"
+	},
+	{
+		"id": 182,
+		"position":{
+			"lat": 35.4309947 ,
+			"lng": 7.146707200000037
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "KHENCHELA",
+		"wilayaID":  40,"wilaya": "KHENCHLA",
+		"adresse": "Cite Belle Vue",
+		"tel": "TEL/FAX: 032.32.20.46/FAX : 032.32.39.79",
+		"fax": "TEL/FAX: 032.32.20.46/FAX : 032.32.39.79"
+	},
+	{
+		"id": 183,
+		"position":{
+			"lat": 35.4929142 ,
+			"lng": 6.926280499999962
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "KAIS",
+		"wilayaID":  40,"wilaya": "KHENCHLA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 184,
+		"position":{
+			"lat": 35.4309947 ,
+			"lng": 7.146707200000037
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "KHENCHLA",
+		"wilayaID":  40,"wilaya": "KHENCHLA",
+		"adresse": "Siege De La Wilaya",
+		"tel": "TEL/FAX: 032.32.26.59/FAX :032.32.90.41",
+		"fax": "TEL/FAX: 032.32.26.59/FAX :032.32.90.41"
+	},
+	{
+		"id": 185,
+		"position":{
+			"lat": 36.2695872 ,
+			"lng": 7.948389799999973
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "CPPEH MOTEURS",
+		"wilayaID":  41,"wilaya": "SOUK AHRAS",
+		"adresse": "Arris Batna",
+		"tel": "TEL/FAX: 037.37.74.97/FAX : 037.37.65.29",
+		"fax": "TEL/FAX: 037.37.74.97/FAX : 037.37.65.29"
+	},
+	{
+		"id": 186,
+		"position":{
+			"lat": 36.2695872 ,
+			"lng": 7.948389799999973
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "SOUK AHRAS",
+		"wilayaID":  41,"wilaya": "SOUK AHRAS",
+		"adresse": "Commune Souk Ahros",
+		"tel": "TEL/FAX: 037.75.23.59/FAX : 037.75.25.10",
+		"fax": "TEL/FAX: 037.75.23.59/FAX : 037.75.25.10"
+	},
+	{
+		"id": 187,
+		"position":{
+			"lat": 36.0756762 ,
+			"lng": 7.820479100000057
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "M'DAOUARACHE",
+		"wilayaID":  41,"wilaya": "SOUK AHRAS",
+		"adresse": "Cite Herkat El Malki BP 110 Oum El Bouaghi",
+		"tel": "TEL/FAX:TEL DASS: 037.75.21.69",
+		"fax": "TEL/FAX:TEL DASS: 037.75.21.69"
+	},
+	{
+		"id": 188,
+		"position":{
+			"lat": 36.163447 ,
+			"lng": 8.043790899999976
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "TAOURA",
+		"wilayaID":  41,"wilaya": "SOUK AHRAS",
+		"adresse": "Commune De Taoura",
+		"tel": "TEL/FAX: 037.33.16.16",
+		"fax": "TEL/FAX: 037.33.16.16"
+	},
+	{
+		"id": 189,
+		"position":{
+			"lat": 36.6381992 ,
+			"lng": 2.7033575000000383
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BOU ISMAIL",
+		"wilayaID":  42,"wilaya": "TIPAZA",
+		"adresse": "Commune De Bousmail",
+		"tel": "TEL/FAX: 024.46.34.60",
+		"fax": "TEL/FAX: 024.46.34.60"
+	},
+	{
+		"id": 190,
+		"position":{
+			"lat": 36.6785804 ,
+			"lng": 2.79726340000002
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "DOUAOUDA",
+		"wilayaID":  42,"wilaya": "TIPAZA",
+		"adresse": "Ferme Yaakoubi Amar",
+		"tel": "TEL/FAX: 024.40.71.29/37",
+		"fax": "TEL/FAX: 024.40.71.29/37"
+	},
+	{
+		"id": 191,
+		"position":{
+			"lat": 36.6178786 ,
+			"lng": 2.3912361999999803
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "TIPAZA",
+		"wilayaID":  42,"wilaya": "TIPAZA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 192,
+		"position":{
+			"lat": 36.5124409 ,
+			"lng": 2.414127600000029
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "HADJOUT",
+		"wilayaID":  42,"wilaya": "TIPAZA",
+		"adresse": "Commune De Hadjout",
+		"tel": "TEL/FAX: 024.49.38.28",
+		"fax": "TEL/FAX: 024.49.38.28"
+	},
+	{
+		"id": 193,
+		"position":{
+			"lat": 36.4084009 ,
+			"lng": 5.9304038999999875
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MILA",
+		"wilayaID":  43,"wilaya": "MILA",
+		"adresse": "Commune De Mila",
+		"tel": "TEL/FAX: 031.57.87.76",
+		"fax": "TEL/FAX: 031.57.87.76"
+	},
+	{
+		"id": 194,
+		"position":{
+			"lat": 36.4084009 ,
+			"lng": 5.9304038999999875
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "FERDJIOUA",
+		"wilayaID":  43,"wilaya": "MILA",
+		"adresse": "Cite 20 Aoet 55",
+		"tel": "TEL/FAX: 031.59.63.46",
+		"fax": "TEL/FAX: 031.59.63.46"
+	},
+	{
+		"id": 195,
+		"position":{
+			"lat": 36.1464769 ,
+			"lng": 6.195132000000058
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "CHELGHOUM LAID",
+		"wilayaID":  43,"wilaya": "MILA",
+		"adresse": "Cite Guscourte Abdeikrim",
+		"tel": "TEL/FAX: 031.52.85.53/FAX : 011 53 /4.94",
+		"fax": "TEL/FAX: 031.52.85.53/FAX : 011 53 /4.94"
+	},
+	{
+		"id": 196,
+		"position":{
+			"lat": 36.4084009 ,
+			"lng": 5.9304038999999875
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "FERDJIOUA",
+		"wilayaID":  43,"wilaya": "MILA",
+		"adresse": "Commune De Ferdjioua",
+		"tel": "TEL/FAX: 031.59.98.18",
+		"fax": "TEL/FAX: 031.59.98.18"
+	},
+	{
+		"id": 197,
+		"position":{
+			"lat": 36.263186 ,
+			"lng": 1.9641065000000708
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "AIN DEFLA",
+		"wilayaID":  44,"wilaya": "AIN DEFLA",
+		"adresse": "Cite Freres Chouei",
+		"tel": "TEL/FAX: 027.59.06.92",
+		"fax": "TEL/FAX: 027.59.06.92"
+	},
+	{
+		"id": 198,
+		"position":{
+			"lat": 36.3519477 ,
+			"lng": 2.164672200000041
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BENALLEL",
+		"wilayaID":  44,"wilaya": "AIN DEFLA",
+		"adresse": "Sidi Mjahed",
+		"tel": "TEL/FAX: 027.60.11.34",
+		"fax": "TEL/FAX: 027.60.11.34"
+	},
+	{
+		"id": 199,
+		"position":{
+			"lat": 36.263186 ,
+			"lng": 1.9641065000000708
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN DEFLA",
+		"wilayaID":  44,"wilaya": "AIN DEFLA",
+		"adresse": "Cite Freres Mazouni",
+		"tel": "TEL/FAX:TFL/FAX : 027.58.72.30",
+		"fax": "TEL/FAX:TFL/FAX : 027.58.72.30"
+	},
+	{
+		"id": 200,
+		"position":{
+			"lat": 36.35 ,
+			"lng": 2.266666999999984
+		},
+		"denomination": "CIR",
+		"typeId": "0",
+		"description": " Centre pour insuffisants respiratoires",
+		"commune": "Ain N'sour",
+		"wilayaID":  44,"wilaya": "AIN DEFLA",
+		"adresse": "Ain Tourki",
+		"tel": "TEL/FAX: 027.60.32.38/FAX : 027.60.35.67",
+		"fax": "TEL/FAX: 027.60.32.38/FAX : 027.60.35.67"
+	},
+	{
+		"id": 201,
+		"position":{
+			"lat": 32.75633320000001 ,
+			"lng": -0.5778033000000278
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN SEFRA",
+		"wilayaID":  45,"wilaya": "NAAMA",
+		"adresse": "Rue Fares Mohamed",
+		"tel": "TEL/FAX: 049.76.15.73",
+		"fax": "TEL/FAX: 049.76.15.73"
+	},
+	{
+		"id": 202,
+		"position":{
+			"lat": 33.5442772 ,
+			"lng": -0.2762706999999409
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MECHRIA",
+		"wilayaID":  45,"wilaya": "NAAMA",
+		"adresse": "Route Nationale ne06",
+		"tel": "TEL/FAX: 049.78.02.21/93",
+		"fax": "TEL/FAX: 049.78.02.21/93"
+	},
+	{
+		"id": 203,
+		"position":{
+			"lat": 33.5442772 ,
+			"lng": -0.2762706999999409
+		},
+		"denomination": "EEH VISUELS",
+		"typeId": "0",
+		"description": "Ecole pour enfants handicapes visuels",
+		"commune": "MECHRIA",
+		"wilayaID":  45,"wilaya": "NAAMA",
+		"adresse": "RUP Snlhi Tnyeh RP ?QQ",
+		"tel": "TEL/FAX: 049.78.60.54/FAX : 049.77.62.23",
+		"fax": "TEL/FAX: 049.78.60.54/FAX : 049.77.62.23"
+	},
+	{
+		"id": 204,
+		"position":{
+			"lat": 35.3072501 ,
+			"lng": -1.1424514000000272
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN TEMOUCHENT",
+		"wilayaID":  46,"wilaya": "AIN TEMOUCHENT",
+		"adresse": "38 Cite Moulay AEK",
+		"tel": "TEL/FAX: 043.60.68.65/FAX : 043.60.44.00",
+		"fax": "TEL/FAX: 043.60.68.65/FAX : 043.60.44.00"
+	},
+	{
+		"id": 205,
+		"position":{
+			"lat": 35.288358 ,
+			"lng": -1.3648152000000664
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AIN LARBAA",
+		"wilayaID":  46,"wilaya": "AIN TEMOUCHENT",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 206,
+		"position":{
+			"lat": 35.3072501 ,
+			"lng": -1.1424514000000272
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "AIN TEMOUCHENT",
+		"wilayaID":  46,"wilaya": "AIN TEMOUCHENT",
+		"adresse": "Cite Moulay Mustapha",
+		"tel": "TEL/FAX: 043.60.35.10/FAX : 043.60.54.05",
+		"fax": "TEL/FAX: 043.60.35.10/FAX : 043.60.54.05"
+	},
+	{
+		"id": 207,
+		"position":{
+			"lat": 30.59958869999999 ,
+			"lng": 2.8876436000000467
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "El MENIA",
+		"wilayaID":  47,"wilaya": "GHARDAIA",
+		"adresse": "Rue El Moudjahidine",
+		"tel": "TEL/FAX: 029.81.43.53/FAX : 029.81.24.99",
+		"fax": "TEL/FAX: 029.81.43.53/FAX : 029.81.24.99"
+	},
+	{
+		"id": 208,
+		"position":{
+			"lat": 32.8337669 ,
+			"lng": 3.771809800000028
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "BERRIANE",
+		"wilayaID":  47,"wilaya": "GHARDAIA",
+		"adresse": "Commune de Berriane",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 209,
+		"position":{
+			"lat": 32.8337669 ,
+			"lng": 3.771809800000028
+		},
+		"denomination": "CPPEH MEN1AUX",
+		"typeId": "0",
+		"description": " ",
+		"commune": "DAYA BEN DAHOU A",
+		"wilayaID":  47,"wilaya": "GHARDAIA",
+		"adresse": "Daya Ben Dahaua",
+		"tel": "TEL/FAX: 029,87.19.49/FAX : 029.87.17.57",
+		"fax": "TEL/FAX: 029,87.19.49/FAX : 029.87.17.57"
+	},
+	{
+		"id": 210,
+		"position":{
+			"lat": 32.2908262 ,
+			"lng": 3.598988800000029
+		},
+		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "METLILI",
+		"wilayaID":  47,"wilaya": "GHARDAIA",
+		"adresse": "Cite Chaebet Ahmed",
+		"tel": "TEL/FAX: 029.88.32.87/FAX :029.82.32.49",
+		"fax": "TEL/FAX: 029.88.32.87/FAX :029.82.32.49"
+	},
+	{
+		"id": 211,
+		"position":{
+			"lat": 35.9607107 ,
+			"lng": 0.9199773000000278
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "OUED RHIOU",
+		"wilayaID":  48,"wilaya": "RELIZANE",
+		"adresse": "Rue Imam Abdou",
+		"tel": "TEL/FAX:TEL/FAX . 046.97.72.23",
+		"fax": "TEL/FAX:TEL/FAX . 046.97.72.23"
+	},
+	{
+		"id": 212,
+		"position":{
+			"lat": 36.1187509 ,
+			"lng": 0.8770472999999583
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "MAZOUNA",
+		"wilayaID":  48,"wilaya": "RELIZANE",
+		"adresse": "Rue Sidi M'hamed Ben ALI",
+		"tel": "TEL/FAX: 046.94.79.90/FAX : 046.94.73.85",
+		"fax": "TEL/FAX: 046.94.79.90/FAX : 046.94.73.85"
+	},
+	{
+		"id": 213,
+		"position":{
+			"lat": 35.7960821 ,
+			"lng": 0.679676699999959
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "OUED DJEMAA",
+		"wilayaID":  48,"wilaya": "RELIZANE",
+		"adresse": "Commune de Oued Djemaa",
+		"tel": "TEL/FAX: 046.90.81.27",
+		"fax": "TEL/FAX: 046.90.81.27"
+	},
+	{
+		"id": 214,
+		"position":{
+			"lat": 35.8692431 ,
+			"lng": 1.108924399999978
+		},
+		"denomination": "CPPEH MENTAUX",
+		"typeId": "0",
+		"description": "Centre psycho-pedagogique pour enfants handicapes mentaux",
+		"commune": "AMI MOUSSA",
+		"wilayaID":  48,"wilaya": "RELIZANE",
+		"adresse": "",
+		"tel": "TEL/FAX: 046.95.27.91",
+		"fax": "TEL/FAX: 046.95.27.91"
+	},
+	{
+		"id": 215,
+		"position":{
+			"lat": 35.7339361 ,
+			"lng": 0.5588787000000366
+		},		"denomination": "EEH AUDITIFS",
+		"typeId": "0",
+		"description": " Ecole pour enfants handicapes auditifs",
+		"commune": "RELIZANE",
+		"wilayaID":  48,"wilaya": "RELIZANE",
+		"adresse": "Boulevard 11 Decembre il Iniissar",
+		"tel": "TEL/FAX: 046.92.83.23",
+		"fax": "TEL/FAX: 046.92.83.23"
+	},
+	{
+		"id": 216,
+		"position":{
+			"lat": 27.9716342 ,
+			"lng": -0.18696439999996528
+		},
+		"denomination": "Centre specialise de reeducation d'Adrar",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Adrar",
+		"wilayaID":  1, "wilaya": "ADRAR",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 217,
+		"position":{
+			"lat": 36.0569401 ,
+			"lng": 1.1209120999999413
+		},
+		"denomination": "Centre specialise de reeducation de BouKadir",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Boukadir",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 218,
+		"position":{
+			"lat": 36.0189518 ,
+			"lng": 6.556988199999978
+		},
+		"denomination": "Centre specialise de reeducation de Ain M'iila",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Ain M'ila",
+		"wilayaID":  4,"wilaya": "OUM ELBOUAGHI",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 219,
+		"position":{
+			"lat": 36.5047206 ,
+			"lng": 2.8726747000000614
+		},
+		"denomination": "Centre specialise de reeducation de Batna (F)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Batna",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 220,
+		"position":{
+			"lat": 36.4336226 ,
+			"lng": 2.9076093999999557
+		},
+		"denomination": "Centre specialise de reeducation d'Ouled-Aich (F)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Ouled-Aich",
+		"wilayaID":  9,"wilaya": "BLIDA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 221,
+		"position":{
+			"lat": 36.3019154 ,
+			"lng": 3.7536662999999635
+		},
+		"denomination": "Centre specialise de reeducation d'Ain-Laloui",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Ain-Laloui",
+		"wilayaID":  10,"wilaya": "BOUIRA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 222,
+		"position":{
+			"lat": 21.9537293 ,
+			"lng": 5.561727900000051
+		},
+		"denomination": "Centre specialise de reeducation de Tamanghasset",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Tamanghasset",
+		"wilayaID":  11,"wilaya": "TAMANGHASSET",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 223,
+		"position":{
+			"lat": 35.4142494 ,
+			"lng": 8.101091999999994
+		},
+		"denomination": "Centre specialise de reeducation de Tebessa (F)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Tebessa",
+		"wilayaID":  12,"wilaya": "TEBESSA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 224,
+		"position":{
+			"lat": 35.3673553 ,
+			"lng": 1.322032199999967
+		},
+		"denomination": "Centre specialise de reeducation de Tiaret (F)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Tiaret",
+		"wilayaID":  14,"wilaya": "TIARET",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 225,
+		"position":{
+			"lat": 35.5313694 ,
+			"lng": 1.0227145000000064
+		},
+		"denomination": "Centre specialise de reeducation de Rahouia",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Rahouia",
+		"wilayaID":  14,"wilaya": "TIARET",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 226,
+		"position":{
+			"lat": 36.7021906 ,
+			"lng": 4.0593255
+		},
+		"denomination": "Centre specialise de reeducation de Tizi-Ouzou",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Tizi-Ouzou",
+		"wilayaID":  15,"wilaya": "TIZI OUZOU",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 227,
+		"position":{
+			"lat": 36.7162726 ,
+			"lng": 3.0425976999999875
+		},
+		"denomination": "Centre specialise de reeducation Birkhadem (01)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Birkhadem",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 228,
+		"position":{
+			"lat": 36.7162726 ,
+			"lng": 3.0425976999999875
+		},
+		"denomination": "Centre specialise de reeducation Birkhadem (02 )",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Birkhadem",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 229,
+		"position":{
+			"lat": 36.7690092 ,
+			"lng": 3.0309945999999854
+		},
+		"denomination": "Centre specialise de reeducation d'EL-Biar",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "EL-Biar",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 230,
+		"position":{
+			"lat": 34.6751691 ,
+			"lng": 3.2684214999999313
+		},
+		"denomination": "Centre specialise de reeducation de Djelfa",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Djelfa",
+		"wilayaID":  17,"wilaya": "DJELFA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 231,
+		"position":{
+			"lat": 36.7753597 ,
+			"lng": 5.90927540000007
+		},
+		"denomination": "Centre specialise de reeducation de Taher",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Taher",
+		"wilayaID":  18,"wilaya": "JIJEL",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 232,
+		"position":{
+			"lat": 36.1969027 ,
+			"lng": 5.415087099999937
+		},
+		"denomination": "Centre specialise de reeducation de Setif",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Setif",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 233,
+		"position":{
+			"lat": 34.8412014 ,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "Centre specialise de reeducation de Saida",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Saida",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 234,
+		"position":{
+			"lat": 36.7599329 ,
+			"lng": 6.894084600000042
+		},
+		"denomination": "Centre specialise de reeducation de Ramdane Djamel",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Ramdane Djamel",
+		"wilayaID":  21,"wilaya": "SKIKDA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 235,
+		"position":{
+			"lat": 35.1036532 ,
+			"lng": -0.5446911999999884
+		},
+		"denomination": "Centre specialise de reeducation de Hassi-Dahou",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Hassi-Dahou",
+		"wilayaID":  22,"wilaya": "SIDI BEL ABBAS",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 236,
+		"position":{
+			"lat": 36.7609066 ,
+			"lng": 7.665662500000053
+		},
+		"denomination": "Centre specialise de reeducation d'EL Hadjar",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "EL Hadjar",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 237,
+		"position":{
+			"lat": 36.458976 ,
+			"lng": 7.4327273000000105
+		},
+		"denomination": "Centre specialise de reeducation de Guelma",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Guelma",
+		"wilayaID":  24,"wilaya": "GUELMA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 238,
+		"position":{
+			"lat": 36.360155 ,
+			"lng": 6.642432999999983
+		},
+		"denomination": "Centre specialise de reeducation de Constantine (F)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Constantine",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 239,
+		"position":{
+			"lat": 36.2853847 ,
+			"lng": 2.768024700000069
+		},
+		"denomination": "Centre specialise de reeducation de Medea",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Medea",
+		"wilayaID":  26,"wilaya": "MEDEA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 240,
+		"position":{
+			"lat": 35.9042298 ,
+			"lng": 0.14013810000005833
+		},
+		"denomination": "Centre specialise de reeducation de Sayada",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Sayada",
+		"wilayaID":  27,"wilaya": "MOSTAGANEM",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 241,
+		"position":{
+			"lat": 35.4256036 ,
+			"lng": 0.14049469999997655
+		},
+		"denomination": "Centre specialise de reeducation de Mamounia",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Mamounia",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 242,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "Centre specialise de reeducation Dar El Beida",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Dar El Beida",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 243,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "Centre specialise de reeducation Es Seddikia(F)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Oran",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 244,
+		"position":{
+			"lat": 33.3713397 ,
+			"lng": 6.847968199999968
+		},
+		"denomination": "Centre specialise de reeducation deEL-Oued",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "EL-Oued",
+		"wilayaID":  39,"wilaya": "EL OUED",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 245,
+		"position":{
+			"lat": 36.2695872 ,
+			"lng": 7.948389799999973
+		},
+		"denomination": "Centre specialise de reeducation de Souk-Ahras",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Souk-Ahras",
+		"wilayaID":  41,"wilaya": "SOUK AHRAS",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 246,
+		"position":{
+			"lat": 35.3701948 ,
+			"lng": -0.9677301000000398
+		},
+		"denomination": "Centre specialise de reeducation de Hammam-Bouhadjar (F)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Hammam-Bouhadjar",
+		"wilayaID":  46,"wilaya": "AIN TEMOUCHENT",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 247,
+		"position":{
+			"lat": 33.766667 ,
+			"lng": 1.233333000000016
+		},
+		"denomination": "Centre specialise de reeducation (stiten)",
+		"typeId": "2",
+		"description": "Etablissement de la sauvegarde de la jeunesse",
+		"commune": "Stiten",
+		"wilayaID":  32,"wilaya": "EL BAYADH",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 248,
+		"position":{
+			"lat": 36.1988388 ,
+			"lng": 1.549921100000006
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Oued fodda",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Hai sakassik",
+		"tel": "TEL/FAX:0556.87.78.02/040.67.27.99",
+		"fax": "TEL/FAX:0556.87.78.02/040.67.27.99"
+	},
+	{
+		"id": 249,
+		"position":{
+			"lat": 36.5049038 ,
+			"lng": 1.3180042000000185
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans mixte",
+		"commune": "Tenes",
+		"wilayaID":  2, "wilaya": "CHLEF",
+		"adresse": "Route de mostaghanem",
+		"tel": "TEL/FAX:027.45.31.57 /0663.56.85.11/07.75.67.52.07",
+		"fax": "TEL/FAX:027.45.31.57 /0663.56.85.11/07.75.67.52.07"
+	},
+	{
+		"id": 250,
+		"position":{
+			"lat": 33.7972551 ,
+			"lng": 2.869406499999968
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Laghouat",
+		"wilayaID":  2, "wilaya": "LAGHOUAT",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 251,
+		"position":{
+			"lat": 35.873056 ,
+			"lng": 7.119786699999963
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Oum El Bouaghi",
+		"wilayaID":  3, "wilaya": "OUM EL BOUAGHI",
+		"adresse": "",
+		"tel": "TEL/FAX:05.54.11.40.22",
+		"fax": "TEL/FAX:05.54.11.40.22"
+	},
+	{
+		"id": 252,
+		"position":{
+			"lat": 35.3991089 ,
+			"lng": 5.919838700000014
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6 18 ans mixte",
+		"commune": "Ain Touta",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Route de maafa",
+		"tel": "TEL/FAX:033.83.52.71/033.83.50.23/07.71.82.38.26",
+		"fax": "TEL/FAX:033.83.52.71/033.83.50.23/07.71.82.38.26"
+	},
+	{
+		"id": 253,
+		"position":{
+			"lat": 35.5610218 ,
+			"lng": 6.173911599999997
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Batna",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "Cite 742 logt freres Khezzar",
+		"tel": "TEL/FAX:033.80.55.85 /033.80.60.48",
+		"fax": "TEL/FAX:033.80.55.85 /033.80.60.48"
+	},
+	{
+		"id": 254,
+		"position":{
+			"lat": 36.7508896 ,
+			"lng": 5.056733300000019
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Bejaia",
+		"wilayaID":  6,"wilaya": "BEJAIA",
+		"adresse": "route de takliet ihaddadene",
+		"tel": "TEL/FAX:034.20.68.77/034,21.57.35/0556.31.02.47",
+		"fax": "TEL/FAX:034.20.68.77/034,21.57.35/0556.31.02.47"
+	},
+	{
+		"id": 255,
+		"position":{
+			"lat": 34.8370347 ,
+			"lng": 5.751047500000027
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Biskra",
+		"wilayaID":  7, "wilaya": "BISKRA",
+		"adresse": "Hai beni morrat",
+		"tel": "TEL/FAX:033.75.96.85 /05.51.15.56.72",
+		"fax": "TEL/FAX:033.75.96.85 /05.51.15.56.72"
+	},
+	{
+		"id": 256,
+		"position":{
+			"lat": 31.6182492 ,
+			"lng": -2.2143231000000014
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Bechar",
+		"wilayaID":  8,"wilaya": "BECHAR",
+		"adresse": "Route nationale ne6",
+		"tel": "TEL/FAX:049.81.92.46DAS / 049.81.14.70 / 049.81.81.90 / 07.91.44.12.52",
+		"fax": "TEL/FAX:049.81.92.46DAS / 049.81.14.70 / 049.81.81.90 / 07.91.44.12.52"
+	},
+	{
+		"id": 257,
+		"position":{
+			"lat": 36.37763 ,
+			"lng": 3.896234800000002
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Bouira",
+		"wilayaID":  10,"wilaya": "BOUIRA",
+		"adresse": "cite 1100 logements",
+		"tel": "TEL/FAX:026.93.94.79 / 07.93.08.08.59",
+		"fax": "TEL/FAX:026.93.94.79 / 07.93.08.08.59"
+	},
+	{
+		"id": 258,
+		"position":{
+			"lat": 21.9537293 ,
+			"lng": 5.561727900000051
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Tamanrasset",
+		"wilayaID":  11,"wilaya": "TAMANRASSET",
+		"adresse": "",
+		"tel": "TEL/FAX:029.35.44.22",
+		"fax": "TEL/FAX:029.35.44.22"
+	},
+	{
+		"id": 259,
+		"position":{
+			"lat": 35.366667 ,
+			"lng": 8.25
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans gareons",
+		"commune": "Bekkaria",
+		"wilayaID":  12,"wilaya": "TEBESSA",
+		"adresse": "",
+		"tel": "TEL/FAX:030.78.35.06",
+		"fax": "TEL/FAX:030.78.35.06"
+	},
+	{
+		"id": 260,
+		"position":{
+			"lat": 35.0823082 ,
+			"lng": -2.196617999999944
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans gareons",
+		"commune": "Marsa ben m'hidi",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "",
+		"tel": "TEL/FAX:043.31.00.84 / 077632.12.65",
+		"fax": "TEL/FAX:043.31.00.84 / 077632.12.65"
+	},
+	{
+		"id": 261,
+		"position":{
+			"lat": 34.88840620000001 ,
+			"lng": -1.3180042000000185
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Tlemcen",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "23 boulevard ghazlaoui abdesselem CHU",
+		"tel": "TEL/FAX:034.26.30.46 / 07.72.09.89 03 / 07.72.41.55.13",
+		"fax": "TEL/FAX:034.26.30.46 / 07.72.09.89 03 / 07.72.41.55.13"
+	},
+	{
+		"id": 262,
+		"position":{
+			"lat": 35.3673553 ,
+			"lng": 1.322032199999967
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Tiaret",
+		"wilayaID":  14,"wilaya": "TIARET",
+		"adresse": "Cite diar el chams route de frigo",
+		"tel": "TEL/FAX:046.45.29.98 / 046.45.19.96/0799.43.10.96",
+		"fax": "TEL/FAX:046.45.29.98 / 046.45.19.96/0799.43.10.96"
+	},
+	{
+		"id": 263,
+		"position":{
+			"lat": 36.744022 ,
+			"lng": 4.015913500000011
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Boukhalfa",
+		"wilayaID":  15,"wilaya": "TIZI OUZOU",
+		"adresse": "Cite mahfoud boussabsi BP",
+		"tel": "TEL/FAX:020.69.36.05 /0774.10.44.94",
+		"fax": "TEL/FAX:020.69.36.05 /0774.10.44.94"
+	},
+	{
+		"id": 264,
+		"position":{
+			"lat": 36.7852529 ,
+			"lng": 3.2835136999999577
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Ain Taya",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "49 avenue de la victoire sercouf",
+		"tel": "TEL/FAX:021.86.85.74/021.86.73.86/021.86.76.69/07.92.23.55.03",
+		"fax": "TEL/FAX:021.86.85.74/021.86.73.86/021.86.76.69/07.92.23.55.03"
+	},
+	{
+		"id": 265,
+		"position":{
+			"lat": 36.7690092 ,
+			"lng": 3.0309945999999854
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "El Biar",
+		"wilayaID": 16, "wilaya": "Alger",
+		"adresse": "78 route bachir el ibrahimi",
+		"tel": "TEL/FAX:021.92.17.92/18/021.92.75.26 /05.54.70.27.24",
+		"fax": "TEL/FAX:021.92.17.92/18/021.92.75.26 /05.54.70.27.24"
+	},
+	{
+		"id": 266,
+		"position":{
+			"lat": 34.6751691 ,
+			"lng": 3.2684214999999313
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Djelfa",
+		"wilayaID":  17,"wilaya": "DJELFA",
+		"adresse": "cite 5 juillet",
+		"tel": "TEL/FAX:027.90.98.96/027.90.99.40/05.50.74.52.76",
+		"fax": "TEL/FAX:027.90.98.96/027.90.99.40/05.50.74.52.76"
+	},
+	{
+		"id": 267,
+		"position":{
+			"lat": 36.81673869999999 ,
+			"lng": 5.749093300000027
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Jijel",
+		"wilayaID":  18,"wilaya": "JIJEL",
+		"adresse": "route de Constantine",
+		"tel": "TEL/FAX:034.47.17.58/034.47.72.43/06.98.99.71.16",
+		"fax": "TEL/FAX:034.47.17.58/034.47.72.43/06.98.99.71.16"
+	},
+	{
+		"id": 268,
+		"position":{
+			"lat": 36.81673869999999 ,
+			"lng": 5.749093300000027
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6. 18 ans",
+		"commune": "El Milia",
+		"wilayaID":  18,"wilaya": "JIJEL",
+		"adresse": "route de la Palestine",
+		"tel": "TEL/FAX:034.42.81.53",
+		"fax": "TEL/FAX:034.42.81.53"
+	},
+	{
+		"id": 269,
+		"position":{
+			"lat": 36.1969027 ,
+			"lng": 5.415087099999937
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans+ 6-18 ans filles",
+		"commune": "Setif",
+		"wilayaID":  19,"wilaya": "Setif",
+		"adresse": "cite bel air",
+		"tel": "TEL/FAX:036.72.18.80/036.72.23.61/07.73.50.92.23",
+		"fax": "TEL/FAX:036.72.18.80/036.72.23.61/07.73.50.92.23"
+	},
+	{
+		"id": 270,
+		"position":{
+			"lat": 36.1969027 ,
+			"lng": 5.415087099999937
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-18 ans gareons",
+		"commune": "Setif",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "",
+		"tel": "TEL/FAX:036.63.91.37/07.71.30.61.67",
+		"fax": "TEL/FAX:036.63.91.37/07.71.30.61.67"
+	},
+	{
+		"id": 271,
+		"position":{
+			"lat": 34.8412014 ,
+			"lng": 0.14843050000001767
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Saida",
+		"wilayaID":  20,"wilaya": "SAIDA",
+		"adresse": "cite el nasr",
+		"tel": "TEL/FAX:048.47.82.48/0771.65.92.39",
+		"fax": "TEL/FAX:048.47.82.48/0771.65.92.39"
+	},
+	{
+		"id": 272,
+		"position":{
+			"lat": 36.7441137 ,
+			"lng": 7.117095199999994
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Skikda",
+		"wilayaID":  21,"wilaya": "SKIKDA",
+		"adresse": "cite des freres chebel",
+		"tel": "TEL/FAX:030.92.53.12/038.76.17.04/038.75.51.75/07.73.82.69.92",
+		"fax": "TEL/FAX:030.92.53.12/038.76.17.04/038.75.51.75/07.73.82.69.92"
+	},
+	{
+		"id": 273,
+		"position":{
+			"lat": 35.2022249 ,
+			"lng": -0.629892199999972
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Sidi bel abbes",
+		"wilayaID":  22,"wilaya": "SIDI BEL ABBES",
+		"adresse": "13 rue inspecteur besset",
+		"tel": "TEL/FAX:048.54.39.91/048.54.02.84",
+		"fax": "TEL/FAX:048.54.39.91/048.54.02.84"
+	},
+	{
+		"id": 274,
+		"position":{
+			"lat": 36.9264582 ,
+			"lng": 7.752535200000011
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "El Moukawama",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "rue bicha youcef pont blanc",
+		"tel": "TEL/FAX:038.42.63.15/07.74.25.85.47",
+		"fax": "TEL/FAX:038.42.63.15/07.74.25.85.47"
+	},
+	{
+		"id": 275,
+		"position":{
+			"lat": 36.9264582 ,
+			"lng": 7.752535200000011
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans Filles",
+		"commune": "Eiyssa",
+		"wilayaID":  23,"wilaya": "ANNABA",
+		"adresse": "rue FN 12 ",
+		"tel": "TEL/FAX:038.55.76.56/038.55.15.63/0771.52.82.85",
+		"fax": "TEL/FAX:038.55.76.56/038.55.15.63/0771.52.82.85"
+	},
+	{
+		"id": 276,
+		"position":{
+			"lat": 36.458976 ,
+			"lng": 7.4327273000000105
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Guelma",
+		"wilayaID":  24,"wilaya": "GUELMA",
+		"adresse": "cite 140 logements oeud el maiz",
+		"tel": "TEL/FAX:037.20.25.88/037.20.23.82/06.61.52.44.93",
+		"fax": "TEL/FAX:037.20.25.88/037.20.23.82/06.61.52.44.93"
+	},
+	{
+		"id": 277,
+		"position":{
+			"lat": 36.458976 ,
+			"lng": 7.4327273000000105
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-18 ans Filles",
+		"commune": "Heliopolis",
+		"wilayaID":  24,"wilaya": "GUELMA",
+		"adresse": "rue ben brouk houcine",
+		"tel": "TEL/FAX:037.23.73.99/037.23.74.00/0771.64.66.22",
+		"fax": "TEL/FAX:037.23.73.99/037.23.74.00/0771.64.66.22"
+	},
+	{
+		"id": 278,
+		"position":{
+			"lat": 36.360155 ,
+			"lng": 6.642432999999983
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans Gareons",
+		"commune": "",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "cite Ziadia",
+		"tel": "TEL/FAX:031.63.59.81",
+		"fax": "TEL/FAX:031.63.59.81"
+	},
+	{
+		"id": 279,
+		"position":{
+			"lat": 36.360155 ,
+			"lng": 6.642432999999983
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "Bon pasteur Chalet des pins",
+		"tel": "TEL/FAX:031.61.40.22/0553.85.15.24",
+		"fax": "TEL/FAX:031.61.40.22/0553.85.15.24"
+	},
+	{
+		"id": 280,
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans",
+		"commune": "",
+		"wilayaID":  25,"wilaya": "CONSTANTINE",
+		"adresse": "Bon pasteur Chalet des pins",
+		"tel": "TEL/FAX:031.61.38.49/0771.65.82.34",
+		"fax": "TEL/FAX:031.61.38.49/0771.65.82.34"
+	},
+	{
+		"id": 281,
+		"position":{
+			"lat": 36.2853847 ,
+			"lng": 2.768024700000069
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans Gareons",
+		"commune": "",
+		"wilayaID":  26,"wilaya": "MEDEA",
+		"adresse": "Ben Chikao",
+		"tel": "TEL/FAX:025.60.41.05/07.78.13.31.94",
+		"fax": "TEL/FAX:025.60.41.05/07.78.13.31.94"
+	},
+	{
+		"id": 282,
+		"position":{
+			"lat": 36.0970536 ,
+			"lng": 0.32543169999996735
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Sayada",
+		"wilayaID":  27,"wilaya": "MOSTAGANEM",
+		"adresse": "4 rue vallee des jardins",
+		"tel": "TEL/FAX:045.26.80.64/07.76.56.70.39",
+		"fax": "TEL/FAX:045.26.80.64/07.76.56.70.39"
+	},
+	{
+		"id": 283,
+		"position":{
+			"lat": 35.3974554 ,
+			"lng": 0.13884459999997034
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Tighennif",
+		"wilayaID":  29,"wilaya": "MASCARA",
+		"adresse": "cite 17 octobre 1961",
+		"tel": "TEL/FAX:045.86.06.62/045.93.12.44/07.77.18.75.20",
+		"fax": "TEL/FAX:045.86.06.62/045.93.12.44/07.77.18.75.20"
+	},
+	{
+		"id": 284,
+		"position":{
+			"lat": 32.1677808 ,
+			"lng": 4.976654000000053
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Ouargla",
+		"wilayaID":  29,"wilayaID":  30,"wilaya": "OUARGLA",
+		"adresse": "",
+		"tel": "TEL/FAX:020.91.11.14/0660.45.37.87",
+		"fax": "TEL/FAX:020.91.11.14/0660.45.37.87"
+	},
+	{
+		"id": 285,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Oran",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "6 avenus emir Abdelkader saint Hubert",
+		"tel": "TEL/FAX:041.35.55.62/041.34 07 46",
+		"fax": "TEL/FAX:041.35.55.62/041.34 07 46"
+	},
+	{
+		"id": 286,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans Gareons",
+		"commune": "",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "6 avenus des martyres",
+		"tel": "TEL/FAX:041.34.32.80",
+		"fax": "TEL/FAX:041.34.32.80"
+	},
+	{
+		"id": 287,
+		"position":{
+			"lat": 35.6976541 ,
+			"lng": -0.6337376000000177
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans Filles",
+		"commune": "",
+		"wilayaID":  31,"wilaya": "ORAN",
+		"adresse": "Hae rahma vieux village Messerghine",
+		"tel": "TEL/FAX:041.49.01.60/07.79.81.16.64",
+		"fax": "TEL/FAX:041.49.01.60/07.79.81.16.64"
+	},
+	{
+		"id": 288,
+		"position":{
+			"lat": 33.65813869999999 ,
+			"lng": 1.020322399999941
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "El Bayadh",
+		"wilayaID":  32,"wilaya": "EL BAYADH",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 289,
+		"position":{
+			"lat": 36.0704188 ,
+			"lng": 4.756404599999996
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Bordj bou arriredj ",
+		"wilayaID":  34,"wilaya": "BORJ BOU ARRERIDJ ",
+		"adresse": "",
+		"tel": "TEL/FAX:035.69.22.71/0560005194/035.69.58.25",
+		"fax": "TEL/FAX:035.69.22.71/0560005194/035.69.58.25"
+	},
+	{
+		"id": 290,
+		"position":{
+			"lat": 36.7552496 ,
+			"lng": 3.7536662999999635
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Boumerdes",
+		"wilayaID":  35,"wilaya": "BOUMERDES",
+		"adresse": "Cite 800 logements",
+		"tel": "TEL/FAX:024.91.10.92,0771116480",
+		"fax": "TEL/FAX:024.91.10.92,0771116480"
+	},
+	{
+		"id": 291,
+		"position":{
+			"lat": 36.7558581 ,
+			"lng": 8.221297899999968
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "El Kalaa",
+		"wilayaID":  36,"wilaya": "TAREF",
+		"adresse": "",
+		"tel": "TEL/FAX:038.66.25.20/06.99.97.41.08/07",
+		"fax": "TEL/FAX:038.66.25.20/06.99.97.41.08/07"
+	},
+	{
+		"id": 292,
+		"position":{
+			"lat": 36.7558581 ,
+			"lng": 8.221297899999968
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Ben Mhidi",
+		"wilayaID":  36,"wilaya": "TAREF",
+		"adresse": "",
+		"tel": "TEL/FAX:038.69.20.79,0662.02.17.15",
+		"fax": "TEL/FAX:038.69.20.79,0662.02.17.15"
+	},
+	{
+		"id": 293,
+		"position":{
+			"lat": 33.3713397 ,
+			"lng": 6.847968199999968
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "EI Oued",
+		"wilayaID":  39,"wilaya": "EL OUED",
+		"adresse": "",
+		"tel": "TEL/FAX:032.24.51.21/032.24.51.20",
+		"fax": "TEL/FAX:032.24.51.21/032.24.51.20"
+	},
+	{
+		"id": 294,
+		"position":{
+			"lat": 35.4309947 ,
+			"lng": 7.146707200000037
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Khenchela",
+		"wilayaID":  40,"wilaya": "KHENCHLA",
+		"adresse": "Route deel hammame saalhine el hamma",
+		"tel": "TEL/FAX:032.33.13.33/07.76.16.86.87",
+		"fax": "TEL/FAX:032.33.13.33/07.76.16.86.87"
+	},
+	{
+		"id": 295,
+		"position":{
+			"lat": 36.2695872 ,
+			"lng": 7.948389799999973
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Souk-Ahras",
+		"wilayaID":  41, "wilaya": "SOUK AHRAS",
+		"adresse": "Cite el chahid",
+		"tel": "TEL/FAX:037.34.00.39/037.34.01.95/07.76.26.26.43",
+		"fax": "TEL/FAX:037.34.00.39/037.34.01.95/07.76.26.26.43"
+	},
+	{
+		"id": 296,
+		"position":{
+			"lat": 36.1464769 ,
+			"lng": 6.195132000000058
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Chelghoum El Aid",
+		"wilayaID":  43,"wilaya": "MILA",
+		"adresse": "",
+		"tel": "TEL/FAX:07.72.33.91.48",
+		"fax": "TEL/FAX:07.72.33.91.48"
+	},
+	{
+		"id": 297,
+		"position":{
+			"lat": 36.1464769 ,
+			"lng": 6.195132000000058
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 6-18 ans Gareons",
+		"commune": "meliana Zoughala",
+		"wilayaID":  44,"wilaya": "AIN DEFLA",
+		"adresse": "",
+		"tel": "TEL/FAX:027.60.15.52",
+		"fax": "TEL/FAX:027.60.15.52"
+	},
+	{
+		"id": 298,
+		"position":{
+			"lat": 33.1683267 ,
+			"lng": -0.3748353999999381
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Naama",
+		"wilayaID":  45,"wilaya": "NAAMA",
+		"adresse": "",
+		"tel": "TEL/FAX:",
+		"fax": "TEL/FAX:"
+	},
+	{
+		"id": 299,
+		"position":{
+			"lat": 35.3004743 ,
+			"lng": -1.3710402000000386
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Beni Saf",
+		"wilayaID":  46,"wilaya": "AIN TEMOUCHENT",
+		"adresse": "La zhune",
+		"tel": "TEL/FAX:043.60.08.53/043.68.08.53",
+		"fax": "TEL/FAX:043.60.08.53/043.68.08.53"
+	},
+	{
+		"id": 300,
+		"position":{
+			"lat": 35.3004743 ,
+			"lng": -1.3710402000000386
+		},
+		"denomination": "Etablissement pour enfants prives de famille",
+		"typeId": "1",
+		"description": "Type de Foyer: 0-6 ans",
+		"commune": "Beni Saf",
+		"wilayaID":  48,"wilaya": "RELIZANE",
+		"adresse": "",
+		"tel": "TEL/FAX:046.92.92.03/06.61.98.81.37",
+		"fax": "TEL/FAX:046.92.92.03/06.61.98.81.37"
+	},
+
+	{
+		"id": 301,
+		"position":{
+			"lat": 35.5610218 ,
+			"lng": 6.173911599999997
+		},
+		"denomination": "Centre specialise de protection de Batna",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "Batna",
+		"wilayaID":  5, "wilaya": "BATNA",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+
+	{
+		"id": 302,
+		"position":{
+			"lat": 36.6682721 ,
+			"lng": 5.155088200000023
+		},
+		"denomination": "Centre specialise de protection de Tichy",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "Tichy",
+		"wilayaID":  6, "wilaya": "BEJAIA",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+
+	{
+		"id": 303,
+		"position":{
+			"lat": 34.9484714 ,
+			"lng": -1.3710402000000386
+		},
+		"denomination": "Centre specialise de protection de HENNAYA",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "HANNAYA",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+
+	{
+		"id": 304,
+		"position":{
+			"lat": 35.0962252 ,
+			"lng": -1.8562217999999575
+		},
+		"denomination": "Centre specialise de protection de Ghazaouet",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "Ghazaouet",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+
+	{
+		"id": 305,
+		"position":{
+			"lat": 34.88840620000001 ,
+			"lng": -1.3180042000000185
+		},
+		"denomination": "Centre specialise de protection de Tlemcen",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "Tlemcen",
+		"wilayaID":  13,"wilaya": "TLEMCEN",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+
+	{
+		"id": 306,
+		"position":{
+			"lat": 36.1603006 ,
+			"lng": 5.698397900000032
+		},
+		"denomination": "Centre specialise de protection d'EL-Eulma",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "EL-EuIma",
+		"wilayaID":  19,"wilaya": "SETIF",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 307,
+		"position":{
+			"lat": 35.268429 ,
+			"lng": -0.5730713000000378
+		},
+		"denomination": "Centre specialise de protection de Sidi Brahim",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "Sidi Brahim",
+		"wilayaID":  22,"wilaya": "SIDI BELABBES",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 308,
+		"position":{
+			"lat": 36.0704188 ,
+			"lng": 4.756404599999996
+		},
+		"denomination": "Centre specialise de protection de Bordj Bou Arreridj",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "Bordj Bou Arreridj",
+		"wilayaID":  34,"wilaya": "BORDJ BOU ARRERIDJ",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 309,
+		"position":{
+			"lat": 36.8783599 ,
+			"lng": 3.9368438999999853
+		},
+		"denomination": "Centre specialise de protection de Dellys",
+		"typeId": "3",
+		"description": "Centre specialise de protection",
+		"commune": "Dellys",
+		"wilayaID":  35,"wilaya": "BOUMERDES ",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+
+	{
+		"id": 310,
+		"position":{
+			"lat": 31.6182492 ,
+			"lng": -2.2143231000000014
+		},
+		"denomination": "Centre polyvalent de sauvegarde de la jeunesse de Bechar",
+		"typeId": "4",
+		"description": "Centre polyvalent de sauvegarde de la jeunesse",
+		"commune": "Bechar",
+		"wilayaID":  8,"wilaya": "BECHAR",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 311,
+		"position":{
+			"lat": 35.366667 ,
+			"lng": 8.25
+		},
+		"denomination": "Centre polyvalent de sauvegarde de la jeunesse de Bekkaria",
+		"typeId": "4",
+		"description": "Centre polyvalent de sauvegarde de la jeunesse",
+		"commune": "Bekkaria",
+		"wilayaID":  12,"wilaya": "TEBESSA",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 312,
+		"position":{
+			"lat": 32.1677808 ,
+			"lng": 4.976654000000053
+		},
+		"denomination": "Centre polyvalent de sauvegarde de la jeunesse d’Ouargla",
+		"typeId": "4",
+		"description": "Centre polyvalent de sauvegarde de la jeunesse",
+		"commune": "Ouargla",
+		"wilayaID":  30,"wilaya": "OUARGLA",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 313,
+		"position":{
+			"lat": 26.5094346 ,
+			"lng": 8.47327180000002
+		},
+		"denomination": "Centre polyvalent de sauvegarde de la jeunesse d’Illizi",
+		"typeId": "4",
+		"description": "Centre polyvalent de sauvegarde de la jeunesse",
+		"commune": "Illizi",
+		"wilayaID":  33,"wilaya": "ILLIZI",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 314,
+		"position":{
+			"lat": 35.4309947 ,
+			"lng": 7.146707200000037
+		},
+		"denomination": "Centre polyvalent de sauvegarde de la jeunesse de Khenchela",
+		"typeId": "4",
+		"description": "Centre polyvalent de sauvegarde de la jeunesse",
+		"commune": "Khenchela",
+		"wilayaID":  40,"wilaya": "KHENCHLA",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	},
+	{
+		"id": 315,
+		"position":{
+			"lat": 35.2550837 ,
+			"lng": -1.253005700000017
+		},
+		"denomination": "Centre polyvalent de sauvegarde de la jeunesse de Ain-Temouchent",
+		"typeId": "4",
+		"description": "Centre polyvalent de sauvegarde de la jeunesse",
+		"commune": "Ain- Tolba",
+		"wilayaID":  46,"wilaya": "AIN TEMOUCHENT",
+		"adresse": "",
+		"tel": "",
+		"fax": ""
+	}
+]

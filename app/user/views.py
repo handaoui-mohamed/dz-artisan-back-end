@@ -56,10 +56,6 @@ def new_user():
     data = request.get_json(force=True)
     form = RegistrationForm(MultiDict(mapping=data))
     if form.validate():
-        for fieldName, errorMessages in form.errors.iteritems():
-            print fieldName
-            for err in errorMessages:
-                print err
         username = data.get('username')
         password = data.get('password')
         email = data.get('email')
@@ -166,10 +162,10 @@ def search(page=1):
     users = []
     for user in User.query.all():
         if location_search and user.latitude and user.longitude:
-            user_location = {
-                'latitude': float(user.latitude),
-                'longitude': float(user.longitude)
-            }
+            user_location = dict(
+                latitude=float(user.latitude),
+                longitude=float(user.longitude)
+            )
             if haversine(user_location, location, search_area) and jobs_intersection(user.jobs, jobs):
                 users.append(user)
         else:

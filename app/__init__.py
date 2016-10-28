@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 import os
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
@@ -16,6 +16,7 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 from app.user import views
 from app.job import views
 from app.upload import views
+from app.contact import views
 
 # import models
 from app.user.models import User
