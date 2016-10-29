@@ -22,7 +22,7 @@ class User(db.Model):
     full_name = db.Column(db.String(100))
     email = db.Column(db.String(60))
     address = db.Column(db.String(200))
-    phone_number = db.Column(db.String(14))
+    phone_number = db.Column(db.String(20))
     description = db.Column(db.Text)
     jobs = db.relationship('Job', secondary=UserJob, backref='user')
     # google map lat/lgt
@@ -72,7 +72,7 @@ class User(db.Model):
             'files':  [element.to_json(self.username) for element in self.files.all()],
             'profile_image':  [element.to_json(self.username) for element in self.profile_image.all()]
         }
-    
+
     def add_jobs(self, jobs):
         self.jobs = []
         for job_id in jobs:

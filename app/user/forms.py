@@ -40,7 +40,7 @@ class UpdateForm(FlaskForm):
         Length(max=100, message="Le nom et prénom doivent être < 100 caractères")
     ])
     phone_number = StringField('phone_number', validators=[
-        Length(max=14, message="Le numéro téléphone doit être < 14 numéro")
+        Length(max=20, message="Le numéro téléphone doit être < 20 numéro")
     ])
     description = StringField('description', validators=[
         Length(max=10000, message="La description doit être < 10000 caractères")
