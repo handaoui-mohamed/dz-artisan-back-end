@@ -2,13 +2,14 @@ from app import db, app
 from app.user.models import User
 from app.user.forms import RegistrationForm, UpdateForm
 from app.job.models import Job
-from flask import abort, request, jsonify, g, send_from_directory, url_for, make_response
+from flask import abort, request, jsonify, g, url_for, make_response
 from config import YEAR, DAY, SECRET_KEY
 import jwt
 from jwt import DecodeError, ExpiredSignature
 from datetime import datetime, timedelta
 from functools import wraps
 from werkzeug.datastructures import MultiDict
+from haversine import haversine
 
 # JWT AUTh process start
 def create_token(user, days=1):
@@ -153,20 +154,16 @@ def search(page=1):
     item_per_page = data.get('limit', 6)
     jobs = data.get('jobs', Job.query.all())
     search_area = data.get('search_area', 5)
-
     location = data.get('location')
     location_search = False
-    if location and location['latitude'] and location['longitude']:
+    if location is not None and location['latitude'] and location['longitude']:
         location_search = True
 
     users = []
     for user in User.query.all():
-        if location_search and user.latitude and user.longitude:
-            user_location = dict(
-                latitude=float(user.latitude),
-                longitude=float(user.longitude)
-            )
-            if haversine(user_location, location, search_area) and jobs_intersection(user.jobs, jobs):
+        if location_search and user.latitude is not None and user.longitude is not None:
+            user_location = dict(latitude=user.latitude,longitude=user.longitude)
+            if calculate_haversine(user_location, location, search_area) and jobs_intersection(user.jobs, jobs):
                 users.append(user)
         else:
             if jobs_intersection(user.jobs, jobs):
@@ -178,19 +175,11 @@ def search(page=1):
     return jsonify({'total_pages': total_pages,'elements': [element.to_json() for element in users]})
 
 
-def haversine(location1, location2, search_area):
-    lat1 = location1['latitude']
-    lon1 = location1['longitude']
-    lat2 = location2['latitude']
-    lon2 = location2['longitude']
-    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
-    # haversine formula
-    dlon = lon2 - lon1
-    dlat = lat2 - lat1
-    a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
-    c = 2 * asin(sqrt(a))
-    km = 6367 * c
-    return km >= search_area
+def calculate_haversine(location1, location2, search_area):
+    pos1 = location1["latitude"], location1["longitude"]
+    pos2 = location2["latitude"], location2["longitude"]
+    km = haversine(pos1,pos2)
+    return km <= search_area
 
 
 def jobs_intersection(user_jobs, jobs_list):
