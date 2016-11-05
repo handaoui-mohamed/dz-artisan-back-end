@@ -9,7 +9,6 @@ from app.job.models import Job
 @app.route('/api/jobs', methods=['GET', 'POST'])
 def new_job():
     if request.method == 'GET':
-        print 'here'
         return jsonify({'elements': [element.to_json() for element in Job.query.all()]})
     else:
         data = request.get_json(force=True)
@@ -31,9 +30,9 @@ def edit_job(id):
     if job is None:
         abort(400)
 
-    if request.method == 'GET':    
+    if request.method == 'GET':
         return jsonify({'element': job.to_json()})
-    
+
     data = request.get_json(force=True)
     name = data.get('name')
     description = data.get('description', job.description)
@@ -41,7 +40,7 @@ def edit_job(id):
     new_job = False
     existing_job = Job.query.filter_by(name=name).first()
     if (existing_job is None) or (existing_job.id == job.id and not (name == job.name)): new_job =True
-      
+
     if new_job and name: job.name = name
     job.description = description
     db.session.add(job)

@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 from app import db, app
 import os
 from flask import abort, request, jsonify, g, send_from_directory
@@ -40,7 +40,7 @@ def upload():
 @app.route('/api/uploads/<int:id>', methods=['DELETE'])
 @login_required
 def delete_file(id):
-    file = g.user.files.get(id)
+    file = g.user.files.filter_by(id=id).first()
     if file and file.user_id == g.user.id:
         db.session.delete(file)
         db.session.commit()
@@ -69,7 +69,7 @@ def upload_profile_image():
             for picture in old_pictures:
                 file_path = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile', picture.name)
                 db.session.delete(picture)
-                db.session.commit() 
+                db.session.commit()
                 if os.path.exists(file_path):
                     os.remove(file_path)
         else:
@@ -85,7 +85,7 @@ def upload_profile_image():
 @app.route('/api/uploads/profile/<int:id>', methods=['DELETE'])
 @login_required
 def delete_profile_image(id):
-    file = g.user.profile_image.get(id)
+    file = g.user.profile_image.filter_by(id=id).first()
     if file and file.user_id == g.user.id:
         return jsonify({'success': 'true'}), 200
     abort(404)
