@@ -11,9 +11,9 @@ class Upload(db.Model):
     def to_json(self, username):
         return {
             'id': self.id,
-            # 'path': os.path.join(HOST_URL, UPLOAD_FOLDER, username, self.name).replace("\\", "/"),
-            # 'name': self.name,
-            'path': self.name,
+            'path': os.path.join(HOST_URL, UPLOAD_FOLDER, username, self.name).replace("\\", "/"),
+            'name': self.name,
+            # 'path': self.name,
             'user_id': self.user_id
         }
 
@@ -27,8 +27,8 @@ class ProfilePicture(db.Model):
     def to_json(self, username):
         return {
             'id': self.id,
-            # 'path': os.path.join(HOST_URL, UPLOAD_FOLDER, 'profile', username, self.name).replace("\\", "/"),
-            # 'name': self.name,
-            'path': self.name,
+            'path': os.path.join(HOST_URL, UPLOAD_FOLDER, 'profile', username, self.name).replace("\\", "/"),
+            'name': self.name,
+            # 'path': self.name,
             'user_id': self.user_id
         }
