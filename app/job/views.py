@@ -16,7 +16,7 @@ def new_job():
         description = data.get('description')
         pass_code = data.get('pass_code')
 
-        if pass_code is None name is None or Job.query.filter_by(name=name).first() is not None:
+        if pass_code is None or name is None or Job.query.filter_by(name=name).first() is not None:
             abort(400)    # missing arguments or existing one
 
         job = Job(name=name, description=description)
