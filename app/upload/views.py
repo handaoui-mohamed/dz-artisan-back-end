@@ -45,8 +45,9 @@ def delete_file(id):
         db.session.delete(file)
         db.session.commit()
         file_path = os.path.join(basedir, UPLOAD_FOLDER, g.user.username, file.name)
-        os.remove(file_path)
-        return jsonify({'success': 'true'}), 200
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            return jsonify({'success': 'true'}), 200
     abort(404)
 
 @app.route('/api/uploads/<string:username>/<string:filename>')
@@ -90,13 +91,13 @@ def delete_profile_image(id):
         db.session.delete(file)
         db.session.commit()
         file_path = os.path.join(basedir, UPLOAD_FOLDER, g.user.username, 'profile', file.name)
-        os.remove(file_path)
-        return jsonify({'success': 'true'}), 200
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            return jsonify({'success': 'true'}), 200
     abort(404)
 
 
 @app.route('/api/uploads/profile/<string:username>/<string:filename>')
 def get_profile_image(username, filename):
     directory = os.path.join(basedir, UPLOAD_FOLDER, username, 'profile')
-    print os.path.exists(directory)
     return send_from_directory(directory, filename)
