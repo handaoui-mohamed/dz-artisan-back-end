@@ -22,7 +22,7 @@ def upload():
     user_id = g.user.id
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
-        directory = os.path.join(UPLOAD_FOLDER, g.user.username)
+        directory = os.path.join(basedir, UPLOAD_FOLDER, g.user.username)
         if not os.path.exists(directory):
             os.makedirs(directory)
         file_path = os.path.join(directory, filename)
@@ -44,9 +44,10 @@ def delete_file(id):
     if file and file.user_id == g.user.id:
         db.session.delete(file)
         db.session.commit()
-        file_path = os.path.join(UPLOAD_FOLDER, g.user.username, file.name)
-        os.remove(file_path)
-        return jsonify({'success': 'true'}), 200
+        file_path = os.path.join(basedir, UPLOAD_FOLDER, g.user.username, file.name)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            return jsonify({'success': 'true'}), 200
     abort(404)
 
 @app.route('/api/uploads/<string:username>/<string:filename>')
@@ -63,11 +64,11 @@ def upload_profile_image():
     user_id = g.user.id
     if file and allowed_file(file.filename):
         filename = secure_filename(file.filename)
-        directory = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile')
+        directory = os.path.join(basedir, UPLOAD_FOLDER, g.user.username, 'profile')
         if os.path.exists(directory):
             old_pictures = g.user.profile_image.all()
             for picture in old_pictures:
-                file_path = os.path.join(UPLOAD_FOLDER, g.user.username, 'profile', picture.name)
+                file_path = os.path.join(directory, picture.name)
                 db.session.delete(picture)
                 db.session.commit()
                 if os.path.exists(file_path):
@@ -87,12 +88,16 @@ def upload_profile_image():
 def delete_profile_image(id):
     file = g.user.profile_image.filter_by(id=id).first()
     if file and file.user_id == g.user.id:
-        return jsonify({'success': 'true'}), 200
+        db.session.delete(file)
+        db.session.commit()
+        file_path = os.path.join(basedir, UPLOAD_FOLDER, g.user.username, 'profile', file.name)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            return jsonify({'success': 'true'}), 200
     abort(404)
 
 
 @app.route('/api/uploads/profile/<string:username>/<string:filename>')
 def get_profile_image(username, filename):
     directory = os.path.join(basedir, UPLOAD_FOLDER, username, 'profile')
-    print os.path.exists(directory)
     return send_from_directory(directory, filename)

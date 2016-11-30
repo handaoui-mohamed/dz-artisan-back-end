@@ -14,9 +14,10 @@ def new_job():
         data = request.get_json(force=True)
         name = data.get('name')
         description = data.get('description')
+        pass_code = data.get('pass_code')
 
-        if name is None or Job.query.filter_by(name=name).first() is not None:
-            abort(400)    # missing arguments or existing one
+        if pass_code is None or name is None or Job.query.filter_by(name=name).first() is not None:
+            abort(400)    # missing arguments or existing one 
 
         job = Job(name=name, description=description)
         db.session.add(job)
@@ -36,6 +37,10 @@ def edit_job(id):
     data = request.get_json(force=True)
     name = data.get('name')
     description = data.get('description', job.description)
+    pass_code = data.get('pass_code')
+
+    if pass_code is None:
+        abort(400)
 
     new_job = False
     existing_job = Job.query.filter_by(name=name).first()

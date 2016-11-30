@@ -12,6 +12,7 @@ SQLALCHEMY_TRACK_MODIFICATIONS=True
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif'])
 HOST_URL = 'http://localhost:5000/api/'
+# HOST_URL = 'https://dz-artisan-api.herokuapp.com/api/'
 CORS_HEADERS = 'Content-Type'
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 YEAR = 365
